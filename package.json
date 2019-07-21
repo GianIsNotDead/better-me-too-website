@@ -1,7 +1,7 @@
 {
-  "name": "poor-mans-react",
+  "name": "better-me-too",
   "version": "1.0.0",
-  "description": "A gate way to simple life",
+  "description": "website for better me too",
   "license": "MIT",
   "scripts": {
     "build": "webpack --config webpack/webpack.prod.js",
