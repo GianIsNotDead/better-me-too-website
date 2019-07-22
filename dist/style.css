@@ -77,7 +77,8 @@ button {
 
 .container {
   padding: 60px 10%;
-  overflow: scroll; }
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; }
 
 /************************
         Header
