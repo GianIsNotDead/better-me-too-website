@@ -36,7 +36,9 @@ button {
 
 .container {
   padding: 60px 10%;
-  overflow: scroll;
+  overflow-y: scroll;
+  // Scroll momentum enabled on iphone
+  -webkit-overflow-scrolling: touch;
 }
 
 /************************
