@@ -10,6 +10,11 @@
   @include container-title-text;
 }
 
+.cp-container .cp-container-text {
+  @include content-text;
+  margin-bottom: $vertical-gutter-medium;
+}
+
 .cp-container .conversation-preview,
 .cp-container .conversation-title-container {
   width: 100%;
@@ -58,6 +63,7 @@
 .cp-container .conversation-title {
   position: relative;
   height: 100%;
+  width: 80%;
   padding: 2%;
 }
 

@@ -12,6 +12,9 @@ import ResourcesPreview from '../../components/ResourcesPreview';
 import ThoughtsLetter from '../../components/ThoughtsLetter';
 import Footer from '../../components/Footer';
 
+// assets
+import BackgroundHome from '../../assets/background_home.svg';
+
 function HomePage({ showMobileMenu, toggleDisplay }) {
   return (
     <div className="page-container">
@@ -22,11 +25,16 @@ function HomePage({ showMobileMenu, toggleDisplay }) {
         />
         <Banner />
       </div>
-      <ReleasesPreview />
-      <ConversationsPreview />
-      <ResourcesPreview />
-      <ThoughtsLetter />
-      <Footer />
+      <main className="btm-main">
+        <ReleasesPreview />
+        <ConversationsPreview />
+        <ResourcesPreview />
+        <ThoughtsLetter />
+        <Footer />
+        <div className="page-background">
+          <img className="page-background-image" src={`./dist/${BackgroundHome}`} alt="geometric background overlay"/>
+        </div>
+      </main>
     </div>
   );
 }

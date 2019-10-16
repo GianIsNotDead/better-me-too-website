@@ -1,7 +1,7 @@
 @import "../../style/mixins";
 @import "../../style/variables";
 
-.page-contaienr, .gradient-container {
+.page-contaienr, .gradient-container, .btm-main {
   position: relative;
   width: 100%;
 }
@@ -15,6 +15,28 @@
   background: $banner-gradient;
 }
 
+.page-container .bmt-main {
+  background: $primary-background;
+}
+
 .page-container .nav-mobile-active {
   height: 100%;
+}
+
+.page-container .page-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.page-container .page-background-image {
+  display: block;
+  height: 100%;
+  width: auto;
+  position: relative;
+  top: 20px;
+  left: -10%;
 }

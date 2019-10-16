@@ -30,8 +30,9 @@ Better Me Too Visual Guide
   position: relative;
   top: 0;
   left: 0;
-  padding: $vertical-gutter-large $horizontal-gutter;
-  background: $primary-background;
+  margin: 0 $horizontal-gutter;
+  padding: $vertical-gutter-large 0;
+  z-index: 1;
 }
 
 @mixin container-title-text {

@@ -24885,6 +24885,17 @@ exports.default = App;
 
 /***/ }),
 
+/***/ "./src/assets/background_home.svg":
+/*!****************************************!*\
+  !*** ./src/assets/background_home.svg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "../img/background_home.svg";
+
+/***/ }),
+
 /***/ "./src/assets/icon_close.svg":
 /*!***********************************!*\
   !*** ./src/assets/icon_close.svg ***!
@@ -25108,6 +25119,11 @@ function ConversationsPreview() {
       'h3',
       { className: 'cp-container-title' },
       'Conversations'
+    ),
+    _react2.default.createElement(
+      'p',
+      { className: 'cp-container-text' },
+      'We find interesting concepts, research, and experiments, deliver them in an undiluted yet digestible way.'
     ),
     _react2.default.createElement(
       'article',
@@ -25510,6 +25526,11 @@ function ReleasesPreview() {
       'Releases'
     ),
     _react2.default.createElement(
+      'p',
+      { className: 'rp-container-text' },
+      'We build opensource software and hardware to help people understand the brain.'
+    ),
+    _react2.default.createElement(
       'article',
       { className: 'release-preview' },
       _react2.default.createElement(
@@ -25588,6 +25609,11 @@ function ResourcesPreview() {
       'h3',
       { className: 'rep-container-title' },
       'Resources'
+    ),
+    _react2.default.createElement(
+      'p',
+      { className: 'rep-container-text' },
+      'Some say that the internet has enough resources for one to learn and become a rocket scientist. Here\u2019re some of the goodies that helped us to level up on science and engineering.'
     ),
     _react2.default.createElement(
       'article',
@@ -25792,9 +25818,13 @@ var _Footer = __webpack_require__(/*! ../../components/Footer */ "./src/componen
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
+var _background_home = __webpack_require__(/*! ../../assets/background_home.svg */ "./src/assets/background_home.svg");
+
+var _background_home2 = _interopRequireDefault(_background_home);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// style
+// component
 function HomePage(_ref) {
   var showMobileMenu = _ref.showMobileMenu,
       toggleDisplay = _ref.toggleDisplay;
@@ -25811,15 +25841,27 @@ function HomePage(_ref) {
       }),
       _react2.default.createElement(_Banner2.default, null)
     ),
-    _react2.default.createElement(_ReleasesPreview2.default, null),
-    _react2.default.createElement(_ConversationsPreview2.default, null),
-    _react2.default.createElement(_ResourcesPreview2.default, null),
-    _react2.default.createElement(_ThoughtsLetter2.default, null),
-    _react2.default.createElement(_Footer2.default, null)
+    _react2.default.createElement(
+      'main',
+      { className: 'btm-main' },
+      _react2.default.createElement(_ReleasesPreview2.default, null),
+      _react2.default.createElement(_ConversationsPreview2.default, null),
+      _react2.default.createElement(_ResourcesPreview2.default, null),
+      _react2.default.createElement(_ThoughtsLetter2.default, null),
+      _react2.default.createElement(_Footer2.default, null),
+      _react2.default.createElement(
+        'div',
+        { className: 'page-background' },
+        _react2.default.createElement('img', { className: 'page-background-image', src: './dist/' + _background_home2.default, alt: 'geometric background overlay' })
+      )
+    )
   );
 }
 
-// component
+// assets
+
+
+// style
 exports.default = HomePage;
 
 /***/ }),

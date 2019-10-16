@@ -10,6 +10,7 @@ function ResourcesPreview() {
   return (
     <section className="rep-container">
       <h3 className="rep-container-title">Resources</h3>
+      <p className="rep-container-text">Some say that the internet has enough resources for one to learn and become a rocket scientist. Here’re some of the goodies that helped us to level up on science and engineering.</p>
       <article className="resource-preview">
         <div className="resource-preview-image-container">
           <img className="resource-preview-image" src={`./dist/${Incognito}`} alt="resource"/>

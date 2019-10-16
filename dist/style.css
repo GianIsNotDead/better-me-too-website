@@ -7,7 +7,7 @@ Better Me Too Visual Guide
 /*************************************
 Better Me Too Visual Guide
 *************************************/
-.page-contaienr, .gradient-container {
+.page-contaienr, .gradient-container, .btm-main {
   position: relative;
   width: 100%; }
 
@@ -19,8 +19,27 @@ Better Me Too Visual Guide
 .page-container .gradient-container {
   background: linear-gradient(225deg, #62BDC8 0%, #517DAF 52%, #555CCF 100%); }
 
+.page-container .bmt-main {
+  background: #EFF2F5; }
+
 .page-container .nav-mobile-active {
   height: 100%; }
+
+.page-container .page-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 0; }
+
+.page-container .page-background-image {
+  display: block;
+  height: 100%;
+  width: auto;
+  position: relative;
+  top: 20px;
+  left: -10%; }
 /*************************************
 Better Me Too Visual Guide
 *************************************/
@@ -31,8 +50,8 @@ Better Me Too Visual Guide
 Better Me Too Visual Guide
 *************************************/
 .bmt-header {
-  z-index: 1;
-  padding: 0 6%; }
+  padding: 0 6%;
+  z-index: 2; }
 
 .bmt-header, .header-items-container {
   position: relative;
@@ -60,7 +79,7 @@ Better Me Too Visual Guide
 .bmt-header .burger-menu {
   width: 100%;
   height: 100%;
-  z-index: 0; }
+  z-index: 1; }
 
 .bmt-header .header-nav {
   display: none; }
@@ -146,8 +165,9 @@ Better Me Too Visual Guide
   position: relative;
   top: 0;
   left: 0;
-  padding: 50px 6%;
-  background: #EFF2F5;
+  margin: 0 6%;
+  padding: 50px 0;
+  z-index: 1;
   border-bottom: 1px solid #DBDBDB; }
 
 .rp-container .rp-container-title {
@@ -157,6 +177,14 @@ Better Me Too Visual Guide
   color: #353975;
   letter-spacing: 1.2px;
   text-shadow: 0 2px 2px rgba(124, 158, 212, 0.42); }
+
+.rp-container .rp-container-text {
+  margin-bottom: 10px;
+  font-size: 0.875rem;
+  line-height: 20px;
+  color: #353975;
+  letter-spacing: 0.93px;
+  margin-bottom: 30px; }
 
 .rp-container .release-preview {
   padding: 50px 6%;
@@ -208,8 +236,9 @@ Better Me Too Visual Guide
   position: relative;
   top: 0;
   left: 0;
-  padding: 50px 6%;
-  background: #EFF2F5;
+  margin: 0 6%;
+  padding: 50px 0;
+  z-index: 1;
   border-bottom: 1px solid #DBDBDB; }
 
 .cp-container .cp-container-title {
@@ -219,6 +248,14 @@ Better Me Too Visual Guide
   color: #353975;
   letter-spacing: 1.2px;
   text-shadow: 0 2px 2px rgba(124, 158, 212, 0.42); }
+
+.cp-container .cp-container-text {
+  margin-bottom: 10px;
+  font-size: 0.875rem;
+  line-height: 20px;
+  color: #353975;
+  letter-spacing: 0.93px;
+  margin-bottom: 30px; }
 
 .cp-container .conversation-preview,
 .cp-container .conversation-title-container {
@@ -264,6 +301,7 @@ Better Me Too Visual Guide
 .cp-container .conversation-title {
   position: relative;
   height: 100%;
+  width: 80%;
   padding: 2%; }
 
 .cp-container .conversation-title h4 {
@@ -330,8 +368,9 @@ Better Me Too Visual Guide
   position: relative;
   top: 0;
   left: 0;
-  padding: 50px 6%;
-  background: #EFF2F5;
+  margin: 0 6%;
+  padding: 50px 0;
+  z-index: 1;
   border-bottom: 1px solid #DBDBDB; }
 
 .rep-container .rep-container-title {
@@ -341,6 +380,14 @@ Better Me Too Visual Guide
   color: #353975;
   letter-spacing: 1.2px;
   text-shadow: 0 2px 2px rgba(124, 158, 212, 0.42); }
+
+.rep-container .rep-container-text {
+  margin-bottom: 10px;
+  font-size: 0.875rem;
+  line-height: 20px;
+  color: #353975;
+  letter-spacing: 0.93px;
+  margin-bottom: 30px; }
 
 .rep-container .resource-preview {
   display: flex;
@@ -395,8 +442,9 @@ Better Me Too Visual Guide
   position: relative;
   top: 0;
   left: 0;
-  padding: 50px 6%;
-  background: #EFF2F5;
+  margin: 0 6%;
+  padding: 50px 0;
+  z-index: 1;
   border-bottom: 1px solid #DBDBDB; }
 
 .tl-container .thoughts-letter-title {
@@ -453,8 +501,9 @@ Better Me Too Visual Guide
   position: relative;
   top: 0;
   left: 0;
-  padding: 50px 6%;
-  background: #EFF2F5; }
+  margin: 0 6%;
+  padding: 50px 0;
+  z-index: 1; }
 
 .bmt-footer .footer-nav {
   margin-bottom: 20px; }

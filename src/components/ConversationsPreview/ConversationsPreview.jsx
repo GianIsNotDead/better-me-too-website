@@ -10,6 +10,7 @@ function ConversationsPreview() {
   return (
     <section className="cp-container">
       <h3 className="cp-container-title">Conversations</h3>
+      <p className="cp-container-text">We find interesting concepts, research, and experiments, deliver them in an undiluted yet digestible way.</p>
       <article className="conversation-preview">
         <div className="conversation-title-container">
           <div className="conversation-date-container">

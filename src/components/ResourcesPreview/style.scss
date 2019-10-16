@@ -10,6 +10,11 @@
   @include container-title-text;
 }
 
+.rep-container .rep-container-text {
+  @include content-text;
+  margin-bottom: $vertical-gutter-medium;
+}
+
 .rep-container .resource-preview {
   display: flex;
   justify-content: space-between;

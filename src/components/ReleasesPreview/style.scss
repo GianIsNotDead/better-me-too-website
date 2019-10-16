@@ -10,6 +10,11 @@
   @include container-title-text;
 }
 
+.rp-container .rp-container-text {
+  @include content-text;
+  margin-bottom: $vertical-gutter-medium;
+}
+
 .rp-container .release-preview {
   padding: $vertical-gutter-large $horizontal-gutter;
   margin-bottom: $vertical-gutter-medium;
