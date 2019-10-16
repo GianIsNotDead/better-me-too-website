@@ -1,0 +1,106 @@
+@import "../../style/mixins";
+@import "../../style/variables";
+
+.cp-container {
+  @include container;
+  @include vertical-divider;
+}
+
+.cp-container .cp-container-title {
+  @include container-title-text;
+}
+
+.cp-container .conversation-preview,
+.cp-container .conversation-title-container {
+  width: 100%;
+}
+
+.cp-container .conversation-preview {
+  @include vertical-divider;
+  margin-bottom: $vertical-gutter-medium;
+}
+
+.cp-container .conversation-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include vertical-divider-double;
+  height: 70px;
+}
+
+.cp-container .conversation-date-container {
+  position: relative;
+  height: 100%;
+  padding: 2%;
+  background-image: linear-gradient(225deg, #D7B9F9 0%, #F28CC0 100%);
+}
+
+.cp-container .conversation-date {
+  @include vertical-center(relative);
+}
+
+.cp-container .conversation-date p {
+  color: #FFFFFF;
+}
+
+.cp-container .conversation-month {
+  font-size: 1.5rem;
+  letter-spacing: 1.6px;
+}
+
+.cp-container .conversation-year {
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  letter-spacing: 0.8px;
+  text-align: center;
+}
+
+.cp-container .conversation-title {
+  position: relative;
+  height: 100%;
+  padding: 2%;
+}
+
+.cp-container .conversation-title h4 {
+  margin-bottom: 5px;
+}
+
+.cp-container .conversation-title p {
+  margin-bottom: 0;
+}
+
+.cp-container .conversation-title-text-container {
+  @include vertical-center(relative);
+}
+
+.cp-container .conversation-title-text {
+  @include content-title-text;
+  overflow: hidden;
+}
+
+.cp-container .conversation-metadata {
+  @include content-text;
+}
+
+.cp-container .conversation-expand {
+  height: 100%;
+}
+
+.cp-container .conversation-expand .conversation-expand-icon {
+  display: block;
+  height: 100%;
+}
+
+.cp-container .conversation-preview-text-container {
+  width: 100%;
+  padding: $vertical-gutter-extra-small;
+}
+
+.cp-container .conversation-preview-text {
+  @include content-text;
+  margin-bottom: 0;
+}
+
+.cp-container .all-conversations-btn {
+  @include primary-button;
+}

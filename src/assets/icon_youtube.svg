@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>icon_youtube</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="76.1466667%" y1="12.6933333%" x2="22.2266667%" y2="89.64%" id="linearGradient-1">
+            <stop stop-color="#62BDC8" offset="0%"></stop>
+            <stop stop-color="#517DAF" offset="48%"></stop>
+            <stop stop-color="#555CCF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="icon_youtube" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill-rule="nonzero">
+            <rect id="Rectangle" fill="url(#linearGradient-1)" x="0" y="0" width="20" height="20" rx="8.04"></rect>
+            <path d="M15.5146667,6.4 C14.8106667,5.696 11.8773333,5.696 10.1333333,5.696 C8.38933333,5.696 5.44533333,5.696 4.74133333,6.39733333 C4.03733333,7.09866667 3.80266667,8.50933333 3.80266667,9.91466667 C3.80266667,11.32 4.03733333,12.728 4.74133333,13.4293333 C5.44533333,14.1306667 8.37333333,14.1333333 10.1333333,14.1333333 C11.8933333,14.1333333 14.8186667,14.1333333 15.5226667,13.4293333 C16.2266667,12.7253333 16.4613333,11.32 16.4613333,9.91466667 C16.4613333,8.50933333 16.2186667,7.10133333 15.5146667,6.4 Z M8.96,11.872 L8.96,7.95733333 L12,9.91466667 L8.96,11.872 Z" id="Shape" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

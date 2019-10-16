@@ -1,3 +1,8 @@
+@import "./variables";
+
+/************************
+        General
+************************/
 html {
   box-sizing: border-box;
 }
@@ -6,15 +11,12 @@ html {
   box-sizing: inherit;
 }
 
-/************************
-        General
-************************/
 body {
   font-size: 16px;
-  font-family: 'Alegreya Sans', sans-serif;
+  font-family: $primary-font;
 }
 
-html, body, #app, .container {
+html, body, #wrapper {
   position: relative;
   width: 100%;
   height: 100%;
@@ -28,79 +30,14 @@ p {
   line-height: 31px;
 }
 
+a {
+  text-decoration: none;
+}
+
 button {
+  margin: 0;
+  padding: 0;
   outline: none;
-  background: none;
   border: none;
-}
-
-.container {
-  padding: 60px 10%;
-  overflow-y: scroll;
-  // Scroll momentum enabled on iphone
-  -webkit-overflow-scrolling: touch;
-}
-
-/************************
-        Header
-************************/
-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 35px;
-  font-family: 'Overpass', sans-serif;
-}
-
-header .bmt-logo-type {
-  font-weight: 500;
-  font-size: 1rem;
-  color: #000000;
-  letter-spacing: 1.07px;
-}
-
-header .bmt-resources {
-  display: inline-block;
-  padding: 1.5px 0;
-  border-bottom: 3px solid #2624E7;
-  transform: translateY(-3px);
-  visibility: hidden;
-}
-
-/************************
-        Main
-************************/
-main .bmt-text-normal {
-  margin-bottom: 20px;
-}
-
-main .bmt-about-text {
-  width: 100%;
-}
-
-@media only screen and (min-width: 768px) {
-  main .bmt-about-text {
-    width: 75%;
-  }
-}
-
-/************************
-        Bean
-************************/
-.bean {
-  position: relative;
-  width: 100%;
-  height: auto;
-  top: 25%;
-}
-
-/************************
-        Footer
-************************/
-footer {
-  position: relative;
-  top: 25%;
-}
-footer .bmt-text-footer {
-  font-size: 0.75rem;
-  text-align: center;
+  background: none;
 }

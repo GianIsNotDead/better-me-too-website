@@ -1,3 +1,482 @@
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+.page-contaienr, .gradient-container {
+  position: relative;
+  width: 100%; }
+
+.page-container {
+  height: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; }
+
+.page-container .gradient-container {
+  background: linear-gradient(225deg, #62BDC8 0%, #517DAF 52%, #555CCF 100%); }
+
+.page-container .nav-mobile-active {
+  height: 100%; }
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+.bmt-header {
+  z-index: 1;
+  padding: 0 6%; }
+
+.bmt-header, .header-items-container {
+  position: relative;
+  width: 100%; }
+
+.bmt-header .header-items-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #DBDBDB; }
+
+.bmt-header .logo-text {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #FFFFFF; }
+
+.bmt-header .burger-menu-button, .bmt-header .burger-menu {
+  display: inline-block;
+  position: relative; }
+
+.bmt-header .burger-menu-button {
+  z-index: 10; }
+
+.bmt-header .burger-menu {
+  width: 100%;
+  height: 100%;
+  z-index: 0; }
+
+.bmt-header .header-nav {
+  display: none; }
+
+.bmt-header .header-nav a {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 1.25rem;
+  color: #353975;
+  letter-spacing: 1.6px;
+  line-height: 20px; }
+
+.bmt-header .nav-mobile {
+  padding-top: 120px; }
+
+.nav-mobile-active {
+  display: block !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 6%;
+  background: #EFF2F5; }
+
+.bmt-header .nav-items-container {
+  display: block; }
+
+.bmt-header .nav-item {
+  margin-bottom: 40px; }
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+.bmt-banner {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 0 6%;
+  padding-top: 30px;
+  background: linear-gradient(225deg, #62BDC8 0%, #517DAF 52%, #555CCF 100%);
+  z-index: 0; }
+
+.bmt-banner .bmt-banner-title, .bmt-banner .bmt-banner-text {
+  font-size: 0.875rem;
+  color: #FFFFFF;
+  letter-spacing: 0.93px;
+  margin-bottom: 20px; }
+
+.bmt-banner .bmt-banner-title {
+  font-weight: 600; }
+
+.bmt-banner .bmt-banner-text {
+  line-height: 20px; }
+
+.bmt-banner .bmt-cta-button {
+  padding: 2px 2px;
+  border-radius: 20.5px;
+  margin-bottom: 50px;
+  background-image: linear-gradient(180deg, #DBE7FE 0%, #7C9ED4 100%); }
+
+.bmt-banner .bmt-cta-accent {
+  padding: 10px 20px;
+  font-size: 0.75rem;
+  color: #353975;
+  letter-spacing: 0.8px;
+  border-radius: 20.5px;
+  background: #FFFFFF; }
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+.rp-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 50px 6%;
+  background: #EFF2F5;
+  border-bottom: 1px solid #DBDBDB; }
+
+.rp-container .rp-container-title {
+  margin-bottom: 30px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #353975;
+  letter-spacing: 1.2px;
+  text-shadow: 0 2px 2px rgba(124, 158, 212, 0.42); }
+
+.rp-container .release-preview {
+  padding: 50px 6%;
+  margin-bottom: 30px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 6px 0 rgba(226, 233, 248, 0.73);
+  border-radius: 10px; }
+
+.rp-container .release-preview-title {
+  margin-bottom: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #353975;
+  letter-spacing: 0.93px; }
+
+.rp-container .release-preview-brief, .rp-container .release-expand {
+  margin-bottom: 10px;
+  font-size: 0.875rem;
+  line-height: 20px;
+  color: #353975;
+  letter-spacing: 0.93px; }
+
+.rp-container .release-preview-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px; }
+
+.rp-container .release-expand {
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 0.75rem; }
+
+.rp-container .all-release-btn {
+  padding-bottom: 2px;
+  font-size: 0.875rem;
+  color: #353975;
+  border-bottom: 2px solid #7C9ED4; }
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+.cp-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 50px 6%;
+  background: #EFF2F5;
+  border-bottom: 1px solid #DBDBDB; }
+
+.cp-container .cp-container-title {
+  margin-bottom: 30px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #353975;
+  letter-spacing: 1.2px;
+  text-shadow: 0 2px 2px rgba(124, 158, 212, 0.42); }
+
+.cp-container .conversation-preview,
+.cp-container .conversation-title-container {
+  width: 100%; }
+
+.cp-container .conversation-preview {
+  border-bottom: 1px solid #DBDBDB;
+  margin-bottom: 30px; }
+
+.cp-container .conversation-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #DBDBDB;
+  border-bottom: 1px solid #DBDBDB;
+  height: 70px; }
+
+.cp-container .conversation-date-container {
+  position: relative;
+  height: 100%;
+  padding: 2%;
+  background-image: linear-gradient(225deg, #D7B9F9 0%, #F28CC0 100%); }
+
+.cp-container .conversation-date {
+  position: relative;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.cp-container .conversation-date p {
+  color: #FFFFFF; }
+
+.cp-container .conversation-month {
+  font-size: 1.5rem;
+  letter-spacing: 1.6px; }
+
+.cp-container .conversation-year {
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  letter-spacing: 0.8px;
+  text-align: center; }
+
+.cp-container .conversation-title {
+  position: relative;
+  height: 100%;
+  padding: 2%; }
+
+.cp-container .conversation-title h4 {
+  margin-bottom: 5px; }
+
+.cp-container .conversation-title p {
+  margin-bottom: 0; }
+
+.cp-container .conversation-title-text-container {
+  position: relative;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.cp-container .conversation-title-text {
+  margin-bottom: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #353975;
+  letter-spacing: 0.93px;
+  overflow: hidden; }
+
+.cp-container .conversation-metadata {
+  margin-bottom: 10px;
+  font-size: 0.875rem;
+  line-height: 20px;
+  color: #353975;
+  letter-spacing: 0.93px; }
+
+.cp-container .conversation-expand {
+  height: 100%; }
+
+.cp-container .conversation-expand .conversation-expand-icon {
+  display: block;
+  height: 100%; }
+
+.cp-container .conversation-preview-text-container {
+  width: 100%;
+  padding: 10px; }
+
+.cp-container .conversation-preview-text {
+  margin-bottom: 10px;
+  font-size: 0.875rem;
+  line-height: 20px;
+  color: #353975;
+  letter-spacing: 0.93px;
+  margin-bottom: 0; }
+
+.cp-container .all-conversations-btn {
+  padding-bottom: 2px;
+  font-size: 0.875rem;
+  color: #353975;
+  border-bottom: 2px solid #7C9ED4; }
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+.rep-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 50px 6%;
+  background: #EFF2F5;
+  border-bottom: 1px solid #DBDBDB; }
+
+.rep-container .rep-container-title {
+  margin-bottom: 30px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #353975;
+  letter-spacing: 1.2px;
+  text-shadow: 0 2px 2px rgba(124, 158, 212, 0.42); }
+
+.rep-container .resource-preview {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 6%;
+  margin-bottom: 30px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 6px 0 rgba(226, 233, 248, 0.73);
+  border-radius: 10px; }
+
+.rep-container .resource-preview-image-container {
+  position: relative;
+  height: 100px;
+  width: 25%; }
+
+.rep-container .resource-preview-image {
+  height: 100%;
+  width: auto; }
+
+.rep-container .resource-preview-text-container {
+  width: 70%; }
+
+.rep-container .resource-preview-title {
+  margin-bottom: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #353975;
+  letter-spacing: 0.93px; }
+
+.rep-container .resource-preview-text {
+  margin-bottom: 10px;
+  font-size: 0.875rem;
+  line-height: 20px;
+  color: #353975;
+  letter-spacing: 0.93px; }
+
+.rep-container .all-resources-btn {
+  padding-bottom: 2px;
+  font-size: 0.875rem;
+  color: #353975;
+  border-bottom: 2px solid #7C9ED4; }
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+.tl-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 50px 6%;
+  background: #EFF2F5;
+  border-bottom: 1px solid #DBDBDB; }
+
+.tl-container .thoughts-letter-title {
+  margin-bottom: 30px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #353975;
+  letter-spacing: 1.2px;
+  text-shadow: 0 2px 2px rgba(124, 158, 212, 0.42); }
+
+.tl-container .thoughts-letter-text {
+  margin-bottom: 10px;
+  font-size: 0.875rem;
+  line-height: 20px;
+  color: #353975;
+  letter-spacing: 0.93px; }
+
+.tl-container .thoughts-letter-form {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 6px 0 rgba(226, 233, 248, 0.73);
+  border-radius: 4px;
+  overflow: hidden; }
+
+.tl-container .thoughts-letter-input {
+  width: 80%;
+  padding: 0 10px; }
+
+.tl-container .thoughts-letter-submit {
+  width: 20%;
+  font-size: 0.875rem;
+  color: #FFFFFF;
+  letter-spacing: 0.93px;
+  background-image: linear-gradient(45deg, #6592E0 0%, #F3AFF1 100%); }
+
+.tl-container .thoughts-letter-example-btn {
+  padding-bottom: 2px;
+  font-size: 0.875rem;
+  color: #353975;
+  border-bottom: 2px solid #7C9ED4; }
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+.bmt-footer {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 50px 6%;
+  background: #EFF2F5; }
+
+.bmt-footer .footer-nav {
+  margin-bottom: 20px; }
+
+.bmt-footer .nav-item {
+  margin-bottom: 10px; }
+
+.bmt-footer .nav-item:last-of-type {
+  margin-bottom: 0; }
+
+.bmt-footer .nav-item a {
+  font-size: 0.875rem;
+  color: #353975; }
+
+.bmt-footer .social-btn {
+  width: 25px;
+  height: 25px;
+  margin-right: 25px; }
+
+.bmt-footer .social-btn img {
+  width: 100%;
+  height: 100%; }
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -45,20 +524,23 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}html {
+}/*************************************
+Better Me Too Visual Guide
+*************************************/
+/************************
+        General
+************************/
+html {
   box-sizing: border-box; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
 
-/************************
-        General
-************************/
 body {
   font-size: 16px;
-  font-family: 'Alegreya Sans', sans-serif; }
+  font-family: "Libre Franklin", sans-serif; }
 
-html, body, #app, .container {
+html, body, #wrapper {
   position: relative;
   width: 100%;
   height: 100%;
@@ -70,67 +552,14 @@ p {
   letter-spacing: 1.07px;
   line-height: 31px; }
 
+a {
+  text-decoration: none; }
+
 button {
+  margin: 0;
+  padding: 0;
   outline: none;
-  background: none;
-  border: none; }
+  border: none;
+  background: none; }
 
-.container {
-  padding: 60px 10%;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch; }
-
-/************************
-        Header
-************************/
-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 35px;
-  font-family: 'Overpass', sans-serif; }
-
-header .bmt-logo-type {
-  font-weight: 500;
-  font-size: 1rem;
-  color: #000000;
-  letter-spacing: 1.07px; }
-
-header .bmt-resources {
-  display: inline-block;
-  padding: 1.5px 0;
-  border-bottom: 3px solid #2624E7;
-  transform: translateY(-3px);
-  visibility: hidden; }
-
-/************************
-        Main
-************************/
-main .bmt-text-normal {
-  margin-bottom: 20px; }
-
-main .bmt-about-text {
-  width: 100%; }
-
-@media only screen and (min-width: 768px) {
-  main .bmt-about-text {
-    width: 75%; } }
-
-/************************
-        Bean
-************************/
-.bean {
-  position: relative;
-  width: 100%;
-  height: auto;
-  top: 25%; }
-
-/************************
-        Footer
-************************/
-footer {
-  position: relative;
-  top: 25%; }
-
-footer .bmt-text-footer {
-  font-size: 0.75rem;
-  text-align: center; }
+/*# sourceMappingURL=style.css.map*/

@@ -1,0 +1,6 @@
+{
+  "name": "ReleasePreview",
+  "version": "0.0.0",
+  "main": "ReleasesPreview.jsx",
+  "license": "MIT"
+}

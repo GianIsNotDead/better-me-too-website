@@ -8,4 +8,4 @@ import App from './App';
 import './style/reset.css';
 import './style/style.scss';
 
-render(<App />, document.getElementById('app'));
+render(<App />, document.getElementById('wrapper'));

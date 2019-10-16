@@ -1,0 +1,34 @@
+@import "../../style/mixins";
+@import "../../style/variables";
+
+.bmt-footer {
+  @include container;
+}
+
+.bmt-footer .footer-nav {
+  margin-bottom: 20px;
+}
+
+.bmt-footer .nav-item {
+  margin-bottom: 10px;
+}
+
+.bmt-footer .nav-item:last-of-type {
+  margin-bottom: 0;
+}
+
+.bmt-footer .nav-item a {
+  font-size: $primary-text-size;
+  color: $primary-font-color;
+}
+
+.bmt-footer .social-btn {
+  width: 25px;
+  height: 25px;
+  margin-right: 25px;
+}
+
+.bmt-footer .social-btn img {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,74 @@
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+
+@import "./variables";
+
+@mixin vertical-center($position) {
+  position: $position;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin vertical-divider {
+  border-bottom: 1px solid #DBDBDB;
+}
+
+@mixin vertical-divider-double {
+  border-top: 1px solid #DBDBDB;
+  border-bottom: 1px solid #DBDBDB;
+}
+
+@mixin vertical-scroll-momentum {
+  overflow-y: scroll;
+  // Scroll momentum enabled on iphone
+  -webkit-overflow-scrolling: touch;
+}
+
+@mixin container {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: $vertical-gutter-large $horizontal-gutter;
+  background: $primary-background;
+}
+
+@mixin container-title-text {
+  margin-bottom: $vertical-gutter-medium;
+  font-size: $title-text-size;
+  font-weight: 600;
+  color: $primary-font-color;
+  letter-spacing: 1.2px;
+  text-shadow: 0 2px 2px rgba(124,158,212,0.42);
+}
+
+@mixin content-title-text {
+  margin-bottom: $vertical-gutter-extra-small;
+  font-size: $content-title-text-size;
+  font-weight: 600;
+  color: $primary-font-color;
+  letter-spacing: 0.93px;
+}
+
+@mixin content-text {
+  margin-bottom: $vertical-gutter-extra-small;
+  font-size: $primary-text-size;
+  line-height: 20px;
+  color: $primary-font-color;
+  letter-spacing: 0.93px;
+}
+
+@mixin content-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: $vertical-gutter-extra-small;
+}
+
+@mixin primary-button {
+  padding-bottom: 2px;
+  font-size: $primary-text-size;
+  color: $primary-font-color;
+  border-bottom: 2px solid #7C9ED4;
+}

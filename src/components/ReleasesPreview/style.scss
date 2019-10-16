@@ -1,0 +1,41 @@
+@import "../../style/mixins";
+@import "../../style/variables";
+
+.rp-container {
+  @include container;
+  @include vertical-divider;
+}
+
+.rp-container .rp-container-title {
+  @include container-title-text;
+}
+
+.rp-container .release-preview {
+  padding: $vertical-gutter-large $horizontal-gutter;
+  margin-bottom: $vertical-gutter-medium;
+  background: #FFFFFF;
+  box-shadow: 0 4px 6px 0 rgba(226,233,248,0.73);
+  border-radius: 10px;
+}
+
+.rp-container .release-preview-title {
+  @include content-title-text;
+}
+
+.rp-container .release-preview-brief, .rp-container .release-expand  {
+  @include content-text;
+}
+
+.rp-container .release-preview-image {
+  @include content-image;
+}
+
+.rp-container .release-expand {
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.rp-container .all-release-btn {
+  @include primary-button;
+}

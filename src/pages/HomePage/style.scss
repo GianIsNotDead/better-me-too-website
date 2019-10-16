@@ -1,0 +1,20 @@
+@import "../../style/mixins";
+@import "../../style/variables";
+
+.page-contaienr, .gradient-container {
+  position: relative;
+  width: 100%;
+}
+
+.page-container {
+  height: 100%;
+  @include vertical-scroll-momentum();
+}
+
+.page-container .gradient-container {
+  background: $banner-gradient;
+}
+
+.page-container .nav-mobile-active {
+  height: 100%;
+}
