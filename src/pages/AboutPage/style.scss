@@ -1,0 +1,30 @@
+@import "../../style/mixins";
+@import "../../style/variables";
+
+.page-contaienr, .btm-main {
+  position: relative;
+  width: 100%;
+}
+
+.page-container {
+  height: 100%;
+  @include vertical-scroll-momentum();
+  background: $primary-background;
+}
+
+.page-container .bmt-mission,
+.page-container .bmt-ethics,
+.page-container .bmt-disclaimer,
+.page-container .bmt-contributors,
+.page-container .bmt-faq {
+  @include container;
+  @include vertical-divider;
+}
+
+.page-container .bmt-main h3 {
+  @include container-title-text;
+}
+
+.page-container .bmt-mission p {
+  @include content-text;
+}

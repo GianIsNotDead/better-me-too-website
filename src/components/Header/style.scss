@@ -25,6 +25,12 @@
   color: #FFFFFF;
 }
 
+.bmt-header .logo-text-dark {
+  font-size: $logo-text-size;
+  font-weight: 600;
+  color: $primary-font-color;
+}
+
 // Hamburger Menu
 .bmt-header .burger-menu-button, .bmt-header .burger-menu {
   display: inline-block;

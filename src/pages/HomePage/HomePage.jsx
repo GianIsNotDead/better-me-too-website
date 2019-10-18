@@ -30,11 +30,11 @@ function HomePage({ showMobileMenu, toggleDisplay }) {
         <ConversationsPreview />
         <ResourcesPreview />
         <ThoughtsLetter />
-        <Footer />
         <div className="page-background">
           <img className="page-background-image" src={`./dist/${BackgroundHome}`} alt="geometric background overlay"/>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

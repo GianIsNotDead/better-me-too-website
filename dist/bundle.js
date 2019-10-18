@@ -24827,6 +24827,30 @@ var _HomePage = __webpack_require__(/*! ./pages/HomePage */ "./src/pages/HomePag
 
 var _HomePage2 = _interopRequireDefault(_HomePage);
 
+var _ReleasesPage = __webpack_require__(/*! ./pages/ReleasesPage */ "./src/pages/ReleasesPage/ReleasesPage.jsx");
+
+var _ReleasesPage2 = _interopRequireDefault(_ReleasesPage);
+
+var _ConversationsPage = __webpack_require__(/*! ./pages/ConversationsPage */ "./src/pages/ConversationsPage/ConversationsPage.jsx");
+
+var _ConversationsPage2 = _interopRequireDefault(_ConversationsPage);
+
+var _ResourcesPage = __webpack_require__(/*! ./pages/ResourcesPage */ "./src/pages/ResourcesPage/ResourcesPage.jsx");
+
+var _ResourcesPage2 = _interopRequireDefault(_ResourcesPage);
+
+var _AboutPage = __webpack_require__(/*! ./pages/AboutPage */ "./src/pages/AboutPage/AboutPage.jsx");
+
+var _AboutPage2 = _interopRequireDefault(_AboutPage);
+
+var _ContactPage = __webpack_require__(/*! ./pages/ContactPage */ "./src/pages/ContactPage/ContactPage.jsx");
+
+var _ContactPage2 = _interopRequireDefault(_ContactPage);
+
+var _SuggestionsPage = __webpack_require__(/*! ./pages/SuggestionsPage */ "./src/pages/SuggestionsPage/SuggestionsPage.jsx");
+
+var _SuggestionsPage2 = _interopRequireDefault(_SuggestionsPage);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -24871,10 +24895,36 @@ var App = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      return _react2.default.createElement(_HomePage2.default, {
-        showMobileMenu: this.state.showMobileMenu,
-        toggleDisplay: this.toggleDisplay
-      });
+      return (
+        // <HomePage
+        //   showMobileMenu={this.state.showMobileMenu}
+        //   toggleDisplay={this.toggleDisplay}
+        // />
+        // <ReleasesPage
+        //   showMobileMenu={this.state.showMobileMenu}
+        //   toggleDisplay={this.toggleDisplay}
+        // />
+        // <ConversationsPage
+        //   showMobileMenu={this.state.showMobileMenu}
+        //   toggleDisplay={this.toggleDisplay}
+        // />
+        // <ResourcesPage
+        //   showMobileMenu={this.state.showMobileMenu}
+        //   toggleDisplay={this.toggleDisplay}
+        // />
+        // <AboutPage
+        //   showMobileMenu={this.state.showMobileMenu}
+        //   toggleDisplay={this.toggleDisplay}
+        // />
+        // <ContactPage
+        //   showMobileMenu={this.state.showMobileMenu}
+        //   toggleDisplay={this.toggleDisplay}
+        // />
+        _react2.default.createElement(_SuggestionsPage2.default, {
+          showMobileMenu: this.state.showMobileMenu,
+          toggleDisplay: this.toggleDisplay
+        })
+      );
     }
   }]);
 
@@ -24893,6 +24943,17 @@ exports.default = App;
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "../img/background_home.svg";
+
+/***/ }),
+
+/***/ "./src/assets/contributor_gian.png":
+/*!*****************************************!*\
+  !*** ./src/assets/contributor_gian.png ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "../img/contributor_gian.png";
 
 /***/ }),
 
@@ -24937,6 +24998,17 @@ module.exports = __webpack_require__.p + "../img/icon_github.svg";
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "../img/icon_hamburger.svg";
+
+/***/ }),
+
+/***/ "./src/assets/icon_hamburger_dark.svg":
+/*!********************************************!*\
+  !*** ./src/assets/icon_hamburger_dark.svg ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "../img/icon_hamburger_dark.svg";
 
 /***/ }),
 
@@ -25077,6 +25149,101 @@ exports.default = Banner;
 /*!******************************************!*\
   !*** ./src/components/Banner/style.scss ***!
   \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./src/components/Contributor/Contributor.jsx":
+/*!****************************************************!*\
+  !*** ./src/components/Contributor/Contributor.jsx ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(/*! ./style.scss */ "./src/components/Contributor/style.scss");
+
+var _contributor_gian = __webpack_require__(/*! ../../assets/contributor_gian.png */ "./src/assets/contributor_gian.png");
+
+var _contributor_gian2 = _interopRequireDefault(_contributor_gian);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// style
+function Contributor() {
+  return _react2.default.createElement(
+    'article',
+    { className: 'bmt-contributor' },
+    _react2.default.createElement(
+      'div',
+      { className: 'bmt-contributor-image-container' },
+      _react2.default.createElement('img', { className: 'bmt-contributor-image', src: './dist/' + _contributor_gian2.default, alt: 'computer illustrated profile image' })
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'bmt-contributor-text-container' },
+      _react2.default.createElement(
+        'div',
+        { className: 'bmt-contributor-name-social' },
+        _react2.default.createElement(
+          'div',
+          { className: 'bmt-contributor-name-container' },
+          _react2.default.createElement(
+            'p',
+            { className: 'bmt-contributor-name' },
+            'Gian'
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'bmt-contributor-social-container' },
+          _react2.default.createElement(
+            'a',
+            { className: 'bmt-contributor-social', href: '' },
+            'Twitter'
+          ),
+          _react2.default.createElement(
+            'a',
+            { className: 'bmt-contributor-social', href: '' },
+            'Instagram'
+          )
+        )
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'bmt-contributor-role-container' },
+        _react2.default.createElement(
+          'p',
+          { className: 'bmt-contributor-role' },
+          'Software, Hardware, Design'
+        )
+      )
+    )
+  );
+}
+
+// assets
+exports.default = Contributor;
+
+/***/ }),
+
+/***/ "./src/components/Contributor/style.scss":
+/*!***********************************************!*\
+  !*** ./src/components/Contributor/style.scss ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -25363,6 +25530,10 @@ var _icon_hamburger = __webpack_require__(/*! ../../assets/icon_hamburger.svg */
 
 var _icon_hamburger2 = _interopRequireDefault(_icon_hamburger);
 
+var _icon_hamburger_dark = __webpack_require__(/*! ../../assets/icon_hamburger_dark.svg */ "./src/assets/icon_hamburger_dark.svg");
+
+var _icon_hamburger_dark2 = _interopRequireDefault(_icon_hamburger_dark);
+
 var _icon_close = __webpack_require__(/*! ../../assets/icon_close.svg */ "./src/assets/icon_close.svg");
 
 var _icon_close2 = _interopRequireDefault(_icon_close);
@@ -25404,8 +25575,11 @@ var Header = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var showMobileMenu = this.props.showMobileMenu;
+      var _props = this.props,
+          theme = _props.theme,
+          showMobileMenu = _props.showMobileMenu;
 
+      var HamburgerIcon = theme === 'dark' ? _icon_hamburger_dark2.default : _icon_hamburger2.default;
       return _react2.default.createElement(
         'header',
         { className: 'bmt-header ' + (showMobileMenu === true ? 'nav-mobile-active' : '') },
@@ -25414,13 +25588,13 @@ var Header = function (_Component) {
           { className: 'header-items-container' },
           _react2.default.createElement(
             'h1',
-            { className: 'logo-text' },
+            { className: '' + (theme === 'dark' ? 'logo-text-dark' : 'logo-text') },
             'Better Me Too'
           ),
           _react2.default.createElement(
             'button',
             { className: 'burger-menu-button', name: 'showMobileMenu', onClick: this._toggleMobileMenu },
-            _react2.default.createElement('img', { className: 'burger-menu', src: './dist/' + (showMobileMenu === true ? _icon_close2.default : _icon_hamburger2.default), alt: 'hamburger menu' })
+            _react2.default.createElement('img', { className: 'burger-menu', src: './dist/' + (showMobileMenu === true ? _icon_close2.default : HamburgerIcon), alt: 'hamburger menu' })
           )
         ),
         _react2.default.createElement(
@@ -25770,6 +25944,326 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /***/ }),
 
+/***/ "./src/pages/AboutPage/AboutPage.jsx":
+/*!*******************************************!*\
+  !*** ./src/pages/AboutPage/AboutPage.jsx ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(/*! ./style.scss */ "./src/pages/AboutPage/style.scss");
+
+var _Header = __webpack_require__(/*! ../../components/Header */ "./src/components/Header/Header.jsx");
+
+var _Header2 = _interopRequireDefault(_Header);
+
+var _Contributor = __webpack_require__(/*! ../../components/Contributor */ "./src/components/Contributor/Contributor.jsx");
+
+var _Contributor2 = _interopRequireDefault(_Contributor);
+
+var _ThoughtsLetter = __webpack_require__(/*! ../../components/ThoughtsLetter */ "./src/components/ThoughtsLetter/ThoughtsLetter.jsx");
+
+var _ThoughtsLetter2 = _interopRequireDefault(_ThoughtsLetter);
+
+var _Footer = __webpack_require__(/*! ../../components/Footer */ "./src/components/Footer/Footer.jsx");
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// components
+function AboutPage(_ref) {
+  var showMobileMenu = _ref.showMobileMenu,
+      toggleDisplay = _ref.toggleDisplay;
+
+  return _react2.default.createElement(
+    'div',
+    { className: 'page-container' },
+    _react2.default.createElement(_Header2.default, {
+      theme: 'dark',
+      showMobileMenu: showMobileMenu,
+      toggleDisplay: toggleDisplay
+    }),
+    _react2.default.createElement(
+      'main',
+      { className: 'bmt-main' },
+      _react2.default.createElement(
+        'section',
+        { className: 'bmt-mission' },
+        _react2.default.createElement(
+          'h3',
+          { className: 'bmt-mission-title' },
+          'Mission'
+        ),
+        _react2.default.createElement(
+          'p',
+          { className: 'bmt-mission-text' },
+          'We hope to accelerate the understanding of the brain by delivering intriguing, undiluted builds, contents, and resources to everyone, so they have the tools to ask questions, conduct experiments and make positive progress in healthcare. '
+        )
+      ),
+      _react2.default.createElement(
+        'section',
+        { className: 'bmt-ethics' },
+        _react2.default.createElement(
+          'h3',
+          { className: 'bmt-ethics-title' },
+          'Ethics'
+        ),
+        _react2.default.createElement('p', { className: 'bmt-ethics-text' })
+      ),
+      _react2.default.createElement(
+        'section',
+        { className: 'bmt-disclaimer' },
+        _react2.default.createElement(
+          'h3',
+          { className: 'bmt-disclaimer-title' },
+          'Disclaimer'
+        ),
+        _react2.default.createElement(
+          'p',
+          { className: 'bmt-disclaimer-text' },
+          'Science and engineering are not always straight forward, so please enjoy it with a healthy dose of skepticism.'
+        ),
+        _react2.default.createElement(
+          'p',
+          { className: 'bmt-disclaimer-text' },
+          'The materials published on this platform are not intended for medical advice, diagnosis nor treatment. Please always consult healthcare professionals for any medical conditions. We try our best to thoroughly validate the published materials. However, we make no warranties, expressed or implied, regarding errors or omissions and assumes no legal liability or responsibility for loss or damage resulting from the use of the information contained within. '
+        )
+      ),
+      _react2.default.createElement(
+        'section',
+        { className: 'bmt-contributors' },
+        _react2.default.createElement(
+          'h3',
+          { className: 'bmt-contributors-title' },
+          'Contributors'
+        ),
+        _react2.default.createElement(_Contributor2.default, null)
+      ),
+      _react2.default.createElement(
+        'section',
+        { className: 'bmt-faq' },
+        _react2.default.createElement(
+          'h3',
+          { className: 'bmt-faq-title' },
+          'FAQ'
+        ),
+        _react2.default.createElement(
+          'article',
+          { className: 'bmt-faq-container' },
+          _react2.default.createElement(
+            'p',
+            { className: 'bmt-faq-question' },
+            'What the fact is this?'
+          ),
+          _react2.default.createElement(
+            'p',
+            { className: 'bmt-faq-answer' },
+            'We are professionals and hobbyists on a journey to learn more about the brain. We see no reason to keep it all to ourselves, so we talk about them on this platform, hoping that the contents have some value to others.'
+          )
+        )
+      ),
+      _react2.default.createElement(_ThoughtsLetter2.default, null)
+    ),
+    _react2.default.createElement(_Footer2.default, null)
+  );
+}
+
+// style
+exports.default = AboutPage;
+
+/***/ }),
+
+/***/ "./src/pages/AboutPage/style.scss":
+/*!****************************************!*\
+  !*** ./src/pages/AboutPage/style.scss ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./src/pages/ContactPage/ContactPage.jsx":
+/*!***********************************************!*\
+  !*** ./src/pages/ContactPage/ContactPage.jsx ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(/*! ./style.scss */ "./src/pages/ContactPage/style.scss");
+
+var _Header = __webpack_require__(/*! ../../components/Header */ "./src/components/Header/Header.jsx");
+
+var _Header2 = _interopRequireDefault(_Header);
+
+var _ThoughtsLetter = __webpack_require__(/*! ../../components/ThoughtsLetter */ "./src/components/ThoughtsLetter/ThoughtsLetter.jsx");
+
+var _ThoughtsLetter2 = _interopRequireDefault(_ThoughtsLetter);
+
+var _Footer = __webpack_require__(/*! ../../components/Footer */ "./src/components/Footer/Footer.jsx");
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// style
+function ContactPage(_ref) {
+  var showMobileMenu = _ref.showMobileMenu,
+      toggleDisplay = _ref.toggleDisplay;
+
+  return _react2.default.createElement(
+    'div',
+    { className: 'page-container' },
+    _react2.default.createElement(_Header2.default, {
+      theme: 'dark',
+      showMobileMenu: showMobileMenu,
+      toggleDisplay: toggleDisplay
+    }),
+    _react2.default.createElement(
+      'main',
+      { className: 'bmt-main' },
+      _react2.default.createElement(
+        'section',
+        { className: 'bmt-contact-container' },
+        _react2.default.createElement(
+          'h3',
+          { className: 'bmt-contact-title' },
+          'Let\'s Be Friends'
+        ),
+        _react2.default.createElement(
+          'p',
+          { className: 'bmt-contact-text' },
+          'We like yoga, coffee, nature, and the brain. '
+        ),
+        _react2.default.createElement(
+          'p',
+          { className: 'bmt-contact-text' },
+          'gian@bettermetoo.com'
+        )
+      ),
+      _react2.default.createElement(_ThoughtsLetter2.default, null)
+    ),
+    _react2.default.createElement(_Footer2.default, null)
+  );
+}
+
+// components
+exports.default = ContactPage;
+
+/***/ }),
+
+/***/ "./src/pages/ContactPage/style.scss":
+/*!******************************************!*\
+  !*** ./src/pages/ContactPage/style.scss ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./src/pages/ConversationsPage/ConversationsPage.jsx":
+/*!***********************************************************!*\
+  !*** ./src/pages/ConversationsPage/ConversationsPage.jsx ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(/*! ./style.scss */ "./src/pages/ConversationsPage/style.scss");
+
+var _Header = __webpack_require__(/*! ../../components/Header */ "./src/components/Header/Header.jsx");
+
+var _Header2 = _interopRequireDefault(_Header);
+
+var _ConversationsPreview = __webpack_require__(/*! ../../components/ConversationsPreview */ "./src/components/ConversationsPreview/ConversationsPreview.jsx");
+
+var _ConversationsPreview2 = _interopRequireDefault(_ConversationsPreview);
+
+var _ThoughtsLetter = __webpack_require__(/*! ../../components/ThoughtsLetter */ "./src/components/ThoughtsLetter/ThoughtsLetter.jsx");
+
+var _ThoughtsLetter2 = _interopRequireDefault(_ThoughtsLetter);
+
+var _Footer = __webpack_require__(/*! ../../components/Footer */ "./src/components/Footer/Footer.jsx");
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// components
+function ConversationsPage(_ref) {
+  var showMobileMenu = _ref.showMobileMenu,
+      toggleDisplay = _ref.toggleDisplay;
+
+  return _react2.default.createElement(
+    'div',
+    { className: 'page-container' },
+    _react2.default.createElement(_Header2.default, {
+      theme: 'dark',
+      showMobileMenu: showMobileMenu,
+      toggleDisplay: toggleDisplay
+    }),
+    _react2.default.createElement(
+      'main',
+      { className: 'bmt-main' },
+      _react2.default.createElement(_ConversationsPreview2.default, null),
+      _react2.default.createElement(_ThoughtsLetter2.default, null)
+    ),
+    _react2.default.createElement(_Footer2.default, null)
+  );
+}
+
+// style
+exports.default = ConversationsPage;
+
+/***/ }),
+
+/***/ "./src/pages/ConversationsPage/style.scss":
+/*!************************************************!*\
+  !*** ./src/pages/ConversationsPage/style.scss ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./src/pages/HomePage/HomePage.jsx":
 /*!*****************************************!*\
   !*** ./src/pages/HomePage/HomePage.jsx ***!
@@ -25848,13 +26342,13 @@ function HomePage(_ref) {
       _react2.default.createElement(_ConversationsPreview2.default, null),
       _react2.default.createElement(_ResourcesPreview2.default, null),
       _react2.default.createElement(_ThoughtsLetter2.default, null),
-      _react2.default.createElement(_Footer2.default, null),
       _react2.default.createElement(
         'div',
         { className: 'page-background' },
         _react2.default.createElement('img', { className: 'page-background-image', src: './dist/' + _background_home2.default, alt: 'geometric background overlay' })
       )
-    )
+    ),
+    _react2.default.createElement(_Footer2.default, null)
   );
 }
 
@@ -25870,6 +26364,245 @@ exports.default = HomePage;
 /*!***************************************!*\
   !*** ./src/pages/HomePage/style.scss ***!
   \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./src/pages/ReleasesPage/ReleasesPage.jsx":
+/*!*************************************************!*\
+  !*** ./src/pages/ReleasesPage/ReleasesPage.jsx ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(/*! ./style.scss */ "./src/pages/ReleasesPage/style.scss");
+
+var _Header = __webpack_require__(/*! ../../components/Header */ "./src/components/Header/Header.jsx");
+
+var _Header2 = _interopRequireDefault(_Header);
+
+var _ReleasesPreview = __webpack_require__(/*! ../../components/ReleasesPreview */ "./src/components/ReleasesPreview/ReleasesPreview.jsx");
+
+var _ReleasesPreview2 = _interopRequireDefault(_ReleasesPreview);
+
+var _ThoughtsLetter = __webpack_require__(/*! ../../components/ThoughtsLetter */ "./src/components/ThoughtsLetter/ThoughtsLetter.jsx");
+
+var _ThoughtsLetter2 = _interopRequireDefault(_ThoughtsLetter);
+
+var _Footer = __webpack_require__(/*! ../../components/Footer */ "./src/components/Footer/Footer.jsx");
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// components
+function ReleasesPage(_ref) {
+  var showMobileMenu = _ref.showMobileMenu,
+      toggleDisplay = _ref.toggleDisplay;
+
+  return _react2.default.createElement(
+    'div',
+    { className: 'page-container' },
+    _react2.default.createElement(_Header2.default, {
+      theme: 'dark',
+      showMobileMenu: showMobileMenu,
+      toggleDisplay: toggleDisplay
+    }),
+    _react2.default.createElement(
+      'main',
+      { className: 'bmt-main' },
+      _react2.default.createElement(
+        'section',
+        { className: 'bmt-releases' },
+        _react2.default.createElement(_ReleasesPreview2.default, null)
+      ),
+      _react2.default.createElement(_ThoughtsLetter2.default, null)
+    ),
+    _react2.default.createElement(_Footer2.default, null)
+  );
+}
+
+// style
+exports.default = ReleasesPage;
+
+/***/ }),
+
+/***/ "./src/pages/ReleasesPage/style.scss":
+/*!*******************************************!*\
+  !*** ./src/pages/ReleasesPage/style.scss ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./src/pages/ResourcesPage/ResourcesPage.jsx":
+/*!***************************************************!*\
+  !*** ./src/pages/ResourcesPage/ResourcesPage.jsx ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(/*! ./style.scss */ "./src/pages/ResourcesPage/style.scss");
+
+var _Header = __webpack_require__(/*! ../../components/Header */ "./src/components/Header/Header.jsx");
+
+var _Header2 = _interopRequireDefault(_Header);
+
+var _ResourcesPreview = __webpack_require__(/*! ../../components/ResourcesPreview */ "./src/components/ResourcesPreview/ResourcesPreview.jsx");
+
+var _ResourcesPreview2 = _interopRequireDefault(_ResourcesPreview);
+
+var _ThoughtsLetter = __webpack_require__(/*! ../../components/ThoughtsLetter */ "./src/components/ThoughtsLetter/ThoughtsLetter.jsx");
+
+var _ThoughtsLetter2 = _interopRequireDefault(_ThoughtsLetter);
+
+var _Footer = __webpack_require__(/*! ../../components/Footer */ "./src/components/Footer/Footer.jsx");
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// component
+function ResourcesPage(_ref) {
+  var showMobileMenu = _ref.showMobileMenu,
+      toggleDisplay = _ref.toggleDisplay;
+
+  return _react2.default.createElement(
+    'div',
+    { className: 'page-container' },
+    _react2.default.createElement(_Header2.default, {
+      theme: 'dark',
+      showMobileMenu: showMobileMenu,
+      toggleDisplay: toggleDisplay
+    }),
+    _react2.default.createElement(
+      'main',
+      { className: 'bmt-main' },
+      _react2.default.createElement(_ResourcesPreview2.default, null),
+      _react2.default.createElement(_ThoughtsLetter2.default, null)
+    ),
+    _react2.default.createElement(_Footer2.default, null)
+  );
+}
+
+// style
+exports.default = ResourcesPage;
+
+/***/ }),
+
+/***/ "./src/pages/ResourcesPage/style.scss":
+/*!********************************************!*\
+  !*** ./src/pages/ResourcesPage/style.scss ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./src/pages/SuggestionsPage/SuggestionsPage.jsx":
+/*!*******************************************************!*\
+  !*** ./src/pages/SuggestionsPage/SuggestionsPage.jsx ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(/*! ./style.scss */ "./src/pages/SuggestionsPage/style.scss");
+
+var _Header = __webpack_require__(/*! ../../components/Header */ "./src/components/Header/Header.jsx");
+
+var _Header2 = _interopRequireDefault(_Header);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// style
+function SuggestionsPage(_ref) {
+  var showMobileMenu = _ref.showMobileMenu,
+      toggleDisplay = _ref.toggleDisplay;
+
+  return _react2.default.createElement(
+    'div',
+    { className: 'page-container' },
+    _react2.default.createElement(_Header2.default, {
+      theme: 'dark',
+      showMobileMenu: showMobileMenu,
+      toggleDisplay: toggleDisplay
+    }),
+    _react2.default.createElement(
+      'main',
+      { className: 'bmt-main' },
+      _react2.default.createElement(
+        'section',
+        { className: 'bmt-suggestions-container' },
+        _react2.default.createElement(
+          'h3',
+          { className: 'bmt-suggestions-title' },
+          'Recommend Builds and Articles'
+        ),
+        _react2.default.createElement(
+          'p',
+          { className: 'bmt-suggestions-text' },
+          'Nothing is too small or too big for us to investigate. Don\u2019t be shy, reach out to us, be part of our research and build process. '
+        ),
+        _react2.default.createElement(
+          'p',
+          { className: 'bmt-suggestions-text' },
+          'gian@bettermetoo.com'
+        )
+      )
+    )
+  );
+}
+
+// components
+exports.default = SuggestionsPage;
+
+/***/ }),
+
+/***/ "./src/pages/SuggestionsPage/style.scss":
+/*!**********************************************!*\
+  !*** ./src/pages/SuggestionsPage/style.scss ***!
+  \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 

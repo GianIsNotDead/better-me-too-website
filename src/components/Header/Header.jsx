@@ -5,6 +5,7 @@ import './style.scss';
 
 // assets
 import Hamburger from '../../assets/icon_hamburger.svg';
+import HamburgerDark from '../../assets/icon_hamburger_dark.svg';
 import Close from '../../assets/icon_close.svg';
 
 class Header extends Component {
@@ -20,13 +21,14 @@ class Header extends Component {
   }
 
   render() {
-    const { showMobileMenu } = this.props;
+    const { theme, showMobileMenu } = this.props;
+    const HamburgerIcon = theme === 'dark' ? HamburgerDark : Hamburger;
     return (
       <header className={`bmt-header ${showMobileMenu === true ? 'nav-mobile-active' : ''}`}>
         <div className="header-items-container">
-          <h1 className="logo-text">Better Me Too</h1>
+          <h1 className={`${theme === 'dark' ? 'logo-text-dark' : 'logo-text'}`}>Better Me Too</h1>
           <button className="burger-menu-button" name="showMobileMenu" onClick={this._toggleMobileMenu}>
-            <img className="burger-menu" src={`./dist/${showMobileMenu === true ? Close : Hamburger}`} alt="hamburger menu" />
+            <img className="burger-menu" src={`./dist/${showMobileMenu === true ? Close : HamburgerIcon}`} alt="hamburger menu" />
           </button>
         </div>
         <nav className={`header-nav ${showMobileMenu === true ? 'nav-mobile nav-mobile-active' : ''}`}>
