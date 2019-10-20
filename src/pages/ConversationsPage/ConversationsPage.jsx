@@ -5,7 +5,7 @@ import './style.scss';
 
 // components
 import Header from '../../components/Header';
-import ConversationsPreview from '../../components/ConversationsPreview';
+import Conversations from '../../components/Conversations';
 import ThoughtsLetter from '../../components/ThoughtsLetter';
 import Footer from '../../components/Footer';
 

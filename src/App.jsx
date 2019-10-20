@@ -15,25 +15,31 @@ class App extends Component {
     this.state= {
       // Header
       showMobileMenu: false,
+      route: null,
     };
     this.toggleDisplay = this.toggleDisplay.bind(this);
   }
 
   // UI render section
   /**
-   * @param {string} item refers to a key in the state. i.e 'showMobileMenu', usually elements trigger event will have a name attribute, and it correlates to items in state. i.e <button name="showMobileMenu">
+   * @param {string} item
    */
   toggleDisplay(item) {
     const display = this.state[item] === true ? false : true;
     return this.setState({ [item]: display });
   }
+  // life cycle
+  componentDidMount() {
+    console.log(window.location);
+    // this.setState({ route: window.location.href });
+  }
 
   render() {
     return (
-      // <HomePage
-      //   showMobileMenu={this.state.showMobileMenu}
-      //   toggleDisplay={this.toggleDisplay}
-      // />
+      <HomePage
+        showMobileMenu={this.state.showMobileMenu}
+        toggleDisplay={this.toggleDisplay}
+      />
       // <ReleasesPage
       //   showMobileMenu={this.state.showMobileMenu}
       //   toggleDisplay={this.toggleDisplay}
@@ -54,10 +60,11 @@ class App extends Component {
       //   showMobileMenu={this.state.showMobileMenu}
       //   toggleDisplay={this.toggleDisplay}
       // />
-      <SuggestionsPage
-        showMobileMenu={this.state.showMobileMenu}
-        toggleDisplay={this.toggleDisplay}
-      />
+      // <SuggestionsPage
+      //   route={this.state.route}
+      //   showMobileMenu={this.state.showMobileMenu}
+      //   toggleDisplay={this.toggleDisplay}
+      // />
     );
   }
 }

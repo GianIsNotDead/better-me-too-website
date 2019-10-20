@@ -5,7 +5,7 @@ import './style.scss';
 
 // components
 import Header from '../../components/Header';
-import ReleasesPreview from '../../components/ReleasesPreview';
+import Releases from '../../components/Releases';
 import ThoughtsLetter from '../../components/ThoughtsLetter';
 import Footer from '../../components/Footer';
 
@@ -18,9 +18,7 @@ function ReleasesPage({ showMobileMenu, toggleDisplay }) {
         toggleDisplay={toggleDisplay}
       />
       <main className="bmt-main">
-        <section className="bmt-releases">
-          <ReleasesPreview />
-        </section>
+        <Releases />
         <ThoughtsLetter />
       </main>
       <Footer />

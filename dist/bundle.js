@@ -24874,7 +24874,8 @@ var App = function (_Component) {
 
     _this.state = {
       // Header
-      showMobileMenu: false
+      showMobileMenu: false,
+      route: null
     };
     _this.toggleDisplay = _this.toggleDisplay.bind(_this);
     return _this;
@@ -24882,7 +24883,7 @@ var App = function (_Component) {
 
   // UI render section
   /**
-   * @param {string} item refers to a key in the state. i.e 'showMobileMenu', usually elements trigger event will have a name attribute, and it correlates to items in state. i.e <button name="showMobileMenu">
+   * @param {string} item
    */
 
 
@@ -24892,39 +24893,47 @@ var App = function (_Component) {
       var display = this.state[item] === true ? false : true;
       return this.setState(_defineProperty({}, item, display));
     }
+    // life cycle
+
+  }, {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      console.log(window.location);
+      // this.setState({ route: window.location.href });
+    }
   }, {
     key: 'render',
     value: function render() {
-      return (
-        // <HomePage
-        //   showMobileMenu={this.state.showMobileMenu}
-        //   toggleDisplay={this.toggleDisplay}
-        // />
-        // <ReleasesPage
-        //   showMobileMenu={this.state.showMobileMenu}
-        //   toggleDisplay={this.toggleDisplay}
-        // />
-        // <ConversationsPage
-        //   showMobileMenu={this.state.showMobileMenu}
-        //   toggleDisplay={this.toggleDisplay}
-        // />
-        // <ResourcesPage
-        //   showMobileMenu={this.state.showMobileMenu}
-        //   toggleDisplay={this.toggleDisplay}
-        // />
-        // <AboutPage
-        //   showMobileMenu={this.state.showMobileMenu}
-        //   toggleDisplay={this.toggleDisplay}
-        // />
-        // <ContactPage
-        //   showMobileMenu={this.state.showMobileMenu}
-        //   toggleDisplay={this.toggleDisplay}
-        // />
-        _react2.default.createElement(_SuggestionsPage2.default, {
-          showMobileMenu: this.state.showMobileMenu,
-          toggleDisplay: this.toggleDisplay
-        })
-      );
+      return _react2.default.createElement(_HomePage2.default, {
+        showMobileMenu: this.state.showMobileMenu,
+        toggleDisplay: this.toggleDisplay
+      })
+      // <ReleasesPage
+      //   showMobileMenu={this.state.showMobileMenu}
+      //   toggleDisplay={this.toggleDisplay}
+      // />
+      // <ConversationsPage
+      //   showMobileMenu={this.state.showMobileMenu}
+      //   toggleDisplay={this.toggleDisplay}
+      // />
+      // <ResourcesPage
+      //   showMobileMenu={this.state.showMobileMenu}
+      //   toggleDisplay={this.toggleDisplay}
+      // />
+      // <AboutPage
+      //   showMobileMenu={this.state.showMobileMenu}
+      //   toggleDisplay={this.toggleDisplay}
+      // />
+      // <ContactPage
+      //   showMobileMenu={this.state.showMobileMenu}
+      //   toggleDisplay={this.toggleDisplay}
+      // />
+      // <SuggestionsPage
+      //   route={this.state.route}
+      //   showMobileMenu={this.state.showMobileMenu}
+      //   toggleDisplay={this.toggleDisplay}
+      // />
+      ;
     }
   }]);
 
@@ -24942,7 +24951,7 @@ exports.default = App;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "../img/background_home.svg";
+module.exports = __webpack_require__.p + "./img/background_home.svg";
 
 /***/ }),
 
@@ -24953,7 +24962,7 @@ module.exports = __webpack_require__.p + "../img/background_home.svg";
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "../img/contributor_gian.png";
+module.exports = __webpack_require__.p + "./img/contributor_gian.png";
 
 /***/ }),
 
@@ -24964,18 +24973,7 @@ module.exports = __webpack_require__.p + "../img/contributor_gian.png";
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "../img/icon_close.svg";
-
-/***/ }),
-
-/***/ "./src/assets/icon_convo_expand.svg":
-/*!******************************************!*\
-  !*** ./src/assets/icon_convo_expand.svg ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "../img/icon_convo_expand.svg";
+module.exports = __webpack_require__.p + "./img/icon_close.svg";
 
 /***/ }),
 
@@ -24986,7 +24984,7 @@ module.exports = __webpack_require__.p + "../img/icon_convo_expand.svg";
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "../img/icon_github.svg";
+module.exports = __webpack_require__.p + "./img/icon_github.svg";
 
 /***/ }),
 
@@ -24997,7 +24995,7 @@ module.exports = __webpack_require__.p + "../img/icon_github.svg";
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "../img/icon_hamburger.svg";
+module.exports = __webpack_require__.p + "./img/icon_hamburger.svg";
 
 /***/ }),
 
@@ -25008,7 +25006,7 @@ module.exports = __webpack_require__.p + "../img/icon_hamburger.svg";
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "../img/icon_hamburger_dark.svg";
+module.exports = __webpack_require__.p + "./img/icon_hamburger_dark.svg";
 
 /***/ }),
 
@@ -25019,7 +25017,7 @@ module.exports = __webpack_require__.p + "../img/icon_hamburger_dark.svg";
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "../img/icon_instagram.svg";
+module.exports = __webpack_require__.p + "./img/icon_instagram.svg";
 
 /***/ }),
 
@@ -25030,7 +25028,7 @@ module.exports = __webpack_require__.p + "../img/icon_instagram.svg";
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "../img/icon_twitter.svg";
+module.exports = __webpack_require__.p + "./img/icon_twitter.svg";
 
 /***/ }),
 
@@ -25041,7 +25039,7 @@ module.exports = __webpack_require__.p + "../img/icon_twitter.svg";
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "../img/icon_youtube.svg";
+module.exports = __webpack_require__.p + "./img/icon_youtube.svg";
 
 /***/ }),
 
@@ -25052,7 +25050,7 @@ module.exports = __webpack_require__.p + "../img/icon_youtube.svg";
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "../img/release_placeholder.png";
+module.exports = __webpack_require__.p + "./img/release_placeholder.png";
 
 /***/ }),
 
@@ -25063,7 +25061,7 @@ module.exports = __webpack_require__.p + "../img/release_placeholder.png";
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "../img/resource_incognito.jpg";
+module.exports = __webpack_require__.p + "./img/resource_incognito.jpg";
 
 /***/ }),
 
@@ -25251,10 +25249,10 @@ exports.default = Contributor;
 
 /***/ }),
 
-/***/ "./src/components/ConversationsPreview/ConversationsPreview.jsx":
-/*!**********************************************************************!*\
-  !*** ./src/components/ConversationsPreview/ConversationsPreview.jsx ***!
-  \**********************************************************************/
+/***/ "./src/components/Conversations/Conversations.jsx":
+/*!********************************************************!*\
+  !*** ./src/components/Conversations/Conversations.jsx ***!
+  \********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -25269,87 +25267,89 @@ var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(/*! ./style.scss */ "./src/components/ConversationsPreview/style.scss");
-
-var _icon_convo_expand = __webpack_require__(/*! ../../assets/icon_convo_expand.svg */ "./src/assets/icon_convo_expand.svg");
-
-var _icon_convo_expand2 = _interopRequireDefault(_icon_convo_expand);
+__webpack_require__(/*! ./style.scss */ "./src/components/Conversations/style.scss");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// style
 function ConversationsPreview() {
   return _react2.default.createElement(
-    'section',
-    { className: 'cp-container' },
+    'article',
+    { className: 'conversation-preview' },
     _react2.default.createElement(
-      'h3',
-      { className: 'cp-container-title' },
-      'Conversations'
-    ),
-    _react2.default.createElement(
-      'p',
-      { className: 'cp-container-text' },
-      'We find interesting concepts, research, and experiments, deliver them in an undiluted yet digestible way.'
-    ),
-    _react2.default.createElement(
-      'article',
-      { className: 'conversation-preview' },
+      'div',
+      { className: 'conversation-title-container' },
       _react2.default.createElement(
         'div',
-        { className: 'conversation-title-container' },
+        { className: 'conversation-date-container' },
         _react2.default.createElement(
           'div',
-          { className: 'conversation-date-container' },
+          { className: 'conversation-date-center' },
           _react2.default.createElement(
-            'div',
-            { className: 'conversation-date' },
-            _react2.default.createElement(
-              'p',
-              { className: 'conversation-month' },
-              '09/28'
-            ),
-            _react2.default.createElement(
-              'p',
-              { className: 'conversation-year' },
-              '2019'
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'conversation-title' },
+            'p',
+            { className: 'conversation-month' },
+            '09/28'
+          ),
           _react2.default.createElement(
-            'div',
-            { className: 'conversation-title-text-container' },
-            _react2.default.createElement(
-              'h4',
-              { className: 'conversation-title-text' },
-              'Memory Inheritance'
-            ),
-            _react2.default.createElement(
-              'p',
-              { className: 'conversation-metadata' },
-              '#epigenetics #methylation'
-            )
+            'p',
+            { className: 'conversation-year' },
+            '2019'
           )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'conversation-expand' },
-          _react2.default.createElement('img', { className: 'conversation-expand-icon', src: './dist/' + _icon_convo_expand2.default, alt: 'expand article' })
         )
       ),
       _react2.default.createElement(
         'div',
-        { className: 'conversation-preview-text-container' },
+        { className: 'conversation-title' },
         _react2.default.createElement(
-          'p',
-          { className: 'conversation-preview-text' },
-          'In this article, we explore a non-traditional memory pathway. How memory is passed down from generation to generation.'
+          'div',
+          { className: 'conversation-title-center' },
+          _react2.default.createElement(
+            'h4',
+            { className: 'conversation-title-text' },
+            'Memory Inheritance'
+          ),
+          _react2.default.createElement(
+            'p',
+            { className: 'conversation-metadata' },
+            '#epigenetics #methylation'
+          )
         )
       )
     ),
+    _react2.default.createElement(
+      'div',
+      { className: 'conversation-text-container' },
+      _react2.default.createElement(
+        'p',
+        { className: 'conversation-text' },
+        'In this article, we explore a non-traditional memory pathway. How memory is passed down from generation to generation.'
+      ),
+      _react2.default.createElement(
+        'button',
+        { className: 'conversation-full-btn' },
+        'See Full Article'
+      )
+    )
+  );
+}
+
+// style
+
+
+function Conversations() {
+  return _react2.default.createElement(
+    'section',
+    { className: 'bmt-conversations' },
+    _react2.default.createElement(
+      'h3',
+      { className: 'bmt-conversations-title' },
+      'Conversations'
+    ),
+    _react2.default.createElement(
+      'p',
+      { className: 'bmt-conversations-description' },
+      'We find interesting concepts, research, and experiments, deliver them in an undiluted yet digestible way.'
+    ),
+    _react2.default.createElement(ConversationsPreview, null),
     _react2.default.createElement(
       'button',
       { className: 'all-conversations-btn' },
@@ -25358,15 +25358,14 @@ function ConversationsPreview() {
   );
 }
 
-// assets
-exports.default = ConversationsPreview;
+exports.default = Conversations;
 
 /***/ }),
 
-/***/ "./src/components/ConversationsPreview/style.scss":
-/*!********************************************************!*\
-  !*** ./src/components/ConversationsPreview/style.scss ***!
-  \********************************************************/
+/***/ "./src/components/Conversations/style.scss":
+/*!*************************************************!*\
+  !*** ./src/components/Conversations/style.scss ***!
+  \*************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -25577,7 +25576,9 @@ var Header = function (_Component) {
     value: function render() {
       var _props = this.props,
           theme = _props.theme,
+          route = _props.route,
           showMobileMenu = _props.showMobileMenu;
+      // choose color theme for the header 
 
       var HamburgerIcon = theme === 'dark' ? _icon_hamburger_dark2.default : _icon_hamburger2.default;
       return _react2.default.createElement(
@@ -25608,7 +25609,7 @@ var Header = function (_Component) {
               { className: 'nav-item' },
               _react2.default.createElement(
                 'a',
-                { href: '#' },
+                { href: route + '/about' },
                 'About'
               )
             ),
@@ -25663,10 +25664,10 @@ exports.default = Header;
 
 /***/ }),
 
-/***/ "./src/components/ReleasesPreview/ReleasesPreview.jsx":
-/*!************************************************************!*\
-  !*** ./src/components/ReleasesPreview/ReleasesPreview.jsx ***!
-  \************************************************************/
+/***/ "./src/components/Releases/Releases.jsx":
+/*!**********************************************!*\
+  !*** ./src/components/Releases/Releases.jsx ***!
+  \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -25681,7 +25682,7 @@ var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(/*! ./style.scss */ "./src/components/ReleasesPreview/style.scss");
+__webpack_require__(/*! ./style.scss */ "./src/components/Releases/style.scss");
 
 var _release_placeholder = __webpack_require__(/*! ../../assets/release_placeholder.png */ "./src/assets/release_placeholder.png");
 
@@ -25692,55 +25693,61 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // style
 function ReleasesPreview() {
   return _react2.default.createElement(
-    'section',
-    { className: 'rp-container' },
+    'article',
+    { className: 'release-preview' },
     _react2.default.createElement(
-      'h3',
-      { className: 'rp-container-title' },
-      'Releases'
+      'h4',
+      { className: 'release-preview-title' },
+      'Lucid Candy - EEG'
     ),
     _react2.default.createElement(
       'p',
-      { className: 'rp-container-text' },
-      'We build opensource software and hardware to help people understand the brain.'
+      { className: 'release-preview-brief' },
+      'Here are some explainer text Here are some explainer text Here are some explainer text Here are some explainer text'
     ),
+    _react2.default.createElement('img', { className: 'release-preview-image', src: './dist/' + _release_placeholder2.default, alt: 'placeholder' }),
     _react2.default.createElement(
-      'article',
-      { className: 'release-preview' },
-      _react2.default.createElement(
-        'h4',
-        { className: 'release-preview-title' },
-        'Lucid Candy - EEG'
-      ),
-      _react2.default.createElement(
-        'p',
-        { className: 'release-preview-brief' },
-        'Here are some explainer text Here are some explainer text Here are some explainer text Here are some explainer text'
-      ),
-      _react2.default.createElement('img', { className: 'release-preview-image', src: './dist/' + _release_placeholder2.default, alt: 'placeholder' }),
-      _react2.default.createElement(
-        'p',
-        { className: 'release-expand' },
-        'Tap/Click to See the Detail'
-      )
-    ),
-    _react2.default.createElement(
-      'button',
-      { className: 'all-release-btn' },
-      'See All Releases'
+      'p',
+      { className: 'release-expand' },
+      'Tap/Click to See the Detail'
     )
   );
 }
 
 // assets
-exports.default = ReleasesPreview;
+
+
+function Releases() {
+  return _react2.default.createElement(
+    'section',
+    { className: 'bmt-releases' },
+    _react2.default.createElement(
+      'h3',
+      { className: 'bmt-releases-title' },
+      'Releases'
+    ),
+    _react2.default.createElement(
+      'p',
+      { className: 'bmt-releases-description' },
+      'We build opensource software and hardware to help people understand the brain.'
+    ),
+    _react2.default.createElement(ReleasesPreview, null),
+    _react2.default.createElement(
+      'button',
+      { className: 'bmt-releases-all-btn' },
+      'See All Releases'
+    )
+  );
+}
+
+exports.default = Releases;
 
 /***/ }),
 
-/***/ "./src/components/ReleasesPreview/style.scss":
-/*!***************************************************!*\
-  !*** ./src/components/ReleasesPreview/style.scss ***!
-  \***************************************************/
+/***/ "./src/components/Releases/style.scss":
+/*!********************************************!*\
+  !*** ./src/components/Releases/style.scss ***!
+  \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -25748,10 +25755,10 @@ exports.default = ReleasesPreview;
 
 /***/ }),
 
-/***/ "./src/components/ResourcesPreview/ResourcesPreview.jsx":
-/*!**************************************************************!*\
-  !*** ./src/components/ResourcesPreview/ResourcesPreview.jsx ***!
-  \**************************************************************/
+/***/ "./src/components/Resources/Resources.jsx":
+/*!************************************************!*\
+  !*** ./src/components/Resources/Resources.jsx ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -25766,7 +25773,7 @@ var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(/*! ./style.scss */ "./src/components/ResourcesPreview/style.scss");
+__webpack_require__(/*! ./style.scss */ "./src/components/Resources/style.scss");
 
 var _resource_incognito = __webpack_require__(/*! ../../assets/resource_incognito.jpg */ "./src/assets/resource_incognito.jpg");
 
@@ -25777,58 +25784,69 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // style
 function ResourcesPreview() {
   return _react2.default.createElement(
-    'section',
-    { className: 'rep-container' },
+    'article',
+    { className: 'resource-preview' },
     _react2.default.createElement(
-      'h3',
-      { className: 'rep-container-title' },
-      'Resources'
+      'div',
+      { className: 'resource-preview-image-container' },
+      _react2.default.createElement('img', { className: 'resource-preview-image', src: './dist/' + _resource_incognito2.default, alt: 'resource' })
     ),
     _react2.default.createElement(
-      'p',
-      { className: 'rep-container-text' },
-      'Some say that the internet has enough resources for one to learn and become a rocket scientist. Here\u2019re some of the goodies that helped us to level up on science and engineering.'
-    ),
-    _react2.default.createElement(
-      'article',
-      { className: 'resource-preview' },
+      'div',
+      { className: 'resource-preview-text-container' },
       _react2.default.createElement(
-        'div',
-        { className: 'resource-preview-image-container' },
-        _react2.default.createElement('img', { className: 'resource-preview-image', src: './dist/' + _resource_incognito2.default, alt: 'resource' })
+        'h4',
+        { className: 'resource-preview-title' },
+        'Incognito'
       ),
       _react2.default.createElement(
-        'div',
-        { className: 'resource-preview-text-container' },
-        _react2.default.createElement(
-          'h4',
-          { className: 'resource-preview-title' },
-          'Incognito'
-        ),
-        _react2.default.createElement(
-          'p',
-          { className: 'resource-preview-text' },
-          'David Eagleman takes us into a fascinating journey through the unconsious mind. '
-        )
+        'p',
+        { className: 'resource-preview-text' },
+        'David Eagleman takes us into a fascinating journey through the unconsious mind. '
+      ),
+      _react2.default.createElement(
+        'a',
+        { className: 'resource-preview-redirect', href: '#' },
+        'See Detail (Redirect)'
       )
-    ),
-    _react2.default.createElement(
-      'button',
-      { className: 'all-resources-btn' },
-      'See All Resources'
     )
   );
 }
 
 // assets
-exports.default = ResourcesPreview;
+
+
+function Resources() {
+  return _react2.default.createElement(
+    'section',
+    { className: 'bmt-resources' },
+    _react2.default.createElement(
+      'h3',
+      { className: 'bmt-resources-title' },
+      'Resources'
+    ),
+    _react2.default.createElement(
+      'p',
+      { className: 'bmt-resources-description' },
+      'Some say that the internet has enough resources for one to learn and become a rocket scientist. Here\u2019re some of the goodies that helped us to level up on science and engineering.'
+    ),
+    _react2.default.createElement(ResourcesPreview, null),
+    _react2.default.createElement(
+      'button',
+      { className: 'bmt-all-resources-btn' },
+      'See All Resources'
+    )
+  );
+}
+
+exports.default = Resources;
 
 /***/ }),
 
-/***/ "./src/components/ResourcesPreview/style.scss":
-/*!****************************************************!*\
-  !*** ./src/components/ResourcesPreview/style.scss ***!
-  \****************************************************/
+/***/ "./src/components/Resources/style.scss":
+/*!*********************************************!*\
+  !*** ./src/components/Resources/style.scss ***!
+  \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -26211,9 +26229,9 @@ var _Header = __webpack_require__(/*! ../../components/Header */ "./src/componen
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _ConversationsPreview = __webpack_require__(/*! ../../components/ConversationsPreview */ "./src/components/ConversationsPreview/ConversationsPreview.jsx");
+var _Conversations = __webpack_require__(/*! ../../components/Conversations */ "./src/components/Conversations/Conversations.jsx");
 
-var _ConversationsPreview2 = _interopRequireDefault(_ConversationsPreview);
+var _Conversations2 = _interopRequireDefault(_Conversations);
 
 var _ThoughtsLetter = __webpack_require__(/*! ../../components/ThoughtsLetter */ "./src/components/ThoughtsLetter/ThoughtsLetter.jsx");
 
@@ -26241,7 +26259,7 @@ function ConversationsPage(_ref) {
     _react2.default.createElement(
       'main',
       { className: 'bmt-main' },
-      _react2.default.createElement(_ConversationsPreview2.default, null),
+      _react2.default.createElement(ConversationsPreview, null),
       _react2.default.createElement(_ThoughtsLetter2.default, null)
     ),
     _react2.default.createElement(_Footer2.default, null)
@@ -26292,17 +26310,17 @@ var _Banner = __webpack_require__(/*! ../../components/Banner */ "./src/componen
 
 var _Banner2 = _interopRequireDefault(_Banner);
 
-var _ReleasesPreview = __webpack_require__(/*! ../../components/ReleasesPreview */ "./src/components/ReleasesPreview/ReleasesPreview.jsx");
+var _Releases = __webpack_require__(/*! ../../components/Releases */ "./src/components/Releases/Releases.jsx");
 
-var _ReleasesPreview2 = _interopRequireDefault(_ReleasesPreview);
+var _Releases2 = _interopRequireDefault(_Releases);
 
-var _ConversationsPreview = __webpack_require__(/*! ../../components/ConversationsPreview */ "./src/components/ConversationsPreview/ConversationsPreview.jsx");
+var _Conversations = __webpack_require__(/*! ../../components/Conversations */ "./src/components/Conversations/Conversations.jsx");
 
-var _ConversationsPreview2 = _interopRequireDefault(_ConversationsPreview);
+var _Conversations2 = _interopRequireDefault(_Conversations);
 
-var _ResourcesPreview = __webpack_require__(/*! ../../components/ResourcesPreview */ "./src/components/ResourcesPreview/ResourcesPreview.jsx");
+var _Resources = __webpack_require__(/*! ../../components/Resources */ "./src/components/Resources/Resources.jsx");
 
-var _ResourcesPreview2 = _interopRequireDefault(_ResourcesPreview);
+var _Resources2 = _interopRequireDefault(_Resources);
 
 var _ThoughtsLetter = __webpack_require__(/*! ../../components/ThoughtsLetter */ "./src/components/ThoughtsLetter/ThoughtsLetter.jsx");
 
@@ -26338,9 +26356,9 @@ function HomePage(_ref) {
     _react2.default.createElement(
       'main',
       { className: 'btm-main' },
-      _react2.default.createElement(_ReleasesPreview2.default, null),
-      _react2.default.createElement(_ConversationsPreview2.default, null),
-      _react2.default.createElement(_ResourcesPreview2.default, null),
+      _react2.default.createElement(_Releases2.default, null),
+      _react2.default.createElement(_Conversations2.default, null),
+      _react2.default.createElement(_Resources2.default, null),
       _react2.default.createElement(_ThoughtsLetter2.default, null),
       _react2.default.createElement(
         'div',
@@ -26395,9 +26413,9 @@ var _Header = __webpack_require__(/*! ../../components/Header */ "./src/componen
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _ReleasesPreview = __webpack_require__(/*! ../../components/ReleasesPreview */ "./src/components/ReleasesPreview/ReleasesPreview.jsx");
+var _Releases = __webpack_require__(/*! ../../components/Releases */ "./src/components/Releases/Releases.jsx");
 
-var _ReleasesPreview2 = _interopRequireDefault(_ReleasesPreview);
+var _Releases2 = _interopRequireDefault(_Releases);
 
 var _ThoughtsLetter = __webpack_require__(/*! ../../components/ThoughtsLetter */ "./src/components/ThoughtsLetter/ThoughtsLetter.jsx");
 
@@ -26425,11 +26443,7 @@ function ReleasesPage(_ref) {
     _react2.default.createElement(
       'main',
       { className: 'bmt-main' },
-      _react2.default.createElement(
-        'section',
-        { className: 'bmt-releases' },
-        _react2.default.createElement(_ReleasesPreview2.default, null)
-      ),
+      _react2.default.createElement(_Releases2.default, null),
       _react2.default.createElement(_ThoughtsLetter2.default, null)
     ),
     _react2.default.createElement(_Footer2.default, null)
@@ -26476,9 +26490,9 @@ var _Header = __webpack_require__(/*! ../../components/Header */ "./src/componen
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _ResourcesPreview = __webpack_require__(/*! ../../components/ResourcesPreview */ "./src/components/ResourcesPreview/ResourcesPreview.jsx");
+var _Resources = __webpack_require__(/*! ../../components/Resources */ "./src/components/Resources/Resources.jsx");
 
-var _ResourcesPreview2 = _interopRequireDefault(_ResourcesPreview);
+var _Resources2 = _interopRequireDefault(_Resources);
 
 var _ThoughtsLetter = __webpack_require__(/*! ../../components/ThoughtsLetter */ "./src/components/ThoughtsLetter/ThoughtsLetter.jsx");
 
@@ -26506,7 +26520,7 @@ function ResourcesPage(_ref) {
     _react2.default.createElement(
       'main',
       { className: 'bmt-main' },
-      _react2.default.createElement(_ResourcesPreview2.default, null),
+      _react2.default.createElement(_Resources2.default, null),
       _react2.default.createElement(_ThoughtsLetter2.default, null)
     ),
     _react2.default.createElement(_Footer2.default, null)
@@ -26557,7 +26571,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // style
 function SuggestionsPage(_ref) {
-  var showMobileMenu = _ref.showMobileMenu,
+  var route = _ref.route,
+      showMobileMenu = _ref.showMobileMenu,
       toggleDisplay = _ref.toggleDisplay;
 
   return _react2.default.createElement(
@@ -26565,6 +26580,7 @@ function SuggestionsPage(_ref) {
     { className: 'page-container' },
     _react2.default.createElement(_Header2.default, {
       theme: 'dark',
+      route: route,
       showMobileMenu: showMobileMenu,
       toggleDisplay: toggleDisplay
     }),

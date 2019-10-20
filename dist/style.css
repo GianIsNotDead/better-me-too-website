@@ -166,7 +166,7 @@ Better Me Too Visual Guide
 /*************************************
 Better Me Too Visual Guide
 *************************************/
-.rp-container {
+.bmt-releases {
   position: relative;
   top: 0;
   left: 0;
@@ -174,60 +174,52 @@ Better Me Too Visual Guide
   padding: 50px 0;
   z-index: 1;
   border-bottom: 1px solid #DBDBDB; }
-
-.rp-container .rp-container-title {
-  margin-bottom: 30px;
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #353975;
-  letter-spacing: 1.2px;
-  text-shadow: 0 2px 2px rgba(124, 158, 212, 0.42); }
-
-.rp-container .rp-container-text {
-  margin-bottom: 10px;
-  font-size: 0.875rem;
-  line-height: 20px;
-  color: #353975;
-  letter-spacing: 0.93px;
-  margin-bottom: 30px; }
-
-.rp-container .release-preview {
-  padding: 50px 6%;
-  margin-bottom: 30px;
-  background: #FFFFFF;
-  box-shadow: 0 4px 6px 0 rgba(226, 233, 248, 0.73);
-  border-radius: 10px; }
-
-.rp-container .release-preview-title {
-  margin-bottom: 10px;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: #353975;
-  letter-spacing: 0.93px; }
-
-.rp-container .release-preview-brief, .rp-container .release-expand {
-  margin-bottom: 10px;
-  font-size: 0.875rem;
-  line-height: 20px;
-  color: #353975;
-  letter-spacing: 0.93px; }
-
-.rp-container .release-preview-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px; }
-
-.rp-container .release-expand {
-  margin-bottom: 0;
-  text-align: center;
-  font-size: 0.75rem; }
-
-.rp-container .all-release-btn {
-  padding-bottom: 2px;
-  font-size: 0.875rem;
-  color: #353975;
-  border-bottom: 2px solid #7C9ED4; }
+  .bmt-releases .bmt-releases-title {
+    margin-bottom: 30px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #353975;
+    letter-spacing: 1.2px;
+    text-shadow: 0 2px 2px rgba(124, 158, 212, 0.42); }
+  .bmt-releases .bmt-releases-description {
+    margin-bottom: 10px;
+    font-size: 0.875rem;
+    line-height: 20px;
+    color: #353975;
+    letter-spacing: 0.93px;
+    margin-bottom: 30px; }
+  .bmt-releases .release-preview {
+    padding: 30px 6%;
+    margin-bottom: 30px;
+    background: #FFFFFF;
+    box-shadow: 0 4px 6px 0 rgba(226, 233, 248, 0.73);
+    border-radius: 10px; }
+    .bmt-releases .release-preview .release-preview-title {
+      margin-bottom: 10px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #353975;
+      letter-spacing: 0.93px; }
+    .bmt-releases .release-preview .release-preview-brief, .bmt-releases .release-preview .release-expand {
+      margin-bottom: 10px;
+      font-size: 0.875rem;
+      line-height: 20px;
+      color: #353975;
+      letter-spacing: 0.93px; }
+    .bmt-releases .release-preview .release-preview-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px; }
+    .bmt-releases .release-preview .release-expand {
+      margin-bottom: 0;
+      text-align: center;
+      font-size: 0.75rem; }
+  .bmt-releases .bmt-releases-all-btn {
+    padding-bottom: 2px;
+    font-size: 0.875rem;
+    color: #353975;
+    border-bottom: 2px solid #7C9ED4; }
 /*************************************
 Better Me Too Visual Guide
 *************************************/
@@ -237,7 +229,7 @@ Better Me Too Visual Guide
 /*************************************
 Better Me Too Visual Guide
 *************************************/
-.cp-container {
+.bmt-conversations {
   position: relative;
   top: 0;
   left: 0;
@@ -245,121 +237,92 @@ Better Me Too Visual Guide
   padding: 50px 0;
   z-index: 1;
   border-bottom: 1px solid #DBDBDB; }
-
-.cp-container .cp-container-title {
-  margin-bottom: 30px;
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #353975;
-  letter-spacing: 1.2px;
-  text-shadow: 0 2px 2px rgba(124, 158, 212, 0.42); }
-
-.cp-container .cp-container-text {
-  margin-bottom: 10px;
-  font-size: 0.875rem;
-  line-height: 20px;
-  color: #353975;
-  letter-spacing: 0.93px;
-  margin-bottom: 30px; }
-
-.cp-container .conversation-preview,
-.cp-container .conversation-title-container {
-  width: 100%; }
-
-.cp-container .conversation-preview {
-  border-bottom: 1px solid #DBDBDB;
-  margin-bottom: 30px; }
-
-.cp-container .conversation-title-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid #DBDBDB;
-  border-bottom: 1px solid #DBDBDB;
-  height: 70px; }
-
-.cp-container .conversation-date-container {
-  position: relative;
-  height: 100%;
-  padding: 2%;
-  background-image: linear-gradient(225deg, #D7B9F9 0%, #F28CC0 100%); }
-
-.cp-container .conversation-date {
-  position: relative;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%); }
-
-.cp-container .conversation-date p {
-  color: #FFFFFF; }
-
-.cp-container .conversation-month {
-  font-size: 1.5rem;
-  letter-spacing: 1.6px; }
-
-.cp-container .conversation-year {
-  font-size: 0.75rem;
-  line-height: 0.75rem;
-  letter-spacing: 0.8px;
-  text-align: center; }
-
-.cp-container .conversation-title {
-  position: relative;
-  height: 100%;
-  width: 80%;
-  padding: 2%; }
-
-.cp-container .conversation-title h4 {
-  margin-bottom: 5px; }
-
-.cp-container .conversation-title p {
-  margin-bottom: 0; }
-
-.cp-container .conversation-title-text-container {
-  position: relative;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%); }
-
-.cp-container .conversation-title-text {
-  margin-bottom: 10px;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: #353975;
-  letter-spacing: 0.93px;
-  overflow: hidden; }
-
-.cp-container .conversation-metadata {
-  margin-bottom: 10px;
-  font-size: 0.875rem;
-  line-height: 20px;
-  color: #353975;
-  letter-spacing: 0.93px; }
-
-.cp-container .conversation-expand {
-  height: 100%; }
-
-.cp-container .conversation-expand .conversation-expand-icon {
-  display: block;
-  height: 100%; }
-
-.cp-container .conversation-preview-text-container {
-  width: 100%;
-  padding: 10px; }
-
-.cp-container .conversation-preview-text {
-  margin-bottom: 10px;
-  font-size: 0.875rem;
-  line-height: 20px;
-  color: #353975;
-  letter-spacing: 0.93px;
-  margin-bottom: 0; }
-
-.cp-container .all-conversations-btn {
-  padding-bottom: 2px;
-  font-size: 0.875rem;
-  color: #353975;
-  border-bottom: 2px solid #7C9ED4; }
+  .bmt-conversations .bmt-conversations-title {
+    margin-bottom: 30px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #353975;
+    letter-spacing: 1.2px;
+    text-shadow: 0 2px 2px rgba(124, 158, 212, 0.42); }
+  .bmt-conversations .bmt-conversations-description {
+    margin-bottom: 10px;
+    font-size: 0.875rem;
+    line-height: 20px;
+    color: #353975;
+    letter-spacing: 0.93px;
+    margin-bottom: 30px; }
+  .bmt-conversations .conversation-preview, .bmt-conversations .conversation-title-container {
+    width: 100%; }
+  .bmt-conversations .conversation-preview {
+    border-bottom: 1px solid #DBDBDB;
+    margin-bottom: 30px; }
+    .bmt-conversations .conversation-preview .conversation-title-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+      border-top: 1px solid #DBDBDB;
+      border-bottom: 1px solid #DBDBDB; }
+      .bmt-conversations .conversation-preview .conversation-title-container .conversation-date-container {
+        position: relative;
+        height: 100%;
+        padding: 0 2%;
+        background-image: linear-gradient(225deg, #D7B9F9 0%, #F28CC0 100%); }
+        .bmt-conversations .conversation-preview .conversation-title-container .conversation-date-container .conversation-date-center {
+          position: relative;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%); }
+          .bmt-conversations .conversation-preview .conversation-title-container .conversation-date-container .conversation-date-center .conversation-month {
+            font-size: 1.5rem;
+            letter-spacing: 1.6px; }
+          .bmt-conversations .conversation-preview .conversation-title-container .conversation-date-container .conversation-date-center .conversation-year {
+            font-size: 0.75rem;
+            line-height: 0.75rem;
+            letter-spacing: 0.8px;
+            text-align: center; }
+          .bmt-conversations .conversation-preview .conversation-title-container .conversation-date-container .conversation-date-center p {
+            color: #FFFFFF; }
+      .bmt-conversations .conversation-preview .conversation-title-container .conversation-title {
+        position: relative;
+        height: 100%;
+        width: 80%;
+        padding: 6%; }
+        .bmt-conversations .conversation-preview .conversation-title-container .conversation-title .conversation-title-center {
+          position: relative;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%); }
+        .bmt-conversations .conversation-preview .conversation-title-container .conversation-title .conversation-title-text {
+          margin-bottom: 10px;
+          font-size: 0.875rem;
+          font-weight: 600;
+          color: #353975;
+          letter-spacing: 0.93px;
+          margin-bottom: 5px;
+          overflow: hidden; }
+        .bmt-conversations .conversation-preview .conversation-title-container .conversation-title .conversation-metadata {
+          margin-bottom: 10px;
+          font-size: 0.875rem;
+          line-height: 20px;
+          color: #353975;
+          letter-spacing: 0.93px; }
+    .bmt-conversations .conversation-preview .conversation-text-container {
+      width: 100%;
+      padding: 10px 0; }
+      .bmt-conversations .conversation-preview .conversation-text-container .conversation-text {
+        margin-bottom: 10px;
+        font-size: 0.875rem;
+        line-height: 20px;
+        color: #353975;
+        letter-spacing: 0.93px; }
+      .bmt-conversations .conversation-preview .conversation-text-container .conversation-full-btn {
+        font-size: 0.875rem; }
+  .bmt-conversations .all-conversations-btn {
+    padding-bottom: 2px;
+    font-size: 0.875rem;
+    color: #353975;
+    border-bottom: 2px solid #7C9ED4; }
 /*************************************
 Better Me Too Visual Guide
 *************************************/
@@ -369,7 +332,7 @@ Better Me Too Visual Guide
 /*************************************
 Better Me Too Visual Guide
 *************************************/
-.rep-container {
+.bmt-resources {
   position: relative;
   top: 0;
   left: 0;
@@ -377,63 +340,57 @@ Better Me Too Visual Guide
   padding: 50px 0;
   z-index: 1;
   border-bottom: 1px solid #DBDBDB; }
-
-.rep-container .rep-container-title {
-  margin-bottom: 30px;
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #353975;
-  letter-spacing: 1.2px;
-  text-shadow: 0 2px 2px rgba(124, 158, 212, 0.42); }
-
-.rep-container .rep-container-text {
-  margin-bottom: 10px;
-  font-size: 0.875rem;
-  line-height: 20px;
-  color: #353975;
-  letter-spacing: 0.93px;
-  margin-bottom: 30px; }
-
-.rep-container .resource-preview {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 6%;
-  margin-bottom: 30px;
-  background: #FFFFFF;
-  box-shadow: 0 4px 6px 0 rgba(226, 233, 248, 0.73);
-  border-radius: 10px; }
-
-.rep-container .resource-preview-image-container {
-  position: relative;
-  height: 100px;
-  width: 25%; }
-
-.rep-container .resource-preview-image {
-  height: 100%;
-  width: auto; }
-
-.rep-container .resource-preview-text-container {
-  width: 70%; }
-
-.rep-container .resource-preview-title {
-  margin-bottom: 10px;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: #353975;
-  letter-spacing: 0.93px; }
-
-.rep-container .resource-preview-text {
-  margin-bottom: 10px;
-  font-size: 0.875rem;
-  line-height: 20px;
-  color: #353975;
-  letter-spacing: 0.93px; }
-
-.rep-container .all-resources-btn {
-  padding-bottom: 2px;
-  font-size: 0.875rem;
-  color: #353975;
-  border-bottom: 2px solid #7C9ED4; }
+  .bmt-resources .bmt-resources-title {
+    margin-bottom: 30px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #353975;
+    letter-spacing: 1.2px;
+    text-shadow: 0 2px 2px rgba(124, 158, 212, 0.42); }
+  .bmt-resources .bmt-resources-description {
+    margin-bottom: 10px;
+    font-size: 0.875rem;
+    line-height: 20px;
+    color: #353975;
+    letter-spacing: 0.93px;
+    margin-bottom: 30px; }
+  .bmt-resources .resource-preview {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 6%;
+    margin-bottom: 30px;
+    background: #FFFFFF;
+    box-shadow: 0 4px 6px 0 rgba(226, 233, 248, 0.73);
+    border-radius: 10px; }
+    .bmt-resources .resource-preview .resource-preview-image-container {
+      position: relative;
+      height: 100px;
+      width: 25%; }
+      .bmt-resources .resource-preview .resource-preview-image-container .resource-preview-image {
+        height: 100%;
+        width: auto; }
+    .bmt-resources .resource-preview .resource-preview-text-container {
+      width: 70%; }
+      .bmt-resources .resource-preview .resource-preview-text-container .resource-preview-title {
+        margin-bottom: 10px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: #353975;
+        letter-spacing: 0.93px; }
+      .bmt-resources .resource-preview .resource-preview-text-container .resource-preview-text {
+        margin-bottom: 10px;
+        font-size: 0.875rem;
+        line-height: 20px;
+        color: #353975;
+        letter-spacing: 0.93px; }
+      .bmt-resources .resource-preview .resource-preview-text-container .resource-preview-redirect {
+        font-size: 0.875rem;
+        color: #000000; }
+  .bmt-resources .bmt-all-resources-btn {
+    padding-bottom: 2px;
+    font-size: 0.875rem;
+    color: #353975;
+    border-bottom: 2px solid #7C9ED4; }
 /*************************************
 Better Me Too Visual Guide
 *************************************/

@@ -1,0 +1,50 @@
+@import "../../style/mixins";
+@import "../../style/variables";
+
+.bmt-resources {
+  @include container;
+  @include vertical-divider;
+  .bmt-resources-title {
+    @include container-title-text;
+  }
+  .bmt-resources-description {
+    @include content-text;
+    margin-bottom: $vertical-gutter-medium;
+  }
+  // beginning of resource preview box
+  .resource-preview {
+    display: flex;
+    justify-content: space-between;
+    padding: $vertical-gutter-small $horizontal-gutter;
+    margin-bottom: $vertical-gutter-medium;
+    background: #FFFFFF;
+    box-shadow: 0 4px 6px 0 rgba(226,233,248,0.73);
+    border-radius: 10px;
+    .resource-preview-image-container {
+      position: relative;
+      height: 100px;
+      width: 25%;
+      .resource-preview-image {
+        height: 100%;
+        width: auto;
+      }
+    }
+    .resource-preview-text-container {
+      width: 70%;
+      .resource-preview-title {
+        @include content-title-text;
+      }
+      .resource-preview-text {
+        @include content-text;
+      }
+      .resource-preview-redirect {
+        font-size: $primary-text-size;
+        color: #000000;
+      }
+    }
+  }
+  // end of resource preview box
+  .bmt-all-resources-btn {
+    @include primary-button;
+  }
+}

@@ -6,11 +6,12 @@ import './style.scss';
 // components
 import Header from '../../components/Header';
 
-function SuggestionsPage({ showMobileMenu, toggleDisplay }) {
+function SuggestionsPage({ route, showMobileMenu, toggleDisplay }) {
   return (
     <div className="page-container">
       <Header
         theme="dark"
+        route={route}
         showMobileMenu={showMobileMenu}
         toggleDisplay={toggleDisplay}
       />

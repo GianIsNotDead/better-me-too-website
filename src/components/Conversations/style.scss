@@ -1,0 +1,82 @@
+@import "../../style/mixins";
+@import "../../style/variables";
+
+.bmt-conversations {
+  @include container;
+  @include vertical-divider;
+  .bmt-conversations-title {
+    @include container-title-text;  
+  }
+  .bmt-conversations-description {
+    @include content-text;
+    margin-bottom: $vertical-gutter-medium;  
+  }
+  // beginning of conversation preview box style
+  .conversation-preview, .conversation-title-container {
+    width: 100%;
+  }
+  .conversation-preview {
+    @include vertical-divider;
+    margin-bottom: $vertical-gutter-medium;
+    .conversation-title-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+      @include vertical-divider-double;
+      .conversation-date-container {
+        position: relative;
+        height: 100%;
+        padding: 0 2%;
+        background-image: linear-gradient(225deg, #D7B9F9 0%, #F28CC0 100%);
+        .conversation-date-center {
+          @include vertical-center(relative);
+          .conversation-month {
+            font-size: 1.5rem;
+            letter-spacing: 1.6px;
+          }
+          .conversation-year {
+            font-size: 0.75rem;
+            line-height: 0.75rem;
+            letter-spacing: 0.8px;
+            text-align: center;
+          }
+          p {
+            color: #FFFFFF;
+          }
+        }
+      }
+      .conversation-title {
+        position: relative;
+        height: 100%;
+        width: 80%;
+        padding: $horizontal-gutter;
+        .conversation-title-center {
+          @include vertical-center(relative);
+        }
+        .conversation-title-text {
+          @include content-title-text;
+          margin-bottom: 5px;
+          overflow: hidden;
+        }
+        .conversation-metadata {
+          @include content-text;
+        }
+      }
+    }
+    .conversation-text-container {
+      width: 100%;
+      padding: $vertical-gutter-extra-small 0;
+      .conversation-text {
+        @include content-text;
+      }
+      .conversation-full-btn {
+        font-size: $primary-text-size;
+      }
+    }
+  }
+  // end of conversation preview box style
+  .all-conversations-btn {
+    @include primary-button;
+  }
+}

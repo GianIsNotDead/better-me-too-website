@@ -5,7 +5,7 @@ import './style.scss';
 
 // component
 import Header from '../../components/Header';
-import ResourcesPreview from '../../components/ResourcesPreview';
+import Resources from '../../components/Resources';
 import ThoughtsLetter from '../../components/ThoughtsLetter';
 import Footer from '../../components/Footer';
 
@@ -18,7 +18,7 @@ function ResourcesPage({ showMobileMenu, toggleDisplay }) {
         toggleDisplay={toggleDisplay}
       />
       <main className="bmt-main">
-        <ResourcesPreview />
+        <Resources />
         <ThoughtsLetter />
       </main>
       <Footer />

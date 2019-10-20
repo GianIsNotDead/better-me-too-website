@@ -21,7 +21,8 @@ class Header extends Component {
   }
 
   render() {
-    const { theme, showMobileMenu } = this.props;
+    const { theme, route, showMobileMenu } = this.props;
+    // choose color theme for the header 
     const HamburgerIcon = theme === 'dark' ? HamburgerDark : Hamburger;
     return (
       <header className={`bmt-header ${showMobileMenu === true ? 'nav-mobile-active' : ''}`}>
@@ -33,7 +34,7 @@ class Header extends Component {
         </div>
         <nav className={`header-nav ${showMobileMenu === true ? 'nav-mobile nav-mobile-active' : ''}`}>
           <ul className="nav-items-container">
-            <li className="nav-item"><a href="#">About</a></li>
+            <li className="nav-item"><a href={`${route}/about`}>About</a></li>
             <li className="nav-item"><a href="#">Releases &amp; Milestones</a></li>
             <li className="nav-item"><a href="#">Conversations</a></li>
             <li className="nav-item"><a href="#">Resources</a></li>
