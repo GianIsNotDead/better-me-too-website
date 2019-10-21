@@ -26166,20 +26166,20 @@ function ContactPage(_ref) {
       { className: 'bmt-main' },
       _react2.default.createElement(
         'section',
-        { className: 'bmt-contact-container' },
+        { className: 'contact-container' },
         _react2.default.createElement(
           'h3',
-          { className: 'bmt-contact-title' },
+          { className: 'contact-title' },
           'Let\'s Be Friends'
         ),
         _react2.default.createElement(
           'p',
-          { className: 'bmt-contact-text' },
+          { className: 'contact-text' },
           'We like yoga, coffee, nature, and the brain. '
         ),
         _react2.default.createElement(
           'p',
-          { className: 'bmt-contact-text' },
+          { className: 'contact-text' },
           'gian@bettermetoo.com'
         )
       ),
@@ -26567,6 +26567,14 @@ var _Header = __webpack_require__(/*! ../../components/Header */ "./src/componen
 
 var _Header2 = _interopRequireDefault(_Header);
 
+var _ThoughtsLetter = __webpack_require__(/*! ../../components/ThoughtsLetter */ "./src/components/ThoughtsLetter/ThoughtsLetter.jsx");
+
+var _ThoughtsLetter2 = _interopRequireDefault(_ThoughtsLetter);
+
+var _Footer = __webpack_require__(/*! ../../components/Footer */ "./src/components/Footer/Footer.jsx");
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // style
@@ -26589,24 +26597,26 @@ function SuggestionsPage(_ref) {
       { className: 'bmt-main' },
       _react2.default.createElement(
         'section',
-        { className: 'bmt-suggestions-container' },
+        { className: 'suggestions-container' },
         _react2.default.createElement(
           'h3',
-          { className: 'bmt-suggestions-title' },
+          { className: 'suggestions-title' },
           'Recommend Builds and Articles'
         ),
         _react2.default.createElement(
           'p',
-          { className: 'bmt-suggestions-text' },
+          { className: 'suggestions-text' },
           'Nothing is too small or too big for us to investigate. Don\u2019t be shy, reach out to us, be part of our research and build process. '
         ),
         _react2.default.createElement(
           'p',
-          { className: 'bmt-suggestions-text' },
+          { className: 'suggestions-text' },
           'gian@bettermetoo.com'
         )
-      )
-    )
+      ),
+      _react2.default.createElement(_ThoughtsLetter2.default, null)
+    ),
+    _react2.default.createElement(_Footer2.default, null)
   );
 }
 

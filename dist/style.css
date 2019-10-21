@@ -524,6 +524,42 @@ Better Me Too Visual Guide
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   background: #EFF2F5; }
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+.page-contaienr, .btm-main {
+  position: relative;
+  width: 100%; }
+
+.page-container {
+  height: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  background: #EFF2F5; }
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+.page-contaienr, .btm-main {
+  position: relative;
+  width: 100%; }
+
+.page-container {
+  height: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  background: #EFF2F5; }
 
 .page-container .bmt-mission,
 .page-container .bmt-ethics,
@@ -622,29 +658,26 @@ Better Me Too Visual Guide
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   background: #EFF2F5; }
-
-.bmt-contact-container {
-  position: relative;
-  top: 0;
-  left: 0;
-  margin: 0 6%;
-  padding: 50px 0;
-  z-index: 1; }
-
-.page-container .bmt-contact-title {
-  margin-bottom: 30px;
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #353975;
-  letter-spacing: 1.2px;
-  text-shadow: 0 2px 2px rgba(124, 158, 212, 0.42); }
-
-.page-container .bmt-contact-text {
-  margin-bottom: 10px;
-  font-size: 0.875rem;
-  line-height: 20px;
-  color: #353975;
-  letter-spacing: 0.93px; }
+  .page-container .contact-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 6%;
+    padding: 50px 0;
+    z-index: 1; }
+  .page-container .bmt-contact-title {
+    margin-bottom: 30px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #353975;
+    letter-spacing: 1.2px;
+    text-shadow: 0 2px 2px rgba(124, 158, 212, 0.42); }
+  .page-container .bmt-contact-text {
+    margin-bottom: 10px;
+    font-size: 0.875rem;
+    line-height: 20px;
+    color: #353975;
+    letter-spacing: 0.93px; }
 /*************************************
 Better Me Too Visual Guide
 *************************************/
@@ -663,29 +696,26 @@ Better Me Too Visual Guide
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   background: #EFF2F5; }
-
-.page-container .bmt-suggestions-container {
-  position: relative;
-  top: 0;
-  left: 0;
-  margin: 0 6%;
-  padding: 50px 0;
-  z-index: 1; }
-
-.page-container .bmt-main h3 {
-  margin-bottom: 30px;
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #353975;
-  letter-spacing: 1.2px;
-  text-shadow: 0 2px 2px rgba(124, 158, 212, 0.42); }
-
-.page-container .bmt-suggestions-container p {
-  margin-bottom: 10px;
-  font-size: 0.875rem;
-  line-height: 20px;
-  color: #353975;
-  letter-spacing: 0.93px; }
+  .page-container .suggestions-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 6%;
+    padding: 50px 0;
+    z-index: 1; }
+    .page-container .suggestions-container .suggestions-title {
+      margin-bottom: 30px;
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #353975;
+      letter-spacing: 1.2px;
+      text-shadow: 0 2px 2px rgba(124, 158, 212, 0.42); }
+    .page-container .suggestions-container .suggestions-text {
+      margin-bottom: 10px;
+      font-size: 0.875rem;
+      line-height: 20px;
+      color: #353975;
+      letter-spacing: 0.93px; }
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)

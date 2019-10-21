@@ -10,16 +10,13 @@
   height: 100%;
   @include vertical-scroll-momentum();
   background: $primary-background;
-}
-
-.page-container .bmt-suggestions-container {
-  @include container;
-}
-
-.page-container .bmt-main h3 {
-  @include container-title-text;
-}
-
-.page-container .bmt-suggestions-container p {
-  @include content-text;
+  .suggestions-container {
+    @include container;
+    .suggestions-title {
+      @include container-title-text;
+    }
+    .suggestions-text {
+      @include content-text;
+    }
+  }
 }

@@ -1,0 +1,13 @@
+@import "../../style/mixins";
+@import "../../style/variables";
+
+.page-contaienr, .btm-main {
+  position: relative;
+  width: 100%;
+}
+
+.page-container {
+  height: 100%;
+  @include vertical-scroll-momentum();
+  background: $primary-background;
+}

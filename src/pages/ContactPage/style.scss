@@ -10,16 +10,13 @@
   height: 100%;
   @include vertical-scroll-momentum();
   background: $primary-background;
-}
-
-.bmt-contact-container {
-  @include container;
-}
-
-.page-container .bmt-contact-title {
-  @include container-title-text;
-}
-
-.page-container .bmt-contact-text {
-  @include content-text;
+  .contact-container {
+    @include container;
+  }
+  .bmt-contact-title {
+    @include container-title-text;
+  }
+  .bmt-contact-text {
+    @include content-text;
+  }
 }

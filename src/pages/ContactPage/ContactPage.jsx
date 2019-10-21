@@ -17,10 +17,10 @@ function ContactPage({ showMobileMenu, toggleDisplay }) {
         toggleDisplay={toggleDisplay}
       />
       <main className="bmt-main">
-        <section className="bmt-contact-container">
-          <h3 className="bmt-contact-title">Let's Be Friends</h3>
-          <p className="bmt-contact-text">We like yoga, coffee, nature, and the brain. </p>
-          <p className="bmt-contact-text">gian@bettermetoo.com</p>
+        <section className="contact-container">
+          <h3 className="contact-title">Let's Be Friends</h3>
+          <p className="contact-text">We like yoga, coffee, nature, and the brain. </p>
+          <p className="contact-text">gian@bettermetoo.com</p>
         </section>
         <ThoughtsLetter />
       </main>
