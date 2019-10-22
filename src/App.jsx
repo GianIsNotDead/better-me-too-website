@@ -28,11 +28,6 @@ class App extends Component {
     const display = this.state[item] === true ? false : true;
     return this.setState({ [item]: display });
   }
-  // life cycle
-  componentDidMount() {
-    console.log(window.location);
-    // this.setState({ route: window.location.href });
-  }
 
   render() {
     return (
@@ -40,6 +35,7 @@ class App extends Component {
         showMobileMenu={this.state.showMobileMenu}
         toggleDisplay={this.toggleDisplay}
       />
+    );
       // <ReleasesPage
       //   showMobileMenu={this.state.showMobileMenu}
       //   toggleDisplay={this.toggleDisplay}
@@ -65,7 +61,6 @@ class App extends Component {
       //   showMobileMenu={this.state.showMobileMenu}
       //   toggleDisplay={this.toggleDisplay}
       // />
-    );
   }
 }
 

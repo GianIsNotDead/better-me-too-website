@@ -49,55 +49,49 @@ Better Me Too Visual Guide
 /*************************************
 Better Me Too Visual Guide
 *************************************/
-.bmt-header {
-  padding: 0 6%;
-  z-index: 2; }
-
-.bmt-header, .header-items-container {
+.bmt-header, .header-container {
   position: relative;
   width: 100%; }
 
-.bmt-header .header-items-container {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 50px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #DBDBDB; }
-
-.bmt-header .logo-text {
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #FFFFFF; }
-
-.bmt-header .logo-text-dark {
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #353975; }
-
-.bmt-header .burger-menu-button, .bmt-header .burger-menu {
-  display: inline-block;
-  position: relative; }
-
-.bmt-header .burger-menu-button {
-  z-index: 10; }
-
-.bmt-header .burger-menu {
-  width: 100%;
-  height: 100%;
-  z-index: 1; }
-
-.bmt-header .header-nav {
-  display: none; }
-
-.bmt-header .header-nav a {
-  font-family: "Libre Franklin", sans-serif;
-  font-size: 1.25rem;
-  color: #353975;
-  letter-spacing: 1.6px;
-  line-height: 20px; }
-
-.bmt-header .nav-mobile {
-  padding-top: 120px; }
+.bmt-header {
+  padding: 0 6%;
+  z-index: 2; }
+  .bmt-header .header-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #DBDBDB; }
+    .bmt-header .header-container .logo-text {
+      font-size: 1.125rem;
+      font-weight: 600; }
+    .bmt-header .header-container .logo-text-dark {
+      color: #353975; }
+    .bmt-header .header-container .logo-text-light {
+      color: #FFFFFF; }
+    .bmt-header .header-container .burger-menu-button, .bmt-header .header-container .burger-menu {
+      display: inline-block;
+      position: relative; }
+    .bmt-header .header-container .burger-menu-button {
+      z-index: 10; }
+    .bmt-header .header-container .burger-menu {
+      width: 100%;
+      height: 100%;
+      z-index: 1; }
+  .bmt-header .header-nav {
+    display: none; }
+    .bmt-header .header-nav .nav-items-container {
+      display: block; }
+      .bmt-header .header-nav .nav-items-container .nav-item {
+        margin-bottom: 40px; }
+    .bmt-header .header-nav a {
+      font-family: "Libre Franklin", sans-serif;
+      font-size: 1.25rem;
+      color: #353975;
+      letter-spacing: 1.6px;
+      line-height: 20px; }
+  .bmt-header .nav-mobile {
+    padding-top: 120px; }
 
 .nav-mobile-active {
   display: block !important;
@@ -108,12 +102,6 @@ Better Me Too Visual Guide
   height: 100%;
   padding: 0 6%;
   background: #EFF2F5; }
-
-.bmt-header .nav-items-container {
-  display: block; }
-
-.bmt-header .nav-item {
-  margin-bottom: 40px; }
 /*************************************
 Better Me Too Visual Guide
 *************************************/

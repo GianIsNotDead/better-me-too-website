@@ -1,69 +1,66 @@
 @import "../../style/variables";
 @import "../../style/mixins";
 
+.bmt-header, .header-container {
+  position: relative;
+  width: 100%;
+}
+
 .bmt-header {
   padding: 0 $horizontal-gutter;
   z-index: 2;
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: $vertical-gutter-large;
+    padding-bottom: $vertical-gutter-extra-small;
+    @include vertical-divider();
+    .logo-text {
+      font-size: $logo-text-size;
+      font-weight: 600;
+    }
+    .logo-text-dark {
+      color: $primary-font-color;
+    }
+    .logo-text-light {
+      color: #FFFFFF;
+    }
+    // hamgburger menu
+    .burger-menu-button, .burger-menu {
+      display: inline-block;
+      position: relative;
+    }
+    .burger-menu-button {
+      z-index: 10;
+    }
+    .burger-menu {
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+  }
+  .header-nav {
+    display: none;
+    .nav-items-container {
+      display: block;
+      .nav-item {
+        margin-bottom: 40px;
+      }
+    }
+    a {
+      font-family: $primary-font;
+      font-size: 1.25rem;
+      color: #353975;
+      letter-spacing: 1.6px;
+      line-height: 20px;
+    }
+  }
+  .nav-mobile {
+    padding-top: 120px;
+  }
 }
 
-.bmt-header, .header-items-container {
-  position: relative;
-  width: 100%;
-}
-
-.bmt-header .header-items-container {
-  display: flex;
-  justify-content: space-between;
-  padding-top: $vertical-gutter-large;
-  padding-bottom: $vertical-gutter-extra-small;
-  @include vertical-divider();
-}
-
-.bmt-header .logo-text {
-  font-size: $logo-text-size;
-  font-weight: 600;
-  color: #FFFFFF;
-}
-
-.bmt-header .logo-text-dark {
-  font-size: $logo-text-size;
-  font-weight: 600;
-  color: $primary-font-color;
-}
-
-// Hamburger Menu
-.bmt-header .burger-menu-button, .bmt-header .burger-menu {
-  display: inline-block;
-  position: relative;
-}
-
-.bmt-header .burger-menu-button {
-  z-index: 10;
-}
-
-.bmt-header .burger-menu {
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-// Mobile Menu Expanded
-.bmt-header .header-nav {
-  display: none;
-}
-
-.bmt-header .header-nav a {
-  font-family: $primary-font;
-  font-size: 1.25rem;
-  color: #353975;
-  letter-spacing: 1.6px;
-  line-height: 20px;
-}
-
-.bmt-header .nav-mobile {
-  padding-top: 120px;
-}
-
+// expand mobile menu
 .nav-mobile-active {
   display: block !important;
   position: absolute;
@@ -73,12 +70,4 @@
   height: 100%;
   padding: 0 $horizontal-gutter;
   background: #EFF2F5;
-}
-
-.bmt-header .nav-items-container {
-  display: block;
-}
-
-.bmt-header .nav-item {
-  margin-bottom: 40px;
 }

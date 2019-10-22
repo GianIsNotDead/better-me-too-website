@@ -24893,21 +24893,13 @@ var App = function (_Component) {
       var display = this.state[item] === true ? false : true;
       return this.setState(_defineProperty({}, item, display));
     }
-    // life cycle
-
-  }, {
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      console.log(window.location);
-      // this.setState({ route: window.location.href });
-    }
   }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(_HomePage2.default, {
         showMobileMenu: this.state.showMobileMenu,
         toggleDisplay: this.toggleDisplay
-      })
+      });
       // <ReleasesPage
       //   showMobileMenu={this.state.showMobileMenu}
       //   toggleDisplay={this.toggleDisplay}
@@ -24933,7 +24925,6 @@ var App = function (_Component) {
       //   showMobileMenu={this.state.showMobileMenu}
       //   toggleDisplay={this.toggleDisplay}
       // />
-      ;
     }
   }]);
 
@@ -25586,10 +25577,10 @@ var Header = function (_Component) {
         { className: 'bmt-header ' + (showMobileMenu === true ? 'nav-mobile-active' : '') },
         _react2.default.createElement(
           'div',
-          { className: 'header-items-container' },
+          { className: 'header-container' },
           _react2.default.createElement(
             'h1',
-            { className: '' + (theme === 'dark' ? 'logo-text-dark' : 'logo-text') },
+            { className: 'logo-text ' + (theme === 'dark' ? 'logo-text-dark' : 'logo-text-light') },
             'Better Me Too'
           ),
           _react2.default.createElement(
@@ -25609,7 +25600,7 @@ var Header = function (_Component) {
               { className: 'nav-item' },
               _react2.default.createElement(
                 'a',
-                { href: route + '/about' },
+                { className: 'nav-link', href: route + '/about' },
                 'About'
               )
             ),
@@ -25618,7 +25609,7 @@ var Header = function (_Component) {
               { className: 'nav-item' },
               _react2.default.createElement(
                 'a',
-                { href: '#' },
+                { className: 'nav-link', href: '#' },
                 'Releases & Milestones'
               )
             ),
@@ -25627,7 +25618,7 @@ var Header = function (_Component) {
               { className: 'nav-item' },
               _react2.default.createElement(
                 'a',
-                { href: '#' },
+                { className: 'nav-link', href: '#' },
                 'Conversations'
               )
             ),
@@ -25636,7 +25627,7 @@ var Header = function (_Component) {
               { className: 'nav-item' },
               _react2.default.createElement(
                 'a',
-                { href: '#' },
+                { className: 'nav-link', href: '#' },
                 'Resources'
               )
             )
