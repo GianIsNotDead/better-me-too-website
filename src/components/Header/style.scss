@@ -15,14 +15,14 @@
     padding-top: $vertical-gutter-large;
     padding-bottom: $vertical-gutter-extra-small;
     @include vertical-divider();
-    .logo-text {
+    .logo-text .logo-link {
       font-size: $logo-text-size;
       font-weight: 600;
     }
-    .logo-text-dark {
+    .logo-text-dark .logo-link {
       color: $primary-font-color;
     }
-    .logo-text-light {
+    .logo-text-light .logo-link {
       color: #FFFFFF;
     }
     // hamgburger menu

@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+// helpers
+import SonicHedgehog from './helpers/SonicHedgehog';
+
 // pages
 import HomePage from './pages/HomePage';
 import ReleasesPage from './pages/ReleasesPage';
@@ -15,7 +18,6 @@ class App extends Component {
     this.state= {
       // Header
       showMobileMenu: false,
-      route: null,
     };
     this.toggleDisplay = this.toggleDisplay.bind(this);
   }
@@ -29,38 +31,65 @@ class App extends Component {
     return this.setState({ [item]: display });
   }
 
+  componentDidMount() {
+    console.log('======================');
+    console.log('React Component Mounted');
+    console.log('======================');
+    console.log('navigator: ', window.navigator);
+    window.addEventListener('hashchange', () => {
+      console.log('----------> ', 'hashchange fired');
+    }, false);
+    window.addEventListener('popstate', () => {
+      console.log('----------> ', 'popstate fired');
+    }, false);
+  }
+
   render() {
-    return (
-      <HomePage
-        showMobileMenu={this.state.showMobileMenu}
-        toggleDisplay={this.toggleDisplay}
-      />
-    );
-      // <ReleasesPage
-      //   showMobileMenu={this.state.showMobileMenu}
-      //   toggleDisplay={this.toggleDisplay}
-      // />
-      // <ConversationsPage
-      //   showMobileMenu={this.state.showMobileMenu}
-      //   toggleDisplay={this.toggleDisplay}
-      // />
-      // <ResourcesPage
-      //   showMobileMenu={this.state.showMobileMenu}
-      //   toggleDisplay={this.toggleDisplay}
-      // />
-      // <AboutPage
-      //   showMobileMenu={this.state.showMobileMenu}
-      //   toggleDisplay={this.toggleDisplay}
-      // />
-      // <ContactPage
-      //   showMobileMenu={this.state.showMobileMenu}
-      //   toggleDisplay={this.toggleDisplay}
-      // />
-      // <SuggestionsPage
-      //   route={this.state.route}
-      //   showMobileMenu={this.state.showMobileMenu}
-      //   toggleDisplay={this.toggleDisplay}
-      // />
+    return new SonicHedgehog().makeRoutes({
+      '/': () => (
+        <HomePage
+          showMobileMenu={this.state.showMobileMenu}
+          toggleDisplay={this.toggleDisplay}
+        />
+      ),
+      '/about': () => (
+        <AboutPage
+          showMobileMenu={this.state.showMobileMenu}
+          toggleDisplay={this.toggleDisplay}
+        />
+      ),
+      '/releases': () => (
+        <ReleasesPage
+          showMobileMenu={this.state.showMobileMenu}
+          toggleDisplay={this.toggleDisplay}
+        />
+      ),
+      '/conversations': () => (
+        <ConversationsPage
+          showMobileMenu={this.state.showMobileMenu}
+          toggleDisplay={this.toggleDisplay}
+        />
+      ),
+      '/resources': () => (
+        <ResourcesPage
+          showMobileMenu={this.state.showMobileMenu}
+          toggleDisplay={this.toggleDisplay}
+        />
+      ),
+      '/contact': () => (
+        <ContactPage
+          showMobileMenu={this.state.showMobileMenu}
+          toggleDisplay={this.toggleDisplay}
+        />
+      ),
+      '/suggestions': () => (
+        <SuggestionsPage
+          route={this.state.route}
+          showMobileMenu={this.state.showMobileMenu}
+          toggleDisplay={this.toggleDisplay}
+        />
+      ),
+    });
   }
 }
 

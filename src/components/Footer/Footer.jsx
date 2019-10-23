@@ -14,10 +14,10 @@ function Footer() {
     <footer className="bmt-footer">
       <nav className="footer-nav">
         <ul className="nav-items-container">
-          <li className="nav-item"><a href="#">About</a></li>
-          <li className="nav-item"><a href="#">Releases &amp; Milestones</a></li>
-          <li className="nav-item"><a href="#">Conversations</a></li>
-          <li className="nav-item"><a href="#">Resources</a></li>
+          <li className="nav-item"><a href="/about">About</a></li>
+          <li className="nav-item"><a href="/releases">Releases &amp; Milestones</a></li>
+          <li className="nav-item"><a href="/conversations">Conversations</a></li>
+          <li className="nav-item"><a href="/resources">Resources</a></li>
         </ul>
       </nav>
       <section className="social-links">

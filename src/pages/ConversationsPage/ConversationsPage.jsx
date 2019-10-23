@@ -18,7 +18,7 @@ function ConversationsPage({ showMobileMenu, toggleDisplay }) {
         toggleDisplay={toggleDisplay}
       />
       <main className="bmt-main">
-        <ConversationsPreview />
+        <Conversations />
         <ThoughtsLetter />
       </main>
       <Footer />

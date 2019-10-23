@@ -62,12 +62,12 @@ Better Me Too Visual Guide
     padding-top: 50px;
     padding-bottom: 10px;
     border-bottom: 1px solid #DBDBDB; }
-    .bmt-header .header-container .logo-text {
+    .bmt-header .header-container .logo-text .logo-link {
       font-size: 1.125rem;
       font-weight: 600; }
-    .bmt-header .header-container .logo-text-dark {
+    .bmt-header .header-container .logo-text-dark .logo-link {
       color: #353975; }
-    .bmt-header .header-container .logo-text-light {
+    .bmt-header .header-container .logo-text-light .logo-link {
       color: #FFFFFF; }
     .bmt-header .header-container .burger-menu-button, .bmt-header .header-container .burger-menu {
       display: inline-block;
@@ -548,34 +548,40 @@ Better Me Too Visual Guide
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   background: #EFF2F5; }
-
-.page-container .bmt-mission,
-.page-container .bmt-ethics,
-.page-container .bmt-disclaimer,
-.page-container .bmt-contributors,
-.page-container .bmt-faq {
-  position: relative;
-  top: 0;
-  left: 0;
-  margin: 0 6%;
-  padding: 50px 0;
-  z-index: 1;
-  border-bottom: 1px solid #DBDBDB; }
-
-.page-container .bmt-main h3 {
-  margin-bottom: 30px;
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: #353975;
-  letter-spacing: 1.2px;
-  text-shadow: 0 2px 2px rgba(124, 158, 212, 0.42); }
-
-.page-container .bmt-mission p {
-  margin-bottom: 10px;
-  font-size: 0.875rem;
-  line-height: 20px;
-  color: #353975;
-  letter-spacing: 0.93px; }
+  .page-container .bmt-mission, .page-container .bmt-ethics, .page-container .bmt-disclaimer, .page-container .bmt-contributors, .page-container .bmt-faq {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 6%;
+    padding: 50px 0;
+    z-index: 1;
+    border-bottom: 1px solid #DBDBDB; }
+  .page-container .bmt-mission .bmt-mission-title,
+  .page-container .bmt-ethics .bmt-ethics-title,
+  .page-container .bmt-disclaimer .bmt-disclaimer-title,
+  .page-container .bmt-contributors .bmt-contributors-title,
+  .page-container .bmt-faq .bmt-faq-title {
+    margin-bottom: 30px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #353975;
+    letter-spacing: 1.2px;
+    text-shadow: 0 2px 2px rgba(124, 158, 212, 0.42); }
+  .page-container .bmt-mission .bmt-mission-text,
+  .page-container .bmt-ethics .bmt-ethics-text,
+  .page-container .bmt-disclaimer .bmt-disclaimer-text {
+    margin-bottom: 10px;
+    font-size: 0.875rem;
+    line-height: 20px;
+    color: #353975;
+    letter-spacing: 0.93px; }
+  .page-container .bmt-faq .bmt-faq-question,
+  .page-container .bmt-faq .bmt-faq-answer {
+    margin-bottom: 10px;
+    font-size: 0.875rem;
+    line-height: 20px;
+    color: #353975;
+    letter-spacing: 0.93px; }
 /*************************************
 Better Me Too Visual Guide
 *************************************/

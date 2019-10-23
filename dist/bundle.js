@@ -24823,6 +24823,10 @@ var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
+var _SonicHedgehog = __webpack_require__(/*! ./helpers/SonicHedgehog */ "./src/helpers/SonicHedgehog.js");
+
+var _SonicHedgehog2 = _interopRequireDefault(_SonicHedgehog);
+
 var _HomePage = __webpack_require__(/*! ./pages/HomePage */ "./src/pages/HomePage/HomePage.jsx");
 
 var _HomePage2 = _interopRequireDefault(_HomePage);
@@ -24861,6 +24865,9 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+// helpers
+
+
 // pages
 
 
@@ -24874,8 +24881,7 @@ var App = function (_Component) {
 
     _this.state = {
       // Header
-      showMobileMenu: false,
-      route: null
+      showMobileMenu: false
     };
     _this.toggleDisplay = _this.toggleDisplay.bind(_this);
     return _this;
@@ -24894,37 +24900,69 @@ var App = function (_Component) {
       return this.setState(_defineProperty({}, item, display));
     }
   }, {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      console.log('======================');
+      console.log('React Component Mounted');
+      console.log('======================');
+      console.log('navigator: ', window.navigator);
+      window.addEventListener('hashchange', function () {
+        console.log('----------> ', 'hashchange fired');
+      }, false);
+      window.addEventListener('popstate', function () {
+        console.log('----------> ', 'popstate fired');
+      }, false);
+    }
+  }, {
     key: 'render',
     value: function render() {
-      return _react2.default.createElement(_HomePage2.default, {
-        showMobileMenu: this.state.showMobileMenu,
-        toggleDisplay: this.toggleDisplay
+      var _this2 = this;
+
+      return new _SonicHedgehog2.default().makeRoutes({
+        '/': function _() {
+          return _react2.default.createElement(_HomePage2.default, {
+            showMobileMenu: _this2.state.showMobileMenu,
+            toggleDisplay: _this2.toggleDisplay
+          });
+        },
+        '/about': function about() {
+          return _react2.default.createElement(_AboutPage2.default, {
+            showMobileMenu: _this2.state.showMobileMenu,
+            toggleDisplay: _this2.toggleDisplay
+          });
+        },
+        '/releases': function releases() {
+          return _react2.default.createElement(_ReleasesPage2.default, {
+            showMobileMenu: _this2.state.showMobileMenu,
+            toggleDisplay: _this2.toggleDisplay
+          });
+        },
+        '/conversations': function conversations() {
+          return _react2.default.createElement(_ConversationsPage2.default, {
+            showMobileMenu: _this2.state.showMobileMenu,
+            toggleDisplay: _this2.toggleDisplay
+          });
+        },
+        '/resources': function resources() {
+          return _react2.default.createElement(_ResourcesPage2.default, {
+            showMobileMenu: _this2.state.showMobileMenu,
+            toggleDisplay: _this2.toggleDisplay
+          });
+        },
+        '/contact': function contact() {
+          return _react2.default.createElement(_ContactPage2.default, {
+            showMobileMenu: _this2.state.showMobileMenu,
+            toggleDisplay: _this2.toggleDisplay
+          });
+        },
+        '/suggestions': function suggestions() {
+          return _react2.default.createElement(_SuggestionsPage2.default, {
+            route: _this2.state.route,
+            showMobileMenu: _this2.state.showMobileMenu,
+            toggleDisplay: _this2.toggleDisplay
+          });
+        }
       });
-      // <ReleasesPage
-      //   showMobileMenu={this.state.showMobileMenu}
-      //   toggleDisplay={this.toggleDisplay}
-      // />
-      // <ConversationsPage
-      //   showMobileMenu={this.state.showMobileMenu}
-      //   toggleDisplay={this.toggleDisplay}
-      // />
-      // <ResourcesPage
-      //   showMobileMenu={this.state.showMobileMenu}
-      //   toggleDisplay={this.toggleDisplay}
-      // />
-      // <AboutPage
-      //   showMobileMenu={this.state.showMobileMenu}
-      //   toggleDisplay={this.toggleDisplay}
-      // />
-      // <ContactPage
-      //   showMobileMenu={this.state.showMobileMenu}
-      //   toggleDisplay={this.toggleDisplay}
-      // />
-      // <SuggestionsPage
-      //   route={this.state.route}
-      //   showMobileMenu={this.state.showMobileMenu}
-      //   toggleDisplay={this.toggleDisplay}
-      // />
     }
   }]);
 
@@ -25418,7 +25456,7 @@ function Footer() {
           { className: 'nav-item' },
           _react2.default.createElement(
             'a',
-            { href: '#' },
+            { href: '/about' },
             'About'
           )
         ),
@@ -25427,7 +25465,7 @@ function Footer() {
           { className: 'nav-item' },
           _react2.default.createElement(
             'a',
-            { href: '#' },
+            { href: '/releases' },
             'Releases & Milestones'
           )
         ),
@@ -25436,7 +25474,7 @@ function Footer() {
           { className: 'nav-item' },
           _react2.default.createElement(
             'a',
-            { href: '#' },
+            { href: '/conversations' },
             'Conversations'
           )
         ),
@@ -25445,7 +25483,7 @@ function Footer() {
           { className: 'nav-item' },
           _react2.default.createElement(
             'a',
-            { href: '#' },
+            { href: '/resources' },
             'Resources'
           )
         )
@@ -25567,7 +25605,6 @@ var Header = function (_Component) {
     value: function render() {
       var _props = this.props,
           theme = _props.theme,
-          route = _props.route,
           showMobileMenu = _props.showMobileMenu;
       // choose color theme for the header 
 
@@ -25581,7 +25618,11 @@ var Header = function (_Component) {
           _react2.default.createElement(
             'h1',
             { className: 'logo-text ' + (theme === 'dark' ? 'logo-text-dark' : 'logo-text-light') },
-            'Better Me Too'
+            _react2.default.createElement(
+              'a',
+              { className: 'logo-link', href: '/' },
+              'Better Me Too'
+            )
           ),
           _react2.default.createElement(
             'button',
@@ -25600,7 +25641,7 @@ var Header = function (_Component) {
               { className: 'nav-item' },
               _react2.default.createElement(
                 'a',
-                { className: 'nav-link', href: route + '/about' },
+                { className: 'nav-link', href: '/about' },
                 'About'
               )
             ),
@@ -25609,7 +25650,7 @@ var Header = function (_Component) {
               { className: 'nav-item' },
               _react2.default.createElement(
                 'a',
-                { className: 'nav-link', href: '#' },
+                { className: 'nav-link', href: '/releases' },
                 'Releases & Milestones'
               )
             ),
@@ -25618,7 +25659,7 @@ var Header = function (_Component) {
               { className: 'nav-item' },
               _react2.default.createElement(
                 'a',
-                { className: 'nav-link', href: '#' },
+                { className: 'nav-link', href: '/conversations' },
                 'Conversations'
               )
             ),
@@ -25627,7 +25668,7 @@ var Header = function (_Component) {
               { className: 'nav-item' },
               _react2.default.createElement(
                 'a',
-                { className: 'nav-link', href: '#' },
+                { className: 'nav-link', href: '/resources' },
                 'Resources'
               )
             )
@@ -25917,6 +25958,39 @@ exports.default = ThoughtsLetter;
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./src/helpers/SonicHedgehog.js":
+/*!**************************************!*\
+  !*** ./src/helpers/SonicHedgehog.js ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**********************************************************
+A minimalistic router for single page web
+**********************************************************/
+
+// Just for fun, we named it after sonic hedgehog, not the cartoon character, but the mammalian signaling protein.
+
+function SonicHedgehog() {
+  this.routes = null;
+}
+
+SonicHedgehog.prototype.makeRoutes = function (routes) {
+  this.routes = routes;
+  var currentLocation = window.location.pathname;
+  return routes[currentLocation]();
+};
+
+exports.default = SonicHedgehog;
 
 /***/ }),
 
@@ -26250,7 +26324,7 @@ function ConversationsPage(_ref) {
     _react2.default.createElement(
       'main',
       { className: 'bmt-main' },
-      _react2.default.createElement(ConversationsPreview, null),
+      _react2.default.createElement(_Conversations2.default, null),
       _react2.default.createElement(_ThoughtsLetter2.default, null)
     ),
     _react2.default.createElement(_Footer2.default, null)

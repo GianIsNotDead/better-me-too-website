@@ -7,3 +7,11 @@ A minimalistic router for single page web
 function SonicHedgehog() {
   this.routes = null;
 }
+
+SonicHedgehog.prototype.makeRoutes = function (routes) {
+  this.routes = routes;
+  let currentLocation = window.location.pathname;
+  return routes[currentLocation]();
+}
+
+export default SonicHedgehog;

@@ -10,21 +10,24 @@
   height: 100%;
   @include vertical-scroll-momentum();
   background: $primary-background;
-}
-
-.page-container .bmt-mission,
-.page-container .bmt-ethics,
-.page-container .bmt-disclaimer,
-.page-container .bmt-contributors,
-.page-container .bmt-faq {
-  @include container;
-  @include vertical-divider;
-}
-
-.page-container .bmt-main h3 {
-  @include container-title-text;
-}
-
-.page-container .bmt-mission p {
-  @include content-text;
+  .bmt-mission, .bmt-ethics, .bmt-disclaimer, .bmt-contributors, .bmt-faq {
+    @include container;
+    @include vertical-divider;
+  }
+  .bmt-mission .bmt-mission-title,
+  .bmt-ethics .bmt-ethics-title,
+  .bmt-disclaimer .bmt-disclaimer-title,
+  .bmt-contributors .bmt-contributors-title,
+  .bmt-faq .bmt-faq-title {
+    @include container-title-text;
+  }
+  .bmt-mission .bmt-mission-text,
+  .bmt-ethics .bmt-ethics-text,
+  .bmt-disclaimer .bmt-disclaimer-text {
+    @include content-text;
+  }
+  .bmt-faq .bmt-faq-question,
+  .bmt-faq .bmt-faq-answer {
+    @include content-text;
+  }
 }

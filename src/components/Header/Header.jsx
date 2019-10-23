@@ -21,23 +21,23 @@ class Header extends Component {
   }
 
   render() {
-    const { theme, route, showMobileMenu } = this.props;
+    const { theme, showMobileMenu } = this.props;
     // choose color theme for the header 
     const HamburgerIcon = theme === 'dark' ? HamburgerDark : Hamburger;
     return (
       <header className={`bmt-header ${showMobileMenu === true ? 'nav-mobile-active' : ''}`}>
         <div className="header-container">
-          <h1 className={`logo-text ${theme === 'dark' ? 'logo-text-dark' : 'logo-text-light'}`}>Better Me Too</h1>
+          <h1 className={`logo-text ${theme === 'dark' ? 'logo-text-dark' : 'logo-text-light'}`}><a className="logo-link" href="/">Better Me Too</a></h1>
           <button className="burger-menu-button" name="showMobileMenu" onClick={this._toggleMobileMenu}>
             <img className="burger-menu" src={`./dist/${showMobileMenu === true ? Close : HamburgerIcon}`} alt="hamburger menu" />
           </button>
         </div>
         <nav className={`header-nav ${showMobileMenu === true ? 'nav-mobile nav-mobile-active' : ''}`}>
           <ul className="nav-items-container">
-            <li className="nav-item"><a className="nav-link" href={`${route}/about`}>About</a></li>
-            <li className="nav-item"><a className="nav-link" href="#">Releases &amp; Milestones</a></li>
-            <li className="nav-item"><a className="nav-link" href="#">Conversations</a></li>
-            <li className="nav-item"><a className="nav-link" href="#">Resources</a></li>
+            <li className="nav-item"><a className="nav-link" href="/about">About</a></li>
+            <li className="nav-item"><a className="nav-link" href="/releases">Releases &amp; Milestones</a></li>
+            <li className="nav-item"><a className="nav-link" href="/conversations">Conversations</a></li>
+            <li className="nav-item"><a className="nav-link" href="/resources">Resources</a></li>
           </ul>
         </nav>
       </header>
