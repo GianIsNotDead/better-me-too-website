@@ -16,7 +16,6 @@
     display: flex;
     justify-content: space-between;
     padding: $vertical-gutter-small $horizontal-gutter;
-    margin-bottom: $vertical-gutter-medium;
     background: #FFFFFF;
     box-shadow: 0 4px 6px 0 rgba(226,233,248,0.73);
     border-radius: 10px;
@@ -44,7 +43,8 @@
     }
   }
   // end of resource preview box
-  .bmt-all-resources-btn {
+  .bmt-resources-btn {
     @include primary-button;
+    margin-top: $vertical-gutter-medium;
   }
 }

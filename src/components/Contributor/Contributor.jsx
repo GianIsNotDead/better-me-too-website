@@ -3,27 +3,26 @@ import React from 'react';
 // style
 import './style.scss';
 
-// assets
-import ContributorGian from '../../assets/contributor_gian.png';
-
-function Contributor() {
+function Contributor({ name, role, image, socials }) {
+  const Socials = socials.map((t, i) => (
+    <a className="bmt-contributor-social" href={t['link']} key={'social'.concat(i)}>{t['platform']}</a>
+  ));
   return (
     <article className="bmt-contributor">
       <div className="bmt-contributor-image-container">
-        <img className="bmt-contributor-image" src={`./dist/${ContributorGian}`} alt="computer illustrated profile image"/>
+        <img className="bmt-contributor-image" src={`./dist/${image}`} alt="computer illustrated profile image"/>
       </div>
       <div className="bmt-contributor-text-container">
         <div className="bmt-contributor-name-social">
           <div className="bmt-contributor-name-container">
-            <p className="bmt-contributor-name">Gian</p>
+            <p className="bmt-contributor-name">{name}</p>
           </div>
           <div className="bmt-contributor-social-container">
-            <a className="bmt-contributor-social" href="">Twitter</a>
-            <a className="bmt-contributor-social" href="">Instagram</a>
+            {Socials}
           </div>
         </div>
         <div className="bmt-contributor-role-container">
-          <p className="bmt-contributor-role">Software, Hardware, Design</p>
+          <p className="bmt-contributor-role">{role}</p>
         </div>
       </div>
     </article>

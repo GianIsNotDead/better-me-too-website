@@ -9,34 +9,29 @@
 .page-container {
   height: 100%;
   @include vertical-scroll-momentum();
-}
-
-.page-container .gradient-container {
-  background: $banner-gradient;
-}
-
-.page-container .bmt-main {
-  background: $primary-background;
-}
-
-.page-container .nav-mobile-active {
-  height: 100%;
-}
-
-.page-container .page-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.page-container .page-background-image {
-  display: block;
-  height: 100%;
-  width: auto;
-  position: relative;
-  top: 20px;
-  left: -10%;
+  .bmt-main {
+    background: $primary-background;
+  }
+  .gradient-container {
+    background: $banner-gradient;
+  }
+  .nav-mobile-active {
+    height: 100%;
+  }
+  .page-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+  }
+  .page-background-image {
+    display: block;
+    height: 100%;
+    width: auto;
+    position: relative;
+    top: 20px;
+    left: -10%;
+  }
 }

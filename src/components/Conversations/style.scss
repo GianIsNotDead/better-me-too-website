@@ -17,7 +17,6 @@
   }
   .conversation-preview {
     @include vertical-divider;
-    margin-bottom: $vertical-gutter-medium;
     .conversation-title-container {
       display: flex;
       justify-content: space-between;
@@ -76,7 +75,8 @@
     }
   }
   // end of conversation preview box style
-  .all-conversations-btn {
+  .bmt-conversations-btn {
     @include primary-button;
+    margin-top: $vertical-gutter-medium;
   }
 }

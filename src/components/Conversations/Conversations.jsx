@@ -3,6 +3,9 @@ import React from 'react';
 // style
 import './style.scss';
 
+// static
+import WebCopy from '../../constant/web_copy.json';
+
 function ConversationsPreview() {
   return (
     <article className="conversation-preview">
@@ -28,13 +31,15 @@ function ConversationsPreview() {
   )
 }
 
-function Conversations() {
+function Conversations({ btn }) {
   return (
     <section className="bmt-conversations">
-      <h3 className="bmt-conversations-title">Conversations</h3>
-      <p className="bmt-conversations-description">We find interesting concepts, research, and experiments, deliver them in an undiluted yet digestible way.</p>
+      <h3 className="bmt-conversations-title">{WebCopy['conversations-title']}</h3>
+      <p className="bmt-conversations-description">{WebCopy['conversations-description']}</p>
       <ConversationsPreview />
-      <button className="all-conversations-btn">See All Conversations</button>
+      { btn !== undefined &&
+        <button className="bmt-conversations-btn" onClick={btn.func}>{btn.name}</button>
+      }
     </section>
   );
 }

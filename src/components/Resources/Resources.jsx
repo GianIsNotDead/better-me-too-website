@@ -3,6 +3,9 @@ import React from 'react';
 // style
 import './style.scss';
 
+// static
+import WebCopy from '../../constant/web_copy.json';
+
 // assets
 import Incognito from '../../assets/resource_incognito.jpg'
 
@@ -21,13 +24,15 @@ function ResourcesPreview() {
   );
 }
 
-function Resources() {
+function Resources({ btn }) {
   return (
     <section className="bmt-resources">
-      <h3 className="bmt-resources-title">Resources</h3>
-      <p className="bmt-resources-description">Some say that the internet has enough resources for one to learn and become a rocket scientist. Here’re some of the goodies that helped us to level up on science and engineering.</p>
+      <h3 className="bmt-resources-title">{WebCopy['resources-title']}</h3>
+      <p className="bmt-resources-description">{WebCopy['resources-description']}</p>
       <ResourcesPreview />
-      <button className="bmt-all-resources-btn">See All Resources</button>
+      { btn !== undefined &&
+        <button className="bmt-resources-btn" onClick={btn.func}>{btn.name}</button>
+      }
     </section>
   );
 }

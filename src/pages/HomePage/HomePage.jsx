@@ -26,9 +26,24 @@ function HomePage({ showMobileMenu, toggleDisplay }) {
         <Banner />
       </div>
       <main className="btm-main">
-        <Releases />
-        <Conversations />
-        <Resources />
+        <Releases
+          btn={{
+            name: 'See All Releases',
+            func: () => window.location.href = '/releases',
+          }}
+        />
+        <Conversations
+          btn={{
+            name: 'See All Conversations',
+            func: () => window.location.href = '/conversations',
+          }}
+        />
+        <Resources
+          btn={{
+            name: 'See All Resources',
+            func: () => window.location.href = '/resources',
+          }}
+        />
         <ThoughtsLetter />
         <div className="page-background">
           <img className="page-background-image" src={`./dist/${BackgroundHome}`} alt="geometric background overlay"/>

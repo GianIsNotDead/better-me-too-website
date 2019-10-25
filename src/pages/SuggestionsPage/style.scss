@@ -12,6 +12,7 @@
   background: $primary-background;
   .suggestions-container {
     @include container;
+    @include vertical-divider;
     .suggestions-title {
       @include container-title-text;
     }

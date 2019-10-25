@@ -31,19 +31,6 @@ class App extends Component {
     return this.setState({ [item]: display });
   }
 
-  componentDidMount() {
-    console.log('======================');
-    console.log('React Component Mounted');
-    console.log('======================');
-    console.log('navigator: ', window.navigator);
-    window.addEventListener('hashchange', () => {
-      console.log('----------> ', 'hashchange fired');
-    }, false);
-    window.addEventListener('popstate', () => {
-      console.log('----------> ', 'popstate fired');
-    }, false);
-  }
-
   render() {
     return new SonicHedgehog().makeRoutes({
       '/': () => (

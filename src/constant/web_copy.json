@@ -1,0 +1,88 @@
+{
+  "banner-title": "Open Source Brain",
+  "banner-text": "We hope to accelerate the understanding of the brain by delivering intriguing, undiluted builds (software &amp; hardware), contents (articles), and resources (books &amp; videos) to everyone, so they have the tools to ask questions, conduct experiments and make positive progress in healthcare.",
+  "banner-button": "Suggest Builds & Articles",
+
+  "about-mission-title": "Mission",
+  "about-mission-text": "We hope to accelerate the understanding of the brain by delivering intriguing, undiluted builds, contents, and resources to everyone, so they have the tools to ask questions, conduct experiments and make positive progress in healthcare.",
+  "about-ethics-title": "Ethics",
+  "about-ethics-text": [
+    {
+      "title": "Emphasizing Human Potential",
+      "text": "We believe that everyone is equipped with their own unique ability to thrive. The information exchanged through this platform is shared under the assumption that, given the right information and tools, everyone can access their highest potential."
+    },
+    {
+      "title": "Cultivating Supportive Communities",
+      "text": "The goal of platform is to breakdown the power hierachy of conventional knowledge processing, so anyone can have the tools to create change. It's only possible to achieve this goal by the collective effort of people who are curious to learn, open to wild imagination, and honest in their approach to share the knowledge."
+    },
+    {
+      "title": "Operating with Transparency",
+      "text": "All the materials are visible to the public via platforms like GitHub. Our business model is explained throughout the platform."
+    },
+    {
+      "title": "Communicating with Humility",
+      "text": "We communicate with the awareness that we are all grasping for straws with blindfolds on, trying to piece this whole thing together. We welcome all questions, counter arguments and skepticism."
+    }
+  ],
+  "about-disclaimer-title": "Disclaimer",
+  "about-disclaimer-text-tltr": "Science and engineering are not always straight forward, so please enjoy the contents with a healthy dose of skepticism.",
+  "about-disclaimer-text": "The materials published on this platform are not intended for medical advice, diagnosis nor treatment. Please always consult healthcare professionals for any medical conditions. We try our best to thoroughly validate the published materials. However, we make no warranties, expressed or implied, regarding errors or omissions and assumes no legal liability or responsibility for loss or damage resulting from the use of the information contained within.",
+  "about-contributors": [
+    {
+      "name": "Gian",
+      "role": "Software, Hardware, Design",
+      "socials": [
+        {
+          "platform": "instagram",
+          "link": "https://www.instagram.com/gianisalive/"
+        },
+        {
+          "platform": "twitter",
+          "link": "https://twitter.com/gianisalive"
+        }
+      ]
+    }
+  ],
+  "about-faq-title": "FAQ",
+  "about-faq-text": [
+    {
+      "question": "What is this?",
+      "answer": "We are professionals and hobbyists on a journey to learn more about the brain. We see no reason to keep it all to ourselves, so we talk about them on this platform, hoping that the contents have some value to others."
+    },
+    {
+      "question": "Should I seek medical advice on the platform?",
+      "answer": "No. Please always consult healthcare professionals for any medical conditions."
+    },
+    {
+      "question": "Are there any financial backers who support the platform?",
+      "answer": "No. We try to fund the entire platform by producing contents."
+    },
+    {
+      "question": "Who should use this platform?",
+      "answer": "Well, no one really should. However, if you want to level up your understanding of science and engineering by learning about the brain, then you might like some of the things we do here."
+    },
+    {
+      "question": "Where are you guys based?",
+      "answer": "We currently working out of coffee shops and maker spaces in San Francisco."
+    }
+  ],
+
+  "releases-title": "Releases",
+  "releases-description": "We build opensource software and hardware to help people understand the brain.",
+
+  "conversations-title": "Conversations",
+  "conversations-description": "We find interesting concepts, research, and experiments, deliver them in an undiluted yet digestible way.",
+
+  "resources-title": "Resources",
+  "resources-description": "Some say that the internet has enough resources for one to learn and become a rocket scientist. Here’re some of the goodies that helped us to level up on science and engineering.",
+
+  "thoguhtsletter-title": "Thoughts Sharing Friday",
+  "thoughtsletter-text": {
+    "description": "We’d love to share our progress, and any interesting concepts we stumble upon. This is our one and only email service, so when you cancel, you cancel for REAL.",
+    "affirmation": "Not sure whether you'll like these ot not?"
+  },
+  "thoughtsletter-button": {
+    "email": "yay",
+    "sample-email": "See the Sample Email"
+  }
+}

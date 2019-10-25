@@ -14,7 +14,6 @@
   // beginning of preview box style
   .release-preview {
     padding: $vertical-gutter-medium $horizontal-gutter;
-    margin-bottom: $vertical-gutter-medium;
     background: #FFFFFF;
     box-shadow: 0 4px 6px 0 rgba(226,233,248,0.73);
     border-radius: 10px;
@@ -38,7 +37,8 @@
     }
   }
   // end of preview box style
-  .bmt-releases-all-btn {
+  .bmt-releases-btn {
     @include primary-button;
+    margin-top: $vertical-gutter-medium;
   }
 }

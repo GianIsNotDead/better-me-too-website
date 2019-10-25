@@ -24900,20 +24900,6 @@ var App = function (_Component) {
       return this.setState(_defineProperty({}, item, display));
     }
   }, {
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      console.log('======================');
-      console.log('React Component Mounted');
-      console.log('======================');
-      console.log('navigator: ', window.navigator);
-      window.addEventListener('hashchange', function () {
-        console.log('----------> ', 'hashchange fired');
-      }, false);
-      window.addEventListener('popstate', function () {
-        console.log('----------> ', 'popstate fired');
-      }, false);
-    }
-  }, {
     key: 'render',
     value: function render() {
       var _this2 = this;
@@ -25108,66 +25094,46 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
 __webpack_require__(/*! ./style.scss */ "./src/components/Banner/style.scss");
 
+var _web_copy = __webpack_require__(/*! ../../constant/web_copy.json */ "./src/constant/web_copy.json");
+
+var _web_copy2 = _interopRequireDefault(_web_copy);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
 // style
+function Banner() {
+  return _react2.default.createElement(
+    'section',
+    { className: 'bmt-banner' },
+    _react2.default.createElement(
+      'h2',
+      { className: 'bmt-banner-title' },
+      _web_copy2.default['banner-title']
+    ),
+    _react2.default.createElement(
+      'p',
+      { className: 'bmt-banner-text' },
+      _web_copy2.default['banner-text']
+    ),
+    _react2.default.createElement(
+      'a',
+      { className: 'bmt-cta-button', href: '/suggestions' },
+      _react2.default.createElement(
+        'div',
+        { className: 'bmt-cta-accent' },
+        _web_copy2.default['banner-button']
+      )
+    )
+  );
+}
 
-
-var Banner = function (_Component) {
-  _inherits(Banner, _Component);
-
-  function Banner() {
-    _classCallCheck(this, Banner);
-
-    return _possibleConstructorReturn(this, (Banner.__proto__ || Object.getPrototypeOf(Banner)).call(this));
-  }
-
-  _createClass(Banner, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'section',
-        { className: 'bmt-banner' },
-        _react2.default.createElement(
-          'h2',
-          { className: 'bmt-banner-title' },
-          'Open Source Brain'
-        ),
-        _react2.default.createElement(
-          'p',
-          { className: 'bmt-banner-text' },
-          'We hope to accelerate the understanding of the brain by delivering intriguing, undiluted builds (software & hardware), contents (articles), and resources (books & videos) to everyone, so they have the tools to ask questions, conduct experiments and make positive progress in healthcare. '
-        ),
-        _react2.default.createElement(
-          'button',
-          { className: 'bmt-cta-button' },
-          _react2.default.createElement(
-            'div',
-            { className: 'bmt-cta-accent' },
-            'Recommend Builds & Articles'
-          )
-        )
-      );
-    }
-  }]);
-
-  return Banner;
-}(_react.Component);
-
+// static
 exports.default = Banner;
 
 /***/ }),
@@ -25203,21 +25169,28 @@ var _react2 = _interopRequireDefault(_react);
 
 __webpack_require__(/*! ./style.scss */ "./src/components/Contributor/style.scss");
 
-var _contributor_gian = __webpack_require__(/*! ../../assets/contributor_gian.png */ "./src/assets/contributor_gian.png");
-
-var _contributor_gian2 = _interopRequireDefault(_contributor_gian);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// style
-function Contributor() {
+function Contributor(_ref) {
+  var name = _ref.name,
+      role = _ref.role,
+      image = _ref.image,
+      socials = _ref.socials;
+
+  var Socials = socials.map(function (t, i) {
+    return _react2.default.createElement(
+      'a',
+      { className: 'bmt-contributor-social', href: t['link'], key: 'social'.concat(i) },
+      t['platform']
+    );
+  });
   return _react2.default.createElement(
     'article',
     { className: 'bmt-contributor' },
     _react2.default.createElement(
       'div',
       { className: 'bmt-contributor-image-container' },
-      _react2.default.createElement('img', { className: 'bmt-contributor-image', src: './dist/' + _contributor_gian2.default, alt: 'computer illustrated profile image' })
+      _react2.default.createElement('img', { className: 'bmt-contributor-image', src: './dist/' + image, alt: 'computer illustrated profile image' })
     ),
     _react2.default.createElement(
       'div',
@@ -25231,22 +25204,13 @@ function Contributor() {
           _react2.default.createElement(
             'p',
             { className: 'bmt-contributor-name' },
-            'Gian'
+            name
           )
         ),
         _react2.default.createElement(
           'div',
           { className: 'bmt-contributor-social-container' },
-          _react2.default.createElement(
-            'a',
-            { className: 'bmt-contributor-social', href: '' },
-            'Twitter'
-          ),
-          _react2.default.createElement(
-            'a',
-            { className: 'bmt-contributor-social', href: '' },
-            'Instagram'
-          )
+          Socials
         )
       ),
       _react2.default.createElement(
@@ -25255,14 +25219,14 @@ function Contributor() {
         _react2.default.createElement(
           'p',
           { className: 'bmt-contributor-role' },
-          'Software, Hardware, Design'
+          role
         )
       )
     )
   );
 }
 
-// assets
+// style
 exports.default = Contributor;
 
 /***/ }),
@@ -25298,8 +25262,13 @@ var _react2 = _interopRequireDefault(_react);
 
 __webpack_require__(/*! ./style.scss */ "./src/components/Conversations/style.scss");
 
+var _web_copy = __webpack_require__(/*! ../../constant/web_copy.json */ "./src/constant/web_copy.json");
+
+var _web_copy2 = _interopRequireDefault(_web_copy);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// style
 function ConversationsPreview() {
   return _react2.default.createElement(
     'article',
@@ -25361,28 +25330,30 @@ function ConversationsPreview() {
   );
 }
 
-// style
+// static
 
 
-function Conversations() {
+function Conversations(_ref) {
+  var btn = _ref.btn;
+
   return _react2.default.createElement(
     'section',
     { className: 'bmt-conversations' },
     _react2.default.createElement(
       'h3',
       { className: 'bmt-conversations-title' },
-      'Conversations'
+      _web_copy2.default['conversations-title']
     ),
     _react2.default.createElement(
       'p',
       { className: 'bmt-conversations-description' },
-      'We find interesting concepts, research, and experiments, deliver them in an undiluted yet digestible way.'
+      _web_copy2.default['conversations-description']
     ),
     _react2.default.createElement(ConversationsPreview, null),
-    _react2.default.createElement(
+    btn !== undefined && _react2.default.createElement(
       'button',
-      { className: 'all-conversations-btn' },
-      'See All Conversations'
+      { className: 'bmt-conversations-btn', onClick: btn.func },
+      btn.name
     )
   );
 }
@@ -25716,13 +25687,17 @@ var _react2 = _interopRequireDefault(_react);
 
 __webpack_require__(/*! ./style.scss */ "./src/components/Releases/style.scss");
 
+var _web_copy = __webpack_require__(/*! ../../constant/web_copy.json */ "./src/constant/web_copy.json");
+
+var _web_copy2 = _interopRequireDefault(_web_copy);
+
 var _release_placeholder = __webpack_require__(/*! ../../assets/release_placeholder.png */ "./src/assets/release_placeholder.png");
 
 var _release_placeholder2 = _interopRequireDefault(_release_placeholder);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// style
+// constant
 function ReleasesPreview() {
   return _react2.default.createElement(
     'article',
@@ -25749,25 +25724,31 @@ function ReleasesPreview() {
 // assets
 
 
-function Releases() {
+// style
+
+
+function Releases(_ref) {
+  var btn = _ref.btn;
+
+  console.log(btn);
   return _react2.default.createElement(
     'section',
     { className: 'bmt-releases' },
     _react2.default.createElement(
       'h3',
       { className: 'bmt-releases-title' },
-      'Releases'
+      _web_copy2.default['releases-title']
     ),
     _react2.default.createElement(
       'p',
       { className: 'bmt-releases-description' },
-      'We build opensource software and hardware to help people understand the brain.'
+      _web_copy2.default['releases-description']
     ),
     _react2.default.createElement(ReleasesPreview, null),
-    _react2.default.createElement(
+    btn !== undefined && _react2.default.createElement(
       'button',
-      { className: 'bmt-releases-all-btn' },
-      'See All Releases'
+      { className: 'bmt-releases-btn', onClick: btn.func },
+      btn.name
     )
   );
 }
@@ -25807,13 +25788,17 @@ var _react2 = _interopRequireDefault(_react);
 
 __webpack_require__(/*! ./style.scss */ "./src/components/Resources/style.scss");
 
+var _web_copy = __webpack_require__(/*! ../../constant/web_copy.json */ "./src/constant/web_copy.json");
+
+var _web_copy2 = _interopRequireDefault(_web_copy);
+
 var _resource_incognito = __webpack_require__(/*! ../../assets/resource_incognito.jpg */ "./src/assets/resource_incognito.jpg");
 
 var _resource_incognito2 = _interopRequireDefault(_resource_incognito);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// style
+// static
 function ResourcesPreview() {
   return _react2.default.createElement(
     'article',
@@ -25848,25 +25833,30 @@ function ResourcesPreview() {
 // assets
 
 
-function Resources() {
+// style
+
+
+function Resources(_ref) {
+  var btn = _ref.btn;
+
   return _react2.default.createElement(
     'section',
     { className: 'bmt-resources' },
     _react2.default.createElement(
       'h3',
       { className: 'bmt-resources-title' },
-      'Resources'
+      _web_copy2.default['resources-title']
     ),
     _react2.default.createElement(
       'p',
       { className: 'bmt-resources-description' },
-      'Some say that the internet has enough resources for one to learn and become a rocket scientist. Here\u2019re some of the goodies that helped us to level up on science and engineering.'
+      _web_copy2.default['resources-description']
     ),
     _react2.default.createElement(ResourcesPreview, null),
-    _react2.default.createElement(
+    btn !== undefined && _react2.default.createElement(
       'button',
-      { className: 'bmt-all-resources-btn' },
-      'See All Resources'
+      { className: 'bmt-resources-btn', onClick: btn.func },
+      btn.name
     )
   );
 }
@@ -25906,8 +25896,13 @@ var _react2 = _interopRequireDefault(_react);
 
 __webpack_require__(/*! ./style.scss */ "./src/components/ThoughtsLetter/style.scss");
 
+var _web_copy = __webpack_require__(/*! ../../constant/web_copy.json */ "./src/constant/web_copy.json");
+
+var _web_copy2 = _interopRequireDefault(_web_copy);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// style
 function ThoughtsLetter() {
   return _react2.default.createElement(
     'section',
@@ -25915,12 +25910,12 @@ function ThoughtsLetter() {
     _react2.default.createElement(
       'h3',
       { className: 'thoughts-letter-title' },
-      'Thoughts Sharing Friday'
+      _web_copy2.default['thoguhtsletter-title']
     ),
     _react2.default.createElement(
       'p',
       { className: 'thoughts-letter-text' },
-      'We\u2019d love to share our progress, and any interesting concepts we stumble upon. This is our one and only email service, so when you cancel, you cancel for REAL.'
+      _web_copy2.default['thoughtsletter-text']['description']
     ),
     _react2.default.createElement(
       'form',
@@ -25929,23 +25924,23 @@ function ThoughtsLetter() {
       _react2.default.createElement(
         'button',
         { className: 'thoughts-letter-submit' },
-        'yay!'
+        _web_copy2.default['thoughtsletter-button']["email"]
       )
     ),
     _react2.default.createElement(
       'p',
       { className: 'thoughts-letter-text' },
-      'Not sure whether you\'ll like these or not?'
+      _web_copy2.default['thoughtsletter-text']['affirmation']
     ),
     _react2.default.createElement(
       'button',
       { className: 'thoughts-letter-example-btn' },
-      'See the Sample Email'
+      _web_copy2.default['thoughtsletter-button']["sample-email"]
     )
   );
 }
 
-// style
+// constant
 exports.default = ThoughtsLetter;
 
 /***/ }),
@@ -25958,6 +25953,17 @@ exports.default = ThoughtsLetter;
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./src/constant/web_copy.json":
+/*!************************************!*\
+  !*** ./src/constant/web_copy.json ***!
+  \************************************/
+/*! exports provided: banner-title, banner-text, banner-button, about-mission-title, about-mission-text, about-ethics-title, about-ethics-text, about-disclaimer-title, about-disclaimer-text-tltr, about-disclaimer-text, about-contributors, about-faq-title, about-faq-text, releases-title, releases-description, conversations-title, conversations-description, resources-title, resources-description, thoguhtsletter-title, thoughtsletter-text, thoughtsletter-button, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"banner-title\":\"Open Source Brain\",\"banner-text\":\"We hope to accelerate the understanding of the brain by delivering intriguing, undiluted builds (software &amp; hardware), contents (articles), and resources (books &amp; videos) to everyone, so they have the tools to ask questions, conduct experiments and make positive progress in healthcare.\",\"banner-button\":\"Suggest Builds & Articles\",\"about-mission-title\":\"Mission\",\"about-mission-text\":\"We hope to accelerate the understanding of the brain by delivering intriguing, undiluted builds, contents, and resources to everyone, so they have the tools to ask questions, conduct experiments and make positive progress in healthcare.\",\"about-ethics-title\":\"Ethics\",\"about-ethics-text\":[{\"title\":\"Emphasizing Human Potential\",\"text\":\"We believe that everyone is equipped with their own unique ability to thrive. The information exchanged through this platform is shared under the assumption that, given the right information and tools, everyone can access their highest potential.\"},{\"title\":\"Cultivating Supportive Communities\",\"text\":\"The goal of platform is to breakdown the power hierachy of conventional knowledge processing, so anyone can have the tools to create change. It's only possible to achieve this goal by the collective effort of people who are curious to learn, open to wild imagination, and honest in their approach to share the knowledge.\"},{\"title\":\"Operating with Transparency\",\"text\":\"All the materials are visible to the public via platforms like GitHub. Our business model is explained throughout the platform.\"},{\"title\":\"Communicating with Humility\",\"text\":\"We communicate with the awareness that we are all grasping for straws with blindfolds on, trying to piece this whole thing together. We welcome all questions, counter arguments and skepticism.\"}],\"about-disclaimer-title\":\"Disclaimer\",\"about-disclaimer-text-tltr\":\"Science and engineering are not always straight forward, so please enjoy the contents with a healthy dose of skepticism.\",\"about-disclaimer-text\":\"The materials published on this platform are not intended for medical advice, diagnosis nor treatment. Please always consult healthcare professionals for any medical conditions. We try our best to thoroughly validate the published materials. However, we make no warranties, expressed or implied, regarding errors or omissions and assumes no legal liability or responsibility for loss or damage resulting from the use of the information contained within.\",\"about-contributors\":[{\"name\":\"Gian\",\"role\":\"Software, Hardware, Design\",\"socials\":[{\"platform\":\"instagram\",\"link\":\"https://www.instagram.com/gianisalive/\"},{\"platform\":\"twitter\",\"link\":\"https://twitter.com/gianisalive\"}]}],\"about-faq-title\":\"FAQ\",\"about-faq-text\":[{\"question\":\"What is this?\",\"answer\":\"We are professionals and hobbyists on a journey to learn more about the brain. We see no reason to keep it all to ourselves, so we talk about them on this platform, hoping that the contents have some value to others.\"},{\"question\":\"Should I seek medical advice on the platform?\",\"answer\":\"No. Please always consult healthcare professionals for any medical conditions.\"},{\"question\":\"Are there any financial backers who support the platform?\",\"answer\":\"No. We try to fund the entire platform by producing contents.\"},{\"question\":\"Who should use this platform?\",\"answer\":\"Well, no one really should. However, if you want to level up your understanding of science and engineering by learning about the brain, then you might like some of the things we do here.\"},{\"question\":\"Where are you guys based?\",\"answer\":\"We currently working out of coffee shops and maker spaces in San Francisco.\"}],\"releases-title\":\"Releases\",\"releases-description\":\"We build opensource software and hardware to help people understand the brain.\",\"conversations-title\":\"Conversations\",\"conversations-description\":\"We find interesting concepts, research, and experiments, deliver them in an undiluted yet digestible way.\",\"resources-title\":\"Resources\",\"resources-description\":\"Some say that the internet has enough resources for one to learn and become a rocket scientist. Here’re some of the goodies that helped us to level up on science and engineering.\",\"thoguhtsletter-title\":\"Thoughts Sharing Friday\",\"thoughtsletter-text\":{\"description\":\"We’d love to share our progress, and any interesting concepts we stumble upon. This is our one and only email service, so when you cancel, you cancel for REAL.\",\"affirmation\":\"Not sure whether you'll like these ot not?\"},\"thoughtsletter-button\":{\"email\":\"yay\",\"sample-email\":\"See the Sample Email\"}}");
 
 /***/ }),
 
@@ -26063,13 +26069,65 @@ var _Footer = __webpack_require__(/*! ../../components/Footer */ "./src/componen
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
+var _web_copy = __webpack_require__(/*! ../../constant/web_copy.json */ "./src/constant/web_copy.json");
+
+var _web_copy2 = _interopRequireDefault(_web_copy);
+
+var _contributor_gian = __webpack_require__(/*! ../../assets/contributor_gian.png */ "./src/assets/contributor_gian.png");
+
+var _contributor_gian2 = _interopRequireDefault(_contributor_gian);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// static
+
 
 // components
 function AboutPage(_ref) {
   var showMobileMenu = _ref.showMobileMenu,
       toggleDisplay = _ref.toggleDisplay;
 
+  var EthicsText = _web_copy2.default['about-ethics-text'].map(function (t, i) {
+    return _react2.default.createElement(
+      'article',
+      { className: 'bmt-ethics-text-container', key: 'ethics'.concat(i) },
+      _react2.default.createElement(
+        'p',
+        { className: 'bmt-ethics-text-title' },
+        t['title']
+      ),
+      _react2.default.createElement(
+        'p',
+        { className: 'bmt-ethics-text' },
+        t['text']
+      )
+    );
+  });
+  var FaqText = _web_copy2.default['about-faq-text'].map(function (t, i) {
+    return _react2.default.createElement(
+      'article',
+      { className: 'bmt-faq-container', key: 'faq'.concat(i) },
+      _react2.default.createElement(
+        'p',
+        { className: 'bmt-faq-question' },
+        t['question']
+      ),
+      _react2.default.createElement(
+        'p',
+        { className: 'bmt-faq-answer' },
+        t['answer']
+      )
+    );
+  });
+  var Contributors = _web_copy2.default["about-contributors"].map(function (t, i) {
+    return _react2.default.createElement(_Contributor2.default, {
+      name: t['name'],
+      role: t['role'],
+      image: _contributor_gian2.default,
+      socials: t['socials'],
+      key: 'social'.concat(i)
+    });
+  });
   return _react2.default.createElement(
     'div',
     { className: 'page-container' },
@@ -26087,12 +26145,12 @@ function AboutPage(_ref) {
         _react2.default.createElement(
           'h3',
           { className: 'bmt-mission-title' },
-          'Mission'
+          _web_copy2.default['about-mission-title']
         ),
         _react2.default.createElement(
           'p',
           { className: 'bmt-mission-text' },
-          'We hope to accelerate the understanding of the brain by delivering intriguing, undiluted builds, contents, and resources to everyone, so they have the tools to ask questions, conduct experiments and make positive progress in healthcare. '
+          _web_copy2.default['about-mission-text']
         )
       ),
       _react2.default.createElement(
@@ -26101,9 +26159,9 @@ function AboutPage(_ref) {
         _react2.default.createElement(
           'h3',
           { className: 'bmt-ethics-title' },
-          'Ethics'
+          _web_copy2.default['about-ethics-title']
         ),
-        _react2.default.createElement('p', { className: 'bmt-ethics-text' })
+        EthicsText
       ),
       _react2.default.createElement(
         'section',
@@ -26111,17 +26169,17 @@ function AboutPage(_ref) {
         _react2.default.createElement(
           'h3',
           { className: 'bmt-disclaimer-title' },
-          'Disclaimer'
+          _web_copy2.default['about-disclaimer-title']
         ),
         _react2.default.createElement(
           'p',
           { className: 'bmt-disclaimer-text' },
-          'Science and engineering are not always straight forward, so please enjoy it with a healthy dose of skepticism.'
+          _web_copy2.default['about-disclaimer-text-tltr']
         ),
         _react2.default.createElement(
           'p',
           { className: 'bmt-disclaimer-text' },
-          'The materials published on this platform are not intended for medical advice, diagnosis nor treatment. Please always consult healthcare professionals for any medical conditions. We try our best to thoroughly validate the published materials. However, we make no warranties, expressed or implied, regarding errors or omissions and assumes no legal liability or responsibility for loss or damage resulting from the use of the information contained within. '
+          _web_copy2.default['about-disclaimer-text']
         )
       ),
       _react2.default.createElement(
@@ -26132,7 +26190,7 @@ function AboutPage(_ref) {
           { className: 'bmt-contributors-title' },
           'Contributors'
         ),
-        _react2.default.createElement(_Contributor2.default, null)
+        Contributors
       ),
       _react2.default.createElement(
         'section',
@@ -26142,26 +26200,16 @@ function AboutPage(_ref) {
           { className: 'bmt-faq-title' },
           'FAQ'
         ),
-        _react2.default.createElement(
-          'article',
-          { className: 'bmt-faq-container' },
-          _react2.default.createElement(
-            'p',
-            { className: 'bmt-faq-question' },
-            'What the fact is this?'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'bmt-faq-answer' },
-            'We are professionals and hobbyists on a journey to learn more about the brain. We see no reason to keep it all to ourselves, so we talk about them on this platform, hoping that the contents have some value to others.'
-          )
-        )
+        FaqText
       ),
       _react2.default.createElement(_ThoughtsLetter2.default, null)
     ),
     _react2.default.createElement(_Footer2.default, null)
   );
 }
+
+// assets
+
 
 // style
 exports.default = AboutPage;
@@ -26421,9 +26469,30 @@ function HomePage(_ref) {
     _react2.default.createElement(
       'main',
       { className: 'btm-main' },
-      _react2.default.createElement(_Releases2.default, null),
-      _react2.default.createElement(_Conversations2.default, null),
-      _react2.default.createElement(_Resources2.default, null),
+      _react2.default.createElement(_Releases2.default, {
+        btn: {
+          name: 'See All Releases',
+          func: function func() {
+            return window.location.href = '/releases';
+          }
+        }
+      }),
+      _react2.default.createElement(_Conversations2.default, {
+        btn: {
+          name: 'See All Conversations',
+          func: function func() {
+            return window.location.href = '/conversations';
+          }
+        }
+      }),
+      _react2.default.createElement(_Resources2.default, {
+        btn: {
+          name: 'See All Resources',
+          func: function func() {
+            return window.location.href = '/resources';
+          }
+        }
+      }),
       _react2.default.createElement(_ThoughtsLetter2.default, null),
       _react2.default.createElement(
         'div',

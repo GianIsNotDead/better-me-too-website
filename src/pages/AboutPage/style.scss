@@ -22,10 +22,9 @@
     @include container-title-text;
   }
   .bmt-mission .bmt-mission-text,
+  .bmt-ethics .bmt-ethics-text-title,
   .bmt-ethics .bmt-ethics-text,
-  .bmt-disclaimer .bmt-disclaimer-text {
-    @include content-text;
-  }
+  .bmt-disclaimer .bmt-disclaimer-text,
   .bmt-faq .bmt-faq-question,
   .bmt-faq .bmt-faq-answer {
     @include content-text;
