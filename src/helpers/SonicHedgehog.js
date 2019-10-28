@@ -11,6 +11,7 @@ function SonicHedgehog() {
 SonicHedgehog.prototype.makeRoutes = function (routes) {
   this.routes = routes;
   let currentLocation = window.location.pathname;
+  console.log('current location: ', currentLocation);
   return routes[currentLocation]();
 }
 

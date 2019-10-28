@@ -4,9 +4,11 @@
 .bmt-releases {
   @include container;
   @include vertical-divider;
+
   .bmt-releases-title {
     @include container-title-text;  
   }
+
   .bmt-releases-description {
     @include content-text;
     margin-bottom: $vertical-gutter-medium;
@@ -14,8 +16,8 @@
   // beginning of preview box style
   .release-preview {
     padding: $vertical-gutter-medium $horizontal-gutter;
-    background: #FFFFFF;
-    box-shadow: 0 4px 6px 0 rgba(226,233,248,0.73);
+    background: #FBFBFB;
+    box-shadow: 0 9px 20px 3px rgba(226,233,248,0.79);
     border-radius: 10px;
 
     .release-preview-title {
@@ -35,6 +37,15 @@
       text-align: center;
       font-size: 0.75rem;
     }
+  }
+  .release-preview:hover {
+    cursor: pointer;
+    background: #FFFFFF;
+    box-shadow: 0 4px 6px 0 rgba(226,233,248,0.73);
+    border-radius: 10px;
+  }
+  .release-preview:active {
+    border: 1px solid #DCDCDC;
   }
   // end of preview box style
   .bmt-releases-btn {

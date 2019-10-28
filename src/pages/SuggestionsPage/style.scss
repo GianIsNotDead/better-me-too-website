@@ -19,5 +19,8 @@
     .suggestions-text {
       @include content-text;
     }
+    .suggestions-text:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }

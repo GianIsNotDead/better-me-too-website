@@ -11,7 +11,7 @@ import ReleasesPlaceHolder from '../../assets/release_placeholder.png';
 
 function ReleasesPreview() {
   return (
-    <article className="release-preview">
+    <article className="release-preview" onClick={() => console.log('release')}>
       <h4 className="release-preview-title">Lucid Candy - EEG</h4>
       <p className="release-preview-brief">Here are some explainer text Here are some explainer text Here are some explainer text Here are some explainer text</p>
       <img className="release-preview-image" src={`./dist/${ReleasesPlaceHolder}`} alt="placeholder"/>
@@ -21,7 +21,6 @@ function ReleasesPreview() {
 }
 
 function Releases({ btn }) {
-  console.log(btn)
   return (
     <section className="bmt-releases">
       <h3 className="bmt-releases-title">{WebCopy['releases-title']}</h3>

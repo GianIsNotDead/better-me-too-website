@@ -1,0 +1,37 @@
+@import "../../style/mixins";
+@import "../../style/variables";
+
+.page-contaienr, .btm-main {
+  position: relative;
+  width: 100%;
+}
+
+.page-container {
+  height: 100%;
+  @include vertical-scroll-momentum();
+  background: $primary-background;
+  .bmt-single-conversation {
+    @include container;
+    @include vertical-divider;
+    .bmt-single-conversation-title {
+      @include container-title-text;
+      margin-bottom: $vertical-gutter-small;
+    }
+    .bmt-single-conversation-image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .bmt-single-conversation-text,
+    .bmt-single-conversation-metadata {
+      @include content-text;
+    }
+    .bmt-single-conversation-text,
+    .bmt-single-conversation-image {
+      margin-bottom: $vertical-gutter-small;
+    }
+    .bmt-single-conversation-text:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

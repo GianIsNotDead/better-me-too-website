@@ -24823,6 +24823,10 @@ var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
+__webpack_require__(/*! ./style/reset.css */ "./src/style/reset.css");
+
+__webpack_require__(/*! ./style/style.scss */ "./src/style/style.scss");
+
 var _SonicHedgehog = __webpack_require__(/*! ./helpers/SonicHedgehog */ "./src/helpers/SonicHedgehog.js");
 
 var _SonicHedgehog2 = _interopRequireDefault(_SonicHedgehog);
@@ -24855,6 +24859,10 @@ var _SuggestionsPage = __webpack_require__(/*! ./pages/SuggestionsPage */ "./src
 
 var _SuggestionsPage2 = _interopRequireDefault(_SuggestionsPage);
 
+var _SingleConversationPage = __webpack_require__(/*! ./pages/SingleConversationPage */ "./src/pages/SingleConversationPage/SingleConversationPage.jsx");
+
+var _SingleConversationPage2 = _interopRequireDefault(_SingleConversationPage);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -24864,6 +24872,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// Style import
+
 
 // helpers
 
@@ -24925,6 +24936,12 @@ var App = function (_Component) {
         },
         '/conversations': function conversations() {
           return _react2.default.createElement(_ConversationsPage2.default, {
+            showMobileMenu: _this2.state.showMobileMenu,
+            toggleDisplay: _this2.toggleDisplay
+          });
+        },
+        '/conversations/memory-inheritance': function conversationsMemoryInheritance() {
+          return _react2.default.createElement(_SingleConversationPage2.default, {
             showMobileMenu: _this2.state.showMobileMenu,
             toggleDisplay: _this2.toggleDisplay
           });
@@ -25169,7 +25186,17 @@ var _react2 = _interopRequireDefault(_react);
 
 __webpack_require__(/*! ./style.scss */ "./src/components/Contributor/style.scss");
 
+var _contributor_gian = __webpack_require__(/*! ../../assets/contributor_gian.png */ "./src/assets/contributor_gian.png");
+
+var _contributor_gian2 = _interopRequireDefault(_contributor_gian);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// style
+var images = { contributor_gian: _contributor_gian2.default };
+
+// assets only used in contributor
+
 
 function Contributor(_ref) {
   var name = _ref.name,
@@ -25177,6 +25204,8 @@ function Contributor(_ref) {
       image = _ref.image,
       socials = _ref.socials;
 
+  var imageAlt = image.substring(image.lastIndexOf('[') + 1, image.lastIndexOf(']'));
+  var imageLink = '../'.concat(image.substring(image.lastIndexOf('(') + 1, image.lastIndexOf(')'))).split('/').pop().split('.')[0];
   var Socials = socials.map(function (t, i) {
     return _react2.default.createElement(
       'a',
@@ -25190,7 +25219,7 @@ function Contributor(_ref) {
     _react2.default.createElement(
       'div',
       { className: 'bmt-contributor-image-container' },
-      _react2.default.createElement('img', { className: 'bmt-contributor-image', src: './dist/' + image, alt: 'computer illustrated profile image' })
+      _react2.default.createElement('img', { className: 'bmt-contributor-image', src: './dist/' + images[imageLink], alt: imageAlt })
     ),
     _react2.default.createElement(
       'div',
@@ -25226,7 +25255,6 @@ function Contributor(_ref) {
   );
 }
 
-// style
 exports.default = Contributor;
 
 /***/ }),
@@ -25266,10 +25294,23 @@ var _web_copy = __webpack_require__(/*! ../../constant/web_copy.json */ "./src/c
 
 var _web_copy2 = _interopRequireDefault(_web_copy);
 
+var _conversations = __webpack_require__(/*! ../../constant/conversations.json */ "./src/constant/conversations.json");
+
+var _conversations2 = _interopRequireDefault(_conversations);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// style
-function ConversationsPreview() {
+// static
+function ConversationsPreview(_ref) {
+  var title = _ref.title,
+      metadata = _ref.metadata,
+      date = _ref.date,
+      content = _ref.content,
+      reference = _ref.reference;
+
+  var FormatedMetadata = metadata.map(function (m) {
+    return '#'.concat(m);
+  }).join(' ');
   return _react2.default.createElement(
     'article',
     { className: 'conversation-preview' },
@@ -25285,12 +25326,12 @@ function ConversationsPreview() {
           _react2.default.createElement(
             'p',
             { className: 'conversation-month' },
-            '09/28'
+            date.substring(0, 5)
           ),
           _react2.default.createElement(
             'p',
             { className: 'conversation-year' },
-            '2019'
+            date.substring(6, date.length)
           )
         )
       ),
@@ -25303,12 +25344,12 @@ function ConversationsPreview() {
           _react2.default.createElement(
             'h4',
             { className: 'conversation-title-text' },
-            'Memory Inheritance'
+            title
           ),
           _react2.default.createElement(
             'p',
             { className: 'conversation-metadata' },
-            '#epigenetics #methylation'
+            FormatedMetadata
           )
         )
       )
@@ -25319,23 +25360,33 @@ function ConversationsPreview() {
       _react2.default.createElement(
         'p',
         { className: 'conversation-text' },
-        'In this article, we explore a non-traditional memory pathway. How memory is passed down from generation to generation.'
+        content.substring(0, 130).concat('...')
       ),
       _react2.default.createElement(
-        'button',
-        { className: 'conversation-full-btn' },
+        'a',
+        { className: 'conversation-full-btn', href: '/conversations/' + title.toLowerCase().split(' ').join('-') },
         'See Full Article'
       )
     )
   );
 }
 
-// static
+// style
 
 
-function Conversations(_ref) {
-  var btn = _ref.btn;
+function Conversations(_ref2) {
+  var btn = _ref2.btn;
 
+  var ConvoComponent = _conversations2.default.map(function (convo, i) {
+    return _react2.default.createElement(ConversationsPreview, {
+      title: convo["title"],
+      metadata: convo["metadata"],
+      date: convo["date"],
+      content: convo["content"][0],
+      reference: convo["reference"],
+      key: 'convo'.concat(i)
+    });
+  });
   return _react2.default.createElement(
     'section',
     { className: 'bmt-conversations' },
@@ -25349,7 +25400,7 @@ function Conversations(_ref) {
       { className: 'bmt-conversations-description' },
       _web_copy2.default['conversations-description']
     ),
-    _react2.default.createElement(ConversationsPreview, null),
+    ConvoComponent,
     btn !== undefined && _react2.default.createElement(
       'button',
       { className: 'bmt-conversations-btn', onClick: btn.func },
@@ -25701,7 +25752,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function ReleasesPreview() {
   return _react2.default.createElement(
     'article',
-    { className: 'release-preview' },
+    { className: 'release-preview', onClick: function onClick() {
+        return console.log('release');
+      } },
     _react2.default.createElement(
       'h4',
       { className: 'release-preview-title' },
@@ -25730,7 +25783,6 @@ function ReleasesPreview() {
 function Releases(_ref) {
   var btn = _ref.btn;
 
-  console.log(btn);
   return _react2.default.createElement(
     'section',
     { className: 'bmt-releases' },
@@ -25956,6 +26008,17 @@ exports.default = ThoughtsLetter;
 
 /***/ }),
 
+/***/ "./src/constant/conversations.json":
+/*!*****************************************!*\
+  !*** ./src/constant/conversations.json ***!
+  \*****************************************/
+/*! exports provided: 0, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("[{\"title\":\"Memory Inheritance\",\"metadata\":[\"epigenetics\",\"methylation\"],\"date\":\"10/23/2019\",\"author\":\"Gian\",\"content\":[\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](../assets/contributor)\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\"],\"reference\":[\"reference 1\",\"reference2\"]}]");
+
+/***/ }),
+
 /***/ "./src/constant/web_copy.json":
 /*!************************************!*\
   !*** ./src/constant/web_copy.json ***!
@@ -25963,7 +26026,7 @@ exports.default = ThoughtsLetter;
 /*! exports provided: banner-title, banner-text, banner-button, about-mission-title, about-mission-text, about-ethics-title, about-ethics-text, about-disclaimer-title, about-disclaimer-text-tltr, about-disclaimer-text, about-contributors, about-faq-title, about-faq-text, releases-title, releases-description, conversations-title, conversations-description, resources-title, resources-description, thoguhtsletter-title, thoughtsletter-text, thoughtsletter-button, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"banner-title\":\"Open Source Brain\",\"banner-text\":\"We hope to accelerate the understanding of the brain by delivering intriguing, undiluted builds (software &amp; hardware), contents (articles), and resources (books &amp; videos) to everyone, so they have the tools to ask questions, conduct experiments and make positive progress in healthcare.\",\"banner-button\":\"Suggest Builds & Articles\",\"about-mission-title\":\"Mission\",\"about-mission-text\":\"We hope to accelerate the understanding of the brain by delivering intriguing, undiluted builds, contents, and resources to everyone, so they have the tools to ask questions, conduct experiments and make positive progress in healthcare.\",\"about-ethics-title\":\"Ethics\",\"about-ethics-text\":[{\"title\":\"Emphasizing Human Potential\",\"text\":\"We believe that everyone is equipped with their own unique ability to thrive. The information exchanged through this platform is shared under the assumption that, given the right information and tools, everyone can access their highest potential.\"},{\"title\":\"Cultivating Supportive Communities\",\"text\":\"The goal of platform is to breakdown the power hierachy of conventional knowledge processing, so anyone can have the tools to create change. It's only possible to achieve this goal by the collective effort of people who are curious to learn, open to wild imagination, and honest in their approach to share the knowledge.\"},{\"title\":\"Operating with Transparency\",\"text\":\"All the materials are visible to the public via platforms like GitHub. Our business model is explained throughout the platform.\"},{\"title\":\"Communicating with Humility\",\"text\":\"We communicate with the awareness that we are all grasping for straws with blindfolds on, trying to piece this whole thing together. We welcome all questions, counter arguments and skepticism.\"}],\"about-disclaimer-title\":\"Disclaimer\",\"about-disclaimer-text-tltr\":\"Science and engineering are not always straight forward, so please enjoy the contents with a healthy dose of skepticism.\",\"about-disclaimer-text\":\"The materials published on this platform are not intended for medical advice, diagnosis nor treatment. Please always consult healthcare professionals for any medical conditions. We try our best to thoroughly validate the published materials. However, we make no warranties, expressed or implied, regarding errors or omissions and assumes no legal liability or responsibility for loss or damage resulting from the use of the information contained within.\",\"about-contributors\":[{\"name\":\"Gian\",\"role\":\"Software, Hardware, Design\",\"socials\":[{\"platform\":\"instagram\",\"link\":\"https://www.instagram.com/gianisalive/\"},{\"platform\":\"twitter\",\"link\":\"https://twitter.com/gianisalive\"}]}],\"about-faq-title\":\"FAQ\",\"about-faq-text\":[{\"question\":\"What is this?\",\"answer\":\"We are professionals and hobbyists on a journey to learn more about the brain. We see no reason to keep it all to ourselves, so we talk about them on this platform, hoping that the contents have some value to others.\"},{\"question\":\"Should I seek medical advice on the platform?\",\"answer\":\"No. Please always consult healthcare professionals for any medical conditions.\"},{\"question\":\"Are there any financial backers who support the platform?\",\"answer\":\"No. We try to fund the entire platform by producing contents.\"},{\"question\":\"Who should use this platform?\",\"answer\":\"Well, no one really should. However, if you want to level up your understanding of science and engineering by learning about the brain, then you might like some of the things we do here.\"},{\"question\":\"Where are you guys based?\",\"answer\":\"We currently working out of coffee shops and maker spaces in San Francisco.\"}],\"releases-title\":\"Releases\",\"releases-description\":\"We build opensource software and hardware to help people understand the brain.\",\"conversations-title\":\"Conversations\",\"conversations-description\":\"We find interesting concepts, research, and experiments, deliver them in an undiluted yet digestible way.\",\"resources-title\":\"Resources\",\"resources-description\":\"Some say that the internet has enough resources for one to learn and become a rocket scientist. Here’re some of the goodies that helped us to level up on science and engineering.\",\"thoguhtsletter-title\":\"Thoughts Sharing Friday\",\"thoughtsletter-text\":{\"description\":\"We’d love to share our progress, and any interesting concepts we stumble upon. This is our one and only email service, so when you cancel, you cancel for REAL.\",\"affirmation\":\"Not sure whether you'll like these ot not?\"},\"thoughtsletter-button\":{\"email\":\"yay\",\"sample-email\":\"See the Sample Email\"}}");
+module.exports = JSON.parse("{\"banner-title\":\"Open Source Brain\",\"banner-text\":\"We hope to accelerate the understanding of the brain by delivering intriguing, undiluted builds (software &amp; hardware), contents (articles), and resources (books &amp; videos) to everyone, so they have the tools to ask questions, conduct experiments and make positive progress in healthcare.\",\"banner-button\":\"Suggest Builds & Articles\",\"about-mission-title\":\"Mission\",\"about-mission-text\":\"We hope to accelerate the understanding of the brain by delivering intriguing, undiluted builds, contents, and resources to everyone, so they have the tools to ask questions, conduct experiments and make positive progress in healthcare.\",\"about-ethics-title\":\"Ethics\",\"about-ethics-text\":[{\"title\":\"Emphasizing Human Potential\",\"text\":\"We believe that everyone is equipped with their own unique ability to thrive. The information exchanged through this platform is shared under the assumption that, given the right information and tools, everyone can access their highest potential.\"},{\"title\":\"Cultivating Supportive Communities\",\"text\":\"The goal of platform is to breakdown the power hierachy of conventional knowledge processing, so anyone can have the tools to create change. It's only possible to achieve this goal by the collective effort of people who are curious to learn, open to wild imagination, and honest in their approach to share the knowledge.\"},{\"title\":\"Operating with Transparency\",\"text\":\"All the materials are visible to the public via platforms like GitHub. Our business model is explained throughout the platform.\"},{\"title\":\"Communicating with Humility\",\"text\":\"We communicate with the awareness that we are all grasping for straws with blindfolds on, trying to piece this whole thing together. We welcome all questions, counter arguments and skepticism.\"}],\"about-disclaimer-title\":\"Disclaimer\",\"about-disclaimer-text-tltr\":\"Science and engineering are not always straight forward, so please enjoy the contents with a healthy dose of skepticism.\",\"about-disclaimer-text\":\"The materials published on this platform are not intended for medical advice, diagnosis nor treatment. Please always consult healthcare professionals for any medical conditions. We try our best to thoroughly validate the published materials. However, we make no warranties, expressed or implied, regarding errors or omissions and assumes no legal liability or responsibility for loss or damage resulting from the use of the information contained within.\",\"about-contributors\":[{\"name\":\"Gian\",\"image\":\"![computer graphic illustration of gian](../assets/contributor_gian.png)\",\"role\":\"Software, Hardware, Design\",\"socials\":[{\"platform\":\"instagram\",\"link\":\"https://www.instagram.com/gianisalive/\"},{\"platform\":\"twitter\",\"link\":\"https://twitter.com/gianisalive\"}]}],\"about-faq-title\":\"FAQ\",\"about-faq-text\":[{\"question\":\"What is this?\",\"answer\":\"We are professionals and hobbyists on a journey to learn more about the brain. We see no reason to keep it all to ourselves, so we talk about them on this platform, hoping that the contents have some value to others.\"},{\"question\":\"Should I seek medical advice on the platform?\",\"answer\":\"No. Please always consult healthcare professionals for any medical conditions.\"},{\"question\":\"Are there any financial backers who support the platform?\",\"answer\":\"No. We try to fund the entire platform by producing contents.\"},{\"question\":\"Who should use this platform?\",\"answer\":\"Well, no one really should. However, if you want to level up your understanding of science and engineering by learning about the brain, then you might like some of the things we do here.\"},{\"question\":\"Where are you guys based?\",\"answer\":\"We currently working out of coffee shops and maker spaces in San Francisco.\"}],\"releases-title\":\"Releases\",\"releases-description\":\"We build opensource software and hardware to help people understand the brain.\",\"conversations-title\":\"Conversations\",\"conversations-description\":\"We find interesting concepts, research, and experiments, deliver them in an undiluted yet digestible way.\",\"resources-title\":\"Resources\",\"resources-description\":\"Some say that the internet has enough resources for one to learn and become a rocket scientist. Here’re some of the goodies that helped us to level up on science and engineering.\",\"thoguhtsletter-title\":\"Thoughts Sharing Friday\",\"thoughtsletter-text\":{\"description\":\"We’d love to share our progress, and any interesting concepts we stumble upon. This is our one and only email service, so when you cancel, you cancel for REAL.\",\"affirmation\":\"Not sure whether you'll like these ot not?\"},\"thoughtsletter-button\":{\"email\":\"yay\",\"sample-email\":\"See the Sample Email\"}}");
 
 /***/ }),
 
@@ -25993,6 +26056,7 @@ function SonicHedgehog() {
 SonicHedgehog.prototype.makeRoutes = function (routes) {
   this.routes = routes;
   var currentLocation = window.location.pathname;
+  console.log('current location: ', currentLocation);
   return routes[currentLocation]();
 };
 
@@ -26020,13 +26084,8 @@ var _App = __webpack_require__(/*! ./App */ "./src/App.jsx");
 
 var _App2 = _interopRequireDefault(_App);
 
-__webpack_require__(/*! ./style/reset.css */ "./src/style/reset.css");
-
-__webpack_require__(/*! ./style/style.scss */ "./src/style/style.scss");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// Style import
 (0, _reactDom.render)(_react2.default.createElement(_App2.default, null), document.getElementById('wrapper'));
 
 // Component
@@ -26073,16 +26132,9 @@ var _web_copy = __webpack_require__(/*! ../../constant/web_copy.json */ "./src/c
 
 var _web_copy2 = _interopRequireDefault(_web_copy);
 
-var _contributor_gian = __webpack_require__(/*! ../../assets/contributor_gian.png */ "./src/assets/contributor_gian.png");
-
-var _contributor_gian2 = _interopRequireDefault(_contributor_gian);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// static
-
-
-// components
+// style
 function AboutPage(_ref) {
   var showMobileMenu = _ref.showMobileMenu,
       toggleDisplay = _ref.toggleDisplay;
@@ -26123,7 +26175,7 @@ function AboutPage(_ref) {
     return _react2.default.createElement(_Contributor2.default, {
       name: t['name'],
       role: t['role'],
-      image: _contributor_gian2.default,
+      image: t['image'],
       socials: t['socials'],
       key: 'social'.concat(i)
     });
@@ -26208,10 +26260,10 @@ function AboutPage(_ref) {
   );
 }
 
-// assets
+// static
 
 
-// style
+// components
 exports.default = AboutPage;
 
 /***/ }),
@@ -26670,6 +26722,115 @@ exports.default = ResourcesPage;
 /*!********************************************!*\
   !*** ./src/pages/ResourcesPage/style.scss ***!
   \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./src/pages/SingleConversationPage/SingleConversationPage.jsx":
+/*!*********************************************************************!*\
+  !*** ./src/pages/SingleConversationPage/SingleConversationPage.jsx ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(/*! ./style.scss */ "./src/pages/SingleConversationPage/style.scss");
+
+var _Header = __webpack_require__(/*! ../../components/Header */ "./src/components/Header/Header.jsx");
+
+var _Header2 = _interopRequireDefault(_Header);
+
+var _ThoughtsLetter = __webpack_require__(/*! ../../components/ThoughtsLetter */ "./src/components/ThoughtsLetter/ThoughtsLetter.jsx");
+
+var _ThoughtsLetter2 = _interopRequireDefault(_ThoughtsLetter);
+
+var _Footer = __webpack_require__(/*! ../../components/Footer */ "./src/components/Footer/Footer.jsx");
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
+var _release_placeholder = __webpack_require__(/*! ../../assets/release_placeholder.png */ "./src/assets/release_placeholder.png");
+
+var _release_placeholder2 = _interopRequireDefault(_release_placeholder);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// component
+function SingleConversationPage(_ref) {
+  var showMobileMenu = _ref.showMobileMenu,
+      toggleDisplay = _ref.toggleDisplay;
+
+  return _react2.default.createElement(
+    'div',
+    { className: 'page-container' },
+    _react2.default.createElement(_Header2.default, {
+      theme: 'dark',
+      showMobileMenu: showMobileMenu,
+      toggleDisplay: toggleDisplay
+    }),
+    _react2.default.createElement(
+      'main',
+      { className: 'bmt-main' },
+      _react2.default.createElement(
+        'section',
+        { className: 'bmt-medium-conversation' },
+        _react2.default.createElement('p', null)
+      ),
+      _react2.default.createElement(
+        'section',
+        { className: 'bmt-single-conversation' },
+        _react2.default.createElement(
+          'h2',
+          { className: 'bmt-single-conversation-title' },
+          'Hello'
+        ),
+        _react2.default.createElement(
+          'p',
+          { className: 'bmt-single-conversation-metadata' },
+          '#hello #whatup'
+        ),
+        _react2.default.createElement(
+          'p',
+          { className: 'bmt-single-conversation-text' },
+          'asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f'
+        ),
+        _react2.default.createElement('img', { className: 'bmt-single-conversation-image', src: './dist/' + _release_placeholder2.default, alt: 'this is a placeholder' }),
+        _react2.default.createElement(
+          'p',
+          { className: 'bmt-single-conversation-text' },
+          'asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f'
+        )
+      ),
+      _react2.default.createElement(_ThoughtsLetter2.default, null)
+    ),
+    _react2.default.createElement(_Footer2.default, null)
+  );
+}
+
+// assets
+
+
+// style
+exports.default = SingleConversationPage;
+
+/***/ }),
+
+/***/ "./src/pages/SingleConversationPage/style.scss":
+/*!*****************************************************!*\
+  !*** ./src/pages/SingleConversationPage/style.scss ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 

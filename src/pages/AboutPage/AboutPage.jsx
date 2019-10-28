@@ -12,9 +12,6 @@ import Footer from '../../components/Footer';
 // static
 import WebCopy from '../../constant/web_copy.json';
 
-// assets
-import ContributorGian from '../../assets/contributor_gian.png';
-
 function AboutPage({ showMobileMenu, toggleDisplay }) {
   const EthicsText = WebCopy['about-ethics-text'].map((t, i) => (
     <article className="bmt-ethics-text-container" key={'ethics'.concat(i)}>
@@ -32,7 +29,7 @@ function AboutPage({ showMobileMenu, toggleDisplay }) {
     <Contributor
       name={t['name']}
       role={t['role']}
-      image={ContributorGian}
+      image={t['image']}
       socials={t['socials']}
       key={'social'.concat(i)}
     />

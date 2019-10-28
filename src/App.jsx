@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 
+// Style import
+import './style/reset.css';
+import './style/style.scss';
+
 // helpers
 import SonicHedgehog from './helpers/SonicHedgehog';
 
@@ -11,6 +15,7 @@ import ResourcesPage from './pages/ResourcesPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import SuggestionsPage from './pages/SuggestionsPage';
+import SingleConversationPage from './pages/SingleConversationPage';
 
 class App extends Component {
   constructor(props) {
@@ -53,6 +58,12 @@ class App extends Component {
       ),
       '/conversations': () => (
         <ConversationsPage
+          showMobileMenu={this.state.showMobileMenu}
+          toggleDisplay={this.toggleDisplay}
+        />
+      ),
+      '/conversations/memory-inheritance': () => (
+        <SingleConversationPage
           showMobileMenu={this.state.showMobileMenu}
           toggleDisplay={this.toggleDisplay}
         />
