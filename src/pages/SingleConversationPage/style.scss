@@ -10,9 +10,30 @@
   height: 100%;
   @include vertical-scroll-momentum();
   background: $primary-background;
-  .bmt-single-conversation {
+  .bmt-medium-conversation, .bmt-single-conversation {
     @include container;
     @include vertical-divider;
+  }
+  .bmt-medium-conversation {
+    .bmt-medium-text {
+      @include content-text;
+      font-size: 0.75rem;
+    }
+    .bmt-medium-assets {
+      display: flex;
+      align-items: center;
+      height: 18px;
+      .bmt-medium-btn {
+        display: inline-block;
+        @include primary-button;
+      }
+      .bmt-medium-logo {
+        height: 100%;
+        margin-right: $horizontal-gutter-small;
+      }
+    }
+  }
+  .bmt-single-conversation {
     .bmt-single-conversation-title {
       @include container-title-text;
       margin-bottom: $vertical-gutter-small;

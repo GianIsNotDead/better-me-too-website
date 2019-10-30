@@ -1,0 +1,54 @@
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+force = false
+
+[[redirects]]
+from = "/about"
+to = "/index.html"
+status = 200
+force = false
+
+[[redirects]]
+from = "/releases"
+to = "/index.html"
+status = 200
+force = false
+
+[[redirects]]
+from = "/conversations/:title"
+to = "/index.html"
+status = 200
+force = false
+
+[[redirects]]
+from = "/conversations"
+to = "/index.html"
+status = 200
+force = false
+
+[[redirects]]
+from = "/resources"
+to = "/index.html"
+status = 200
+force = false
+
+[[redirects]]
+from = "/contact"
+to = "/index.html"
+status = 200
+force = false
+
+[[redirects]]
+from = "/suggestions"
+to = "/index.html"
+status = 200
+force = false
+
+# This is needed because we're using relative path LOL
+[[redirects]]
+from = "/conversations/dist/*"
+to = "/dist/:splat"
+status = 200
+force = true

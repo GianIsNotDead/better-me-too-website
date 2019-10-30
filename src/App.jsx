@@ -62,7 +62,7 @@ class App extends Component {
           toggleDisplay={this.toggleDisplay}
         />
       ),
-      '/conversations/memory-inheritance': () => (
+      '/conversations/:title': () => (
         <SingleConversationPage
           showMobileMenu={this.state.showMobileMenu}
           toggleDisplay={this.toggleDisplay}

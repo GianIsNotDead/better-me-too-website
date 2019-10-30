@@ -24940,7 +24940,7 @@ var App = function (_Component) {
             toggleDisplay: _this2.toggleDisplay
           });
         },
-        '/conversations/memory-inheritance': function conversationsMemoryInheritance() {
+        '/conversations/:title': function conversationsTitle() {
           return _react2.default.createElement(_SingleConversationPage2.default, {
             showMobileMenu: _this2.state.showMobileMenu,
             toggleDisplay: _this2.toggleDisplay
@@ -25050,6 +25050,17 @@ module.exports = __webpack_require__.p + "./img/icon_hamburger_dark.svg";
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./img/icon_instagram.svg";
+
+/***/ }),
+
+/***/ "./src/assets/icon_medium.png":
+/*!************************************!*\
+  !*** ./src/assets/icon_medium.png ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./img/icon_medium.png";
 
 /***/ }),
 
@@ -26054,9 +26065,24 @@ function SonicHedgehog() {
 }
 
 SonicHedgehog.prototype.makeRoutes = function (routes) {
+  // v preserved for future dev
   this.routes = routes;
-  var currentLocation = window.location.pathname;
-  console.log('current location: ', currentLocation);
+  var currentLocation = null;
+  if (this.routes.hasOwnProperty(window.location.pathname)) {
+    currentLocation = window.location.pathname;
+  }
+  if (this.routes.hasOwnProperty(window.location.pathname) === false) {
+    var path = window.location.pathname.split('/').filter(function (i) {
+      return i !== '';
+    });
+    // shallow check if there're matching routes
+    for (var route in this.routes) {
+      var dRoute = route.split('/').filter(function (i) {
+        return i !== '';
+      });
+      if (dRoute[0] === path[0]) currentLocation = route;
+    }
+  }
   return routes[currentLocation]();
 };
 
@@ -26761,13 +26787,20 @@ var _Footer = __webpack_require__(/*! ../../components/Footer */ "./src/componen
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
+var _icon_medium = __webpack_require__(/*! ../../assets/icon_medium.png */ "./src/assets/icon_medium.png");
+
+var _icon_medium2 = _interopRequireDefault(_icon_medium);
+
 var _release_placeholder = __webpack_require__(/*! ../../assets/release_placeholder.png */ "./src/assets/release_placeholder.png");
 
 var _release_placeholder2 = _interopRequireDefault(_release_placeholder);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// component
+// assets
+
+
+// style
 function SingleConversationPage(_ref) {
   var showMobileMenu = _ref.showMobileMenu,
       toggleDisplay = _ref.toggleDisplay;
@@ -26786,7 +26819,21 @@ function SingleConversationPage(_ref) {
       _react2.default.createElement(
         'section',
         { className: 'bmt-medium-conversation' },
-        _react2.default.createElement('p', null)
+        _react2.default.createElement(
+          'p',
+          { className: 'bmt-medium-text' },
+          'While we share all the critical information here, please consider checking out a more thorough version on Medium, and send some claps if we earned it. It\'ll generate some revenue to help us maintain the platform. We really appreciate it.'
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'bmt-medium-assets' },
+          _react2.default.createElement('img', { className: 'bmt-medium-logo', src: './dist/' + _icon_medium2.default, alt: 'medium logo' }),
+          _react2.default.createElement(
+            'a',
+            { href: '#', className: 'bmt-medium-btn' },
+            'Read It On Medium'
+          )
+        )
       ),
       _react2.default.createElement(
         'section',
@@ -26819,10 +26866,7 @@ function SingleConversationPage(_ref) {
   );
 }
 
-// assets
-
-
-// style
+// component
 exports.default = SingleConversationPage;
 
 /***/ }),

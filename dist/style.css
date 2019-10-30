@@ -805,7 +805,7 @@ Better Me Too Visual Guide
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   background: #EFF2F5; }
-  .page-container .bmt-single-conversation {
+  .page-container .bmt-medium-conversation, .page-container .bmt-single-conversation {
     position: relative;
     top: 0;
     left: 0;
@@ -813,29 +813,49 @@ Better Me Too Visual Guide
     padding: 50px 0;
     z-index: 1;
     border-bottom: 1px solid #DBDBDB; }
-    .page-container .bmt-single-conversation .bmt-single-conversation-title {
-      margin-bottom: 30px;
-      font-size: 1.125rem;
-      font-weight: 600;
-      color: #353975;
-      letter-spacing: 1.2px;
-      text-shadow: 0 2px 2px rgba(124, 158, 212, 0.42);
-      margin-bottom: 20px; }
-    .page-container .bmt-single-conversation .bmt-single-conversation-image {
-      display: block;
-      width: 100%;
-      height: auto; }
-    .page-container .bmt-single-conversation .bmt-single-conversation-text,
-    .page-container .bmt-single-conversation .bmt-single-conversation-metadata {
-      margin-bottom: 10px;
+  .page-container .bmt-medium-conversation .bmt-medium-text {
+    margin-bottom: 10px;
+    font-size: 0.875rem;
+    line-height: 20px;
+    color: #353975;
+    letter-spacing: 0.93px;
+    font-size: 0.75rem; }
+  .page-container .bmt-medium-conversation .bmt-medium-assets {
+    display: flex;
+    align-items: center;
+    height: 18px; }
+    .page-container .bmt-medium-conversation .bmt-medium-assets .bmt-medium-btn {
+      display: inline-block;
+      padding-bottom: 2px;
       font-size: 0.875rem;
-      line-height: 20px;
       color: #353975;
-      letter-spacing: 0.93px; }
-    .page-container .bmt-single-conversation .bmt-single-conversation-text,
-    .page-container .bmt-single-conversation .bmt-single-conversation-image {
-      margin-bottom: 20px; }
-    .page-container .bmt-single-conversation .bmt-single-conversation-text:last-of-type {
-      margin-bottom: 0; }
+      border-bottom: 2px solid #7C9ED4; }
+    .page-container .bmt-medium-conversation .bmt-medium-assets .bmt-medium-logo {
+      height: 100%;
+      margin-right: 2%; }
+  .page-container .bmt-single-conversation .bmt-single-conversation-title {
+    margin-bottom: 30px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #353975;
+    letter-spacing: 1.2px;
+    text-shadow: 0 2px 2px rgba(124, 158, 212, 0.42);
+    margin-bottom: 20px; }
+  .page-container .bmt-single-conversation .bmt-single-conversation-image {
+    display: block;
+    width: 100%;
+    height: auto; }
+  .page-container .bmt-single-conversation .bmt-single-conversation-text,
+  .page-container .bmt-single-conversation .bmt-single-conversation-metadata {
+    margin-bottom: 10px;
+    font-size: 0.875rem;
+    line-height: 20px;
+    color: #353975;
+    letter-spacing: 0.93px; }
+  .page-container .bmt-single-conversation .bmt-single-conversation-text,
+  .page-container .bmt-single-conversation .bmt-single-conversation-image {
+    margin-bottom: 20px; }
+  .page-container .bmt-single-conversation .bmt-single-conversation-text:last-of-type {
+    margin-bottom: 0; }
 
 /*# sourceMappingURL=style.css.map*/

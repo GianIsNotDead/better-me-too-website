@@ -9,6 +9,7 @@ import ThoughtsLetter from '../../components/ThoughtsLetter';
 import Footer from '../../components/Footer';
 
 // assets
+import MediumIcon from '../../assets/icon_medium.png';
 import ReleasePlaceholder from '../../assets/release_placeholder.png';
 
 function SingleConversationPage({ showMobileMenu, toggleDisplay }) {
@@ -21,7 +22,11 @@ function SingleConversationPage({ showMobileMenu, toggleDisplay }) {
       />
       <main className="bmt-main">
         <section className="bmt-medium-conversation">
-          <p></p>
+          <p className="bmt-medium-text">While we share all the critical information here, please consider checking out a more thorough version on Medium, and send some claps if we earned it. It'll generate some revenue to help us maintain the platform. We really appreciate it.</p>
+          <div className="bmt-medium-assets">
+            <img className="bmt-medium-logo" src={`./dist/${MediumIcon}`} alt="medium logo" />
+            <a href="#" className="bmt-medium-btn">Read It On Medium</a>
+          </div>
         </section>
         <section className="bmt-single-conversation">
           <h2 className="bmt-single-conversation-title">Hello</h2>
