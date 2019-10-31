@@ -23,8 +23,29 @@ class App extends Component {
     this.state= {
       // Header
       showMobileMenu: false,
+      // SingleConversationPage
+      conversationTitle: null,
+      conversationMetadata: null,
+      conversationDate: null,
+      conversationContent: null,
+      conversationReference: null,
     };
+    this.setConversationContent = this.setConversationContent.bind(this);
     this.toggleDisplay = this.toggleDisplay.bind(this);
+  }
+  /**
+   * @param {string} title
+   * @param {array} metadata ['#metadata', '#metadata']
+   * @param {array} content ['paragraph', '[imagename](imageurl)']
+   * @param {array} reference ['https://somereference.com']
+   */
+  setConversationContent(title, metadata, date, content, reference) {
+    return this.setState({
+      conversationTitle: title,
+      conversationMetadata: metadata,
+      conversationContent: content,
+      conversationReference: reference,
+    }, () => console.log(this.state));
   }
 
   // UI render section

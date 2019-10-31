@@ -7,7 +7,7 @@ import './style.scss';
 import WebCopy from '../../constant/web_copy.json';
 import ConversationsList from '../../constant/conversations.json';
 
-function ConversationsPreview({ title, metadata, date, content, reference }) {
+function ConversationsPreview({ title, metadata, date, content }) {
   let FormatedMetadata = metadata.map(m => '#'.concat(m)).join(' ');
   return (
     <article className="conversation-preview">
@@ -26,7 +26,7 @@ function ConversationsPreview({ title, metadata, date, content, reference }) {
         </div>
       </div>
       <div className="conversation-text-container">
-        <p className="conversation-text">{content.substring(0, 130).concat('...')}</p>
+        <p className="conversation-text">{content[0].substring(0, 130).concat('...')}</p>
         <a className="conversation-full-btn" href={`/conversations/${title.toLowerCase().split(' ').join('-')}`}>See Full Article</a>
       </div>
     </article>
@@ -39,8 +39,7 @@ function Conversations({ btn }) {
       title={convo["title"]}
       metadata={convo["metadata"]}
       date={convo["date"]}
-      content={convo["content"][0]}
-      reference={convo["reference"]}
+      content={convo["content"]}
       key={'convo'.concat(i)}
     />
   ));

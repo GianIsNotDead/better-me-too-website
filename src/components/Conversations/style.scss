@@ -17,6 +17,7 @@
   }
   .conversation-preview {
     @include vertical-divider;
+    margin-bottom: $vertical-gutter-small;
     .conversation-title-container {
       display: flex;
       justify-content: space-between;
@@ -73,6 +74,9 @@
         font-size: $primary-text-size;
       }
     }
+  }
+  .conversation-preview:last-of-type {
+    margin-bottom: 0;
   }
   // end of conversation preview box style
   .bmt-conversations-btn {

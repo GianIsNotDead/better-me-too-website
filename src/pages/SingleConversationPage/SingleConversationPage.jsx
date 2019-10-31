@@ -10,9 +10,21 @@ import Footer from '../../components/Footer';
 
 // assets
 import MediumIcon from '../../assets/icon_medium.png';
-import ReleasePlaceholder from '../../assets/release_placeholder.png';
+
+// fake db
+import { conversations } from '../../helpers/imageDB';
+import ConversationsList from '../../constant/conversations.json';
 
 function SingleConversationPage({ showMobileMenu, toggleDisplay }) {
+  // get conversation title
+  let convoQuery = window.location.pathname.split('/')[2].split('-').join(' ');
+  let conversation = ConversationsList.filter(c => c.title.toLowerCase() === convoQuery)[0];
+  let conversationContent = conversation["content"].map((c, i) => {
+    if (c[0] === '!') {
+      return (<img className="bmt-single-conversation-image" src={`./dist/${conversations[c.substring(c.indexOf('(') + 1, c.indexOf(')'))]}`} alt={`${c.substring(c.indexOf('[') + 1, c.indexOf(']'))}`} key={'convo'.concat(i)} />);
+    }
+    return (<p className="bmt-single-conversation-text" key={'convo'.concat(i)}>{c}</p>);
+  });
   return (
     <div className="page-container">
       <Header
@@ -29,11 +41,9 @@ function SingleConversationPage({ showMobileMenu, toggleDisplay }) {
           </div>
         </section>
         <section className="bmt-single-conversation">
-          <h2 className="bmt-single-conversation-title">Hello</h2>
-          <p className="bmt-single-conversation-metadata">#hello #whatup</p>
-          <p className="bmt-single-conversation-text">asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f</p>
-          <img className="bmt-single-conversation-image" src={`./dist/${ReleasePlaceholder}`} alt="this is a placeholder"/>
-          <p className="bmt-single-conversation-text">asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f</p>
+          <h2 className="bmt-single-conversation-title">{conversation['title']}</h2>
+          <p className="bmt-single-conversation-metadata">{`#${conversation['metadata'].join('#')}`}</p>
+          {conversationContent}
         </section>
         <ThoughtsLetter />
       </main>
