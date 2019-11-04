@@ -33,14 +33,8 @@
       "image": "![computer graphic illustration of gian](ContributorGian)",
       "role": "Software, Hardware, Design",
       "socials": [
-        {
-          "platform": "instagram",
-          "link": "https://www.instagram.com/gianisalive/"
-        },
-        {
-          "platform": "twitter",
-          "link": "https://twitter.com/gianisalive"
-        }
+        "[instagram](https://www.instagram.com/gianisalive/)",
+        "[twitter](https://twitter.com/gianisalive)"
       ]
     }
   ],

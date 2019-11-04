@@ -1,14 +1,20 @@
 import BackgroundHome from '../assets/background_home.svg';
-import ReleasePlaceholder from '../assets/release_placeholder.png';
 
-// assets for about page
+// about page images
 import ContributorGian from '../assets/contributor_gian.png';
-
-// image for conversations pages
-export let conversations = {
-  ReleasePlaceholder,
-}
 
 export let about = {
   ContributorGian,
+}
+
+// release page images
+import ReleasePlaceholder from '../assets/release_placeholder.png';
+
+export let releases = {
+  ReleasePlaceholder,
+}
+
+// conversations pages images
+export let conversations = {
+  ReleasePlaceholder,
 }

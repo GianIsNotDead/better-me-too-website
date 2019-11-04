@@ -15,10 +15,21 @@
   }
   // beginning of preview box style
   .release-preview {
+    position: relative;
     padding: $vertical-gutter-medium $horizontal-gutter;
     background: #FBFBFB;
     box-shadow: 0 9px 20px 3px rgba(226,233,248,0.79);
     border-radius: 10px;
+    margin-bottom: $vertical-gutter-medium;
+
+    .release-full-btn {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
 
     .release-preview-title {
       @include content-title-text;
@@ -37,6 +48,9 @@
       text-align: center;
       font-size: 0.75rem;
     }
+  }
+  .release-preview:last-of-type {
+    margin-bottom: 0;
   }
   .release-preview:hover {
     cursor: pointer;

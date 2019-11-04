@@ -12,7 +12,7 @@ import Footer from '../../components/Footer';
 import MediumIcon from '../../assets/icon_medium.png';
 
 // fake db
-import { conversations } from '../../helpers/imageDB';
+import { conversations as cDB } from '../../helpers/imageDB';
 import ConversationsList from '../../constant/conversations.json';
 
 function SingleConversationPage({ showMobileMenu, toggleDisplay }) {
@@ -21,7 +21,7 @@ function SingleConversationPage({ showMobileMenu, toggleDisplay }) {
   let conversation = ConversationsList.filter(c => c.title.toLowerCase() === convoQuery)[0];
   let conversationContent = conversation["content"].map((c, i) => {
     if (c[0] === '!') {
-      return (<img className="bmt-single-conversation-image" src={`./dist/${conversations[c.substring(c.indexOf('(') + 1, c.indexOf(')'))]}`} alt={`${c.substring(c.indexOf('[') + 1, c.indexOf(']'))}`} key={'convo'.concat(i)} />);
+      return (<img className="bmt-single-conversation-image" src={`./dist/${cDB[c.substring(c.indexOf('(') + 1, c.indexOf(')'))]}`} alt={`${c.substring(c.indexOf('[') + 1, c.indexOf(']'))}`} key={'convo'.concat(i)} />);
     }
     return (<p className="bmt-single-conversation-text" key={'convo'.concat(i)}>{c}</p>);
   });
@@ -37,7 +37,7 @@ function SingleConversationPage({ showMobileMenu, toggleDisplay }) {
           <p className="bmt-medium-text">While we share all the critical information here, please consider checking out a more thorough version on Medium, and send some claps if we earned it. It'll generate some revenue to help us maintain the platform. We really appreciate it.</p>
           <div className="bmt-medium-assets">
             <img className="bmt-medium-logo" src={`./dist/${MediumIcon}`} alt="medium logo" />
-            <a href="#" className="bmt-medium-btn">Read It On Medium</a>
+            <a href={conversation['medium-link']} className="bmt-medium-btn">Read It On Medium</a>
           </div>
         </section>
         <section className="bmt-single-conversation">

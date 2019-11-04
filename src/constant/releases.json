@@ -1,13 +1,15 @@
 [
   {
-    "title": "Memory Inheritance",
-    "author": "Gian",
-    "metadata": ["epigenetics", "methylation"],
-    "date": "10/23/2019",
-    "medium-link": "",
+    "project-name": "Lucid Candy",
+    "author": "Gian C",
+    "metadata": [],
+    "date": "08/10/2019",
+    "preview-image": "![some image link](ReleasePlaceholder)",
     "content": [
+      "##Material",
       "hello there asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f",
       "![some image link](ReleasePlaceholder)",
+      "##Material",
       "asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f",
       "![some image link](ReleasePlaceholder)",
       "asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f"
@@ -18,18 +20,23 @@
     ]
   },
   {
-    "title": "Memory Inheritance Part 2",
-    "author": "Gian",
-    "metadata": ["epigenetics", "methylation"],
-    "date": "10/23/2019",
-    "medium-link": "",
+    "project-name": "Lucid Candy",
+    "author": "Gian C",
+    "metadata": [],
+    "date": "08/10/2019",
+    "preview-image": "![some image link](ReleasePlaceholder)",
     "content": [
-      "this is part 2 ksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f",
+      "##Material",
+      "hello there asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f",
       "![some image link](ReleasePlaceholder)",
+      "##Material",
       "asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f",
       "![some image link](ReleasePlaceholder)",
       "asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f"
     ],
-    "reference": ["reference 1", "reference2"]
+    "reference": [
+      "[name of the link](this is the link)",
+      "[name of the link](this is the link)"
+    ]
   }
 ]

@@ -10,7 +10,7 @@ function Contributor({ name, role, image, socials }) {
   let imageAlt = image.substring(image.lastIndexOf('[') + 1, image.lastIndexOf(']'));
   let imageLink = image.substring(image.lastIndexOf('(') + 1, image.lastIndexOf(')'));
   const Socials = socials.map((t, i) => (
-    <a className="bmt-contributor-social" href={t['link']} key={'social'.concat(i)}>{t['platform']}</a>
+    <a className="bmt-contributor-social" href={t.substring(t.indexOf('(') + 1, t.indexOf(')'))} key={'social'.concat(i)}>{t.substring(t.indexOf('[') + 1, t.indexOf(']'))}</a>
   ));
   return (
     <article className="bmt-contributor">

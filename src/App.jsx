@@ -16,6 +16,7 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import SuggestionsPage from './pages/SuggestionsPage';
 import SingleConversationPage from './pages/SingleConversationPage';
+import SingleReleasePage from './pages/SingleReleasePage';
 
 class App extends Component {
   constructor(props) {
@@ -73,6 +74,12 @@ class App extends Component {
       ),
       '/releases': () => (
         <ReleasesPage
+          showMobileMenu={this.state.showMobileMenu}
+          toggleDisplay={this.toggleDisplay}
+        />
+      ),
+      '/releases/:project-name': () => (
+        <SingleReleasePage
           showMobileMenu={this.state.showMobileMenu}
           toggleDisplay={this.toggleDisplay}
         />

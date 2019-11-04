@@ -252,10 +252,19 @@ Better Me Too Visual Guide
     letter-spacing: 0.93px;
     margin-bottom: 30px; }
   .bmt-releases .release-preview {
+    position: relative;
     padding: 30px 6%;
     background: #FBFBFB;
     box-shadow: 0 9px 20px 3px rgba(226, 233, 248, 0.79);
-    border-radius: 10px; }
+    border-radius: 10px;
+    margin-bottom: 30px; }
+    .bmt-releases .release-preview .release-full-btn {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
     .bmt-releases .release-preview .release-preview-title {
       margin-bottom: 10px;
       font-size: 0.875rem;
@@ -277,6 +286,8 @@ Better Me Too Visual Guide
       margin-bottom: 0;
       text-align: center;
       font-size: 0.75rem; }
+  .bmt-releases .release-preview:last-of-type {
+    margin-bottom: 0; }
   .bmt-releases .release-preview:hover {
     cursor: pointer;
     background: #FFFFFF;

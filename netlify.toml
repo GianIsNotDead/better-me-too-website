@@ -11,6 +11,12 @@ status = 200
 force = false
 
 [[redirects]]
+from = "/releases/:project-name"
+to = "/index.html"
+status = 200
+force = false
+
+[[redirects]]
 from = "/releases"
 to = "/index.html"
 status = 200
@@ -49,6 +55,12 @@ force = false
 # This is needed because we're using relative path LOL
 [[redirects]]
 from = "/conversations/dist/*"
+to = "/dist/:splat"
+status = 200
+force = true
+
+[[redirects]]
+from = "/releases/dist/*"
 to = "/dist/:splat"
 status = 200
 force = true
