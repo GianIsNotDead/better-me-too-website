@@ -1,0 +1,46 @@
+@import "../../style/mixins";
+@import "../../style/variables";
+
+.page-contaienr, .btm-main {
+  position: relative;
+  width: 100%;
+}
+
+.page-container {
+  height: 100%;
+  @include vertical-scroll-momentum();
+  background: $primary-background;
+  .bmt-single-release {
+    @include container;
+    @include vertical-divider;
+    .bmt-single-release-name {
+      @include container-title-text;
+    }
+    .bmt-single-release-title {
+      @include content-title-text;
+      text-shadow: 0 2px 2px rgba(124,158,212,0.42);
+      margin: $vertical-gutter-small 0;
+    }
+    .bmt-single-release-author,
+    .bmt-single-release-text {
+      @include content-text;
+    }
+    .bmt-single-release-author {
+      font-size: 0.75rem;
+    }
+    .bmt-single-release-image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .bmt-single-release-name,
+    .bmt-single-release-author,
+    .bmt-single-release-text,
+    .bmt-single-release-image {
+      margin-bottom: $vertical-gutter-extra-small;
+    }
+    .bmt-single-release-text:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

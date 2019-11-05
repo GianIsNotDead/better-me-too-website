@@ -36,8 +36,8 @@ function SingleReleasePage({ showMobileMenu, toggleDisplay }) {
       />
       <main className="bmt-main">
         <section className="bmt-single-release">
-          <h2 className="bmt-single-release-title">{release['project-name']}</h2>
-          <p className="bmt-single-release-author">{release['author']}</p>
+          <h2 className="bmt-single-release-name">{release['project-name']}</h2>
+          <p className="bmt-single-release-author">Author: {release['author']}</p>
           {releaseContent}
         </section>
         <ThoughtsLetter />

@@ -238,7 +238,7 @@ Better Me Too Visual Guide
   z-index: 1;
   border-bottom: 1px solid #DBDBDB; }
   .bmt-releases .bmt-releases-title {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 1.125rem;
     font-weight: 600;
     color: #353975;
@@ -250,14 +250,14 @@ Better Me Too Visual Guide
     line-height: 20px;
     color: #353975;
     letter-spacing: 0.93px;
-    margin-bottom: 30px; }
+    margin-bottom: 20px; }
   .bmt-releases .release-preview {
     position: relative;
     padding: 30px 6%;
     background: #FBFBFB;
     box-shadow: 0 9px 20px 3px rgba(226, 233, 248, 0.79);
     border-radius: 10px;
-    margin-bottom: 30px; }
+    margin-bottom: 20px; }
     .bmt-releases .release-preview .release-full-btn {
       display: block;
       position: absolute;
@@ -300,7 +300,7 @@ Better Me Too Visual Guide
     font-size: 0.875rem;
     color: #353975;
     border-bottom: 2px solid #7C9ED4;
-    margin-top: 30px; }
+    margin-top: 20px; }
 /*************************************
 Better Me Too Visual Guide
 *************************************/
@@ -319,7 +319,7 @@ Better Me Too Visual Guide
   z-index: 1;
   border-bottom: 1px solid #DBDBDB; }
   .bmt-conversations .bmt-conversations-title {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 1.125rem;
     font-weight: 600;
     color: #353975;
@@ -331,7 +331,7 @@ Better Me Too Visual Guide
     line-height: 20px;
     color: #353975;
     letter-spacing: 0.93px;
-    margin-bottom: 30px; }
+    margin-bottom: 20px; }
   .bmt-conversations .conversation-preview, .bmt-conversations .conversation-title-container {
     width: 100%; }
   .bmt-conversations .conversation-preview {
@@ -407,7 +407,7 @@ Better Me Too Visual Guide
     color: #353975;
     border-bottom: 2px solid #7C9ED4;
     display: inline-block;
-    margin-top: 30px; }
+    margin-top: 20px; }
 /*************************************
 Better Me Too Visual Guide
 *************************************/
@@ -426,7 +426,7 @@ Better Me Too Visual Guide
   z-index: 1;
   border-bottom: 1px solid #DBDBDB; }
   .bmt-resources .bmt-resources-title {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 1.125rem;
     font-weight: 600;
     color: #353975;
@@ -438,7 +438,7 @@ Better Me Too Visual Guide
     line-height: 20px;
     color: #353975;
     letter-spacing: 0.93px;
-    margin-bottom: 30px; }
+    margin-bottom: 20px; }
   .bmt-resources .resource-preview {
     display: flex;
     justify-content: space-between;
@@ -475,7 +475,7 @@ Better Me Too Visual Guide
     font-size: 0.875rem;
     color: #353975;
     border-bottom: 2px solid #7C9ED4;
-    margin-top: 30px; }
+    margin-top: 20px; }
 /*************************************
 Better Me Too Visual Guide
 *************************************/
@@ -494,7 +494,7 @@ Better Me Too Visual Guide
   z-index: 1;
   border-bottom: 1px solid #DBDBDB; }
   .tl-container .thoughts-letter-title {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 1.125rem;
     font-weight: 600;
     color: #353975;
@@ -652,7 +652,7 @@ Better Me Too Visual Guide
   .page-container .bmt-disclaimer .bmt-disclaimer-title,
   .page-container .bmt-contributors .bmt-contributors-title,
   .page-container .bmt-faq .bmt-faq-title {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 1.125rem;
     font-weight: 600;
     color: #353975;
@@ -748,7 +748,7 @@ Better Me Too Visual Guide
     padding: 50px 0;
     z-index: 1; }
   .page-container .bmt-contact-title {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 1.125rem;
     font-weight: 600;
     color: #353975;
@@ -787,7 +787,7 @@ Better Me Too Visual Guide
     z-index: 1;
     border-bottom: 1px solid #DBDBDB; }
     .page-container .suggestions-container .suggestions-title {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       font-size: 1.125rem;
       font-weight: 600;
       color: #353975;
@@ -848,7 +848,7 @@ Better Me Too Visual Guide
       height: 100%;
       margin-right: 2%; }
   .page-container .bmt-single-conversation .bmt-single-conversation-title {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 1.125rem;
     font-weight: 600;
     color: #353975;
@@ -871,5 +871,66 @@ Better Me Too Visual Guide
     margin-bottom: 20px; }
   .page-container .bmt-single-conversation .bmt-single-conversation-text:last-of-type {
     margin-bottom: 0; }
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+/*************************************
+Better Me Too Visual Guide
+*************************************/
+.page-contaienr, .btm-main {
+  position: relative;
+  width: 100%; }
+
+.page-container {
+  height: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  background: #EFF2F5; }
+  .page-container .bmt-single-release {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 6%;
+    padding: 50px 0;
+    z-index: 1;
+    border-bottom: 1px solid #DBDBDB; }
+    .page-container .bmt-single-release .bmt-single-release-name {
+      margin-bottom: 20px;
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #353975;
+      letter-spacing: 1.2px;
+      text-shadow: 0 2px 2px rgba(124, 158, 212, 0.42); }
+    .page-container .bmt-single-release .bmt-single-release-title {
+      margin-bottom: 10px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #353975;
+      letter-spacing: 0.93px;
+      text-shadow: 0 2px 2px rgba(124, 158, 212, 0.42);
+      margin: 20px 0; }
+    .page-container .bmt-single-release .bmt-single-release-author,
+    .page-container .bmt-single-release .bmt-single-release-text {
+      margin-bottom: 10px;
+      font-size: 0.875rem;
+      line-height: 20px;
+      color: #353975;
+      letter-spacing: 0.93px; }
+    .page-container .bmt-single-release .bmt-single-release-author {
+      font-size: 0.75rem; }
+    .page-container .bmt-single-release .bmt-single-release-image {
+      display: block;
+      width: 100%;
+      height: auto; }
+    .page-container .bmt-single-release .bmt-single-release-name,
+    .page-container .bmt-single-release .bmt-single-release-author,
+    .page-container .bmt-single-release .bmt-single-release-text,
+    .page-container .bmt-single-release .bmt-single-release-image {
+      margin-bottom: 10px; }
+    .page-container .bmt-single-release .bmt-single-release-text:last-of-type {
+      margin-bottom: 0; }
 
 /*# sourceMappingURL=style.css.map*/

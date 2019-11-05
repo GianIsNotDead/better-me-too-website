@@ -11,7 +11,7 @@
 
   .bmt-releases-description {
     @include content-text;
-    margin-bottom: $vertical-gutter-medium;
+    margin-bottom: $vertical-gutter-small;
   }
   // beginning of preview box style
   .release-preview {
@@ -20,7 +20,7 @@
     background: #FBFBFB;
     box-shadow: 0 9px 20px 3px rgba(226,233,248,0.79);
     border-radius: 10px;
-    margin-bottom: $vertical-gutter-medium;
+    margin-bottom: $vertical-gutter-small;
 
     .release-full-btn {
       display: block;
@@ -30,19 +30,15 @@
       width: 100%;
       height: 100%;
     }
-
     .release-preview-title {
       @include content-title-text;
     }
-
     .release-preview-brief, .release-expand {
       @include content-text;
     }
-
     .release-preview-image {
       @include content-image;
     }
-
     .release-expand {
       margin-bottom: 0;
       text-align: center;
@@ -64,6 +60,6 @@
   // end of preview box style
   .bmt-releases-btn {
     @include primary-button;
-    margin-top: $vertical-gutter-medium;
+    margin-top: $vertical-gutter-small;
   }
 }

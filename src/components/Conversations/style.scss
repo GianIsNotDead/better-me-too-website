@@ -9,7 +9,7 @@
   }
   .bmt-conversations-description {
     @include content-text;
-    margin-bottom: $vertical-gutter-medium;  
+    margin-bottom: $vertical-gutter-small;  
   }
   // beginning of conversation preview box style
   .conversation-preview, .conversation-title-container {
@@ -82,6 +82,6 @@
   .bmt-conversations-btn {
     @include primary-button;
     display: inline-block;
-    margin-top: $vertical-gutter-medium;
+    margin-top: $vertical-gutter-small;
   }
 }

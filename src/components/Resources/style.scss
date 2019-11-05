@@ -9,7 +9,7 @@
   }
   .bmt-resources-description {
     @include content-text;
-    margin-bottom: $vertical-gutter-medium;
+    margin-bottom: $vertical-gutter-small;
   }
   // beginning of resource preview box
   .resource-preview {
@@ -45,6 +45,6 @@
   // end of resource preview box
   .bmt-resources-btn {
     @include primary-button;
-    margin-top: $vertical-gutter-medium;
+    margin-top: $vertical-gutter-small;
   }
 }
