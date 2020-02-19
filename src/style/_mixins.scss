@@ -68,6 +68,7 @@ Better Me Too Visual Guide
 }
 
 @mixin primary-button {
+  display: block;
   padding-bottom: 2px;
   font-size: $primary-text-size;
   color: $primary-font-color;

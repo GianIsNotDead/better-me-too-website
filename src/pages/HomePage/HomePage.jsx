@@ -15,7 +15,7 @@ import Footer from '../../components/Footer';
 // assets
 import BackgroundHome from '../../assets/background_home.svg';
 
-function HomePage({ showMobileMenu, toggleDisplay, setConversationContent }) {
+function HomePage({ showMobileMenu, toggleDisplay, setConversationContent, windowWidth }) {
   return (
     <div className="page-container">
       <div className={`gradient-container ${showMobileMenu === true ? 'nav-mobile-active' : ''}`}>
@@ -31,6 +31,7 @@ function HomePage({ showMobileMenu, toggleDisplay, setConversationContent }) {
             name: 'See All Releases',
             func: () => window.location.href = '/releases',
           }}
+          windowWidth={windowWidth}
         />
         <Conversations
           btn={{

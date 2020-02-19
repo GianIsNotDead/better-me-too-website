@@ -24,6 +24,7 @@
 
     .release-full-btn {
       display: block;
+      // cover the entire block, so it behave as a clickable button
       position: absolute;
       top: 0;
       left: 0;
@@ -56,6 +57,20 @@
   }
   .release-preview:active {
     border: 1px solid #DCDCDC;
+  }
+  @media only screen and (min-width: 768px) {
+    .release-preview {
+      display: inline-block;
+      width: 49%;
+      margin-right: $horizontal-gutter-small;
+      padding: $vertical-gutter-medium $horizontal-gutter-medium;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .release-preview {
+      width: 32%;
+      padding: $vertical-gutter-small $horizontal-gutter-small;
+    }
   }
   // end of preview box style
   .bmt-releases-btn {
