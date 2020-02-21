@@ -356,7 +356,6 @@ Better Me Too Visual Guide
     margin-bottom: 20px; }
     .bmt-conversations .conversation-preview .conversation-title-container {
       display: flex;
-      justify-content: space-between;
       align-items: center;
       height: 70px;
       border-top: 1px solid #DBDBDB;
@@ -385,7 +384,7 @@ Better Me Too Visual Guide
         position: relative;
         height: 100%;
         width: 80%;
-        padding: 6%; }
+        padding-left: 4%; }
         .bmt-conversations .conversation-preview .conversation-title-container .conversation-title .conversation-title-center {
           position: relative;
           left: 0;
@@ -459,20 +458,42 @@ Better Me Too Visual Guide
     margin-bottom: 20px; }
   .bmt-resources .resource-preview {
     display: flex;
-    justify-content: space-between;
     padding: 20px 6%;
+    margin-bottom: 20px;
     background: #FFFFFF;
     box-shadow: 0 4px 6px 0 rgba(226, 233, 248, 0.73);
     border-radius: 10px; }
+    .bmt-resources .resource-preview .resource-preview-image-container,
+    .bmt-resources .resource-preview .resource-preview-text-container {
+      display: inline-block;
+      vertical-align: top; }
     .bmt-resources .resource-preview .resource-preview-image-container {
       position: relative;
-      height: 100px;
-      width: 25%; }
+      width: 30%; }
       .bmt-resources .resource-preview .resource-preview-image-container .resource-preview-image {
-        height: 100%;
-        width: auto; }
+        height: auto;
+        width: 100%; }
+    @media only screen and (min-width: 480px) {
+      .bmt-resources .resource-preview .resource-preview-image-container {
+        width: 25%; } }
+    @media only screen and (min-width: 520px) {
+      .bmt-resources .resource-preview .resource-preview-image-container {
+        width: 18%; } }
+    @media only screen and (min-width: 600px) {
+      .bmt-resources .resource-preview .resource-preview-image-container {
+        width: 15%; } }
+    @media only screen and (min-width: 768px) {
+      .bmt-resources .resource-preview .resource-preview-image-container {
+        width: 30%; } }
+    @media only screen and (min-width: 1028px) {
+      .bmt-resources .resource-preview .resource-preview-image-container {
+        width: 20%; } }
+    @media only screen and (min-width: 1200px) {
+      .bmt-resources .resource-preview .resource-preview-image-container {
+        width: 15%; } }
     .bmt-resources .resource-preview .resource-preview-text-container {
-      width: 70%; }
+      width: 70%;
+      padding-left: 4%; }
       .bmt-resources .resource-preview .resource-preview-text-container .resource-preview-title {
         margin-bottom: 10px;
         font-size: 0.875rem;
@@ -488,6 +509,14 @@ Better Me Too Visual Guide
       .bmt-resources .resource-preview .resource-preview-text-container .resource-preview-redirect {
         font-size: 0.875rem;
         color: #000000; }
+  .bmt-resources .resource-preview:last-of-type {
+    margin-bottom: 0; }
+  @media only screen and (min-width: 768px) {
+    .bmt-resources .resource-preview {
+      display: inline-block;
+      width: 49%;
+      padding: 30px;
+      margin-right: 2%; } }
   .bmt-resources .bmt-resources-btn {
     display: block;
     padding-bottom: 2px;

@@ -24953,9 +24953,7 @@ var App = function (_Component) {
       var _this3 = this;
 
       window.addEventListener('resize', function () {
-        _this3.setState({ windowWidth: window.innerWidth }, function () {
-          console.log('windowWith: ', _this3.state.windowWidth);
-        });
+        _this3.setState({ windowWidth: window.innerWidth });
       });
     }
   }, {
@@ -25014,7 +25012,8 @@ var App = function (_Component) {
         '/resources': function resources() {
           return _react2.default.createElement(_ResourcesPage2.default, {
             showMobileMenu: _this5.state.showMobileMenu,
-            toggleDisplay: _this5.toggleDisplay
+            toggleDisplay: _this5.toggleDisplay,
+            windowWidth: _this5.state.windowWidth
           });
         },
         '/contact': function contact() {
@@ -25956,10 +25955,12 @@ var _resource_incognito2 = _interopRequireDefault(_resource_incognito);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // static
-function ResourcesPreview() {
+function ResourcesPreview(_ref) {
+  var style = _ref.style;
+
   return _react2.default.createElement(
     'article',
-    { className: 'resource-preview' },
+    { className: 'resource-preview', style: style },
     _react2.default.createElement(
       'div',
       { className: 'resource-preview-image-container' },
@@ -25993,9 +25994,16 @@ function ResourcesPreview() {
 // style
 
 
-function Resources(_ref) {
-  var btn = _ref.btn;
+function Resources(_ref2) {
+  var btn = _ref2.btn,
+      windowWidth = _ref2.windowWidth;
 
+  var ResourcesPreviewComponent = ['1', '2', '3'].map(function (resource, i) {
+    return _react2.default.createElement(ResourcesPreview, {
+      style: windowWidth >= 768 && (i + 1) % 2 === 0 ? { 'marginRight': 0 } : null,
+      key: 'resource'.concat(i)
+    });
+  });
   return _react2.default.createElement(
     'section',
     { className: 'bmt-resources' },
@@ -26009,7 +26017,7 @@ function Resources(_ref) {
       { className: 'bmt-resources-description' },
       _web_copy2.default['resources-description']
     ),
-    _react2.default.createElement(ResourcesPreview, null),
+    ResourcesPreviewComponent,
     btn !== undefined && _react2.default.createElement(
       'button',
       { className: 'bmt-resources-btn', onClick: btn.func },
@@ -26724,7 +26732,8 @@ function HomePage(_ref) {
           func: function func() {
             return window.location.href = '/resources';
           }
-        }
+        },
+        windowWidth: windowWidth
       }),
       _react2.default.createElement(_ThoughtsLetter2.default, null),
       _react2.default.createElement(
@@ -26874,7 +26883,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // component
 function ResourcesPage(_ref) {
   var showMobileMenu = _ref.showMobileMenu,
-      toggleDisplay = _ref.toggleDisplay;
+      toggleDisplay = _ref.toggleDisplay,
+      windowWidth = _ref.windowWidth;
 
   return _react2.default.createElement(
     'div',
@@ -26887,7 +26897,7 @@ function ResourcesPage(_ref) {
     _react2.default.createElement(
       'main',
       { className: 'bmt-main' },
-      _react2.default.createElement(_Resources2.default, null),
+      _react2.default.createElement(_Resources2.default, { windowWidth: windowWidth }),
       _react2.default.createElement(_ThoughtsLetter2.default, null)
     ),
     _react2.default.createElement(_Footer2.default, null)
