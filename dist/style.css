@@ -207,6 +207,12 @@ Better Me Too Visual Guide
     font-weight: 600; }
   .bmt-banner .bmt-banner-text {
     line-height: 20px; }
+  @media only screen and (min-width: 768px) {
+    .bmt-banner .bmt-banner-text {
+      width: 90%; } }
+  @media only screen and (min-width: 1024px) {
+    .bmt-banner .bmt-banner-text {
+      width: 70%; } }
   .bmt-banner .bmt-cta-button {
     display: inline-block;
     padding: 2px 2px;
@@ -295,7 +301,18 @@ Better Me Too Visual Guide
     border-radius: 10px; }
   .bmt-releases .release-preview:active {
     border: 1px solid #DCDCDC; }
+  @media only screen and (min-width: 768px) {
+    .bmt-releases .release-preview {
+      display: inline-block;
+      width: 49%;
+      margin-right: 2%;
+      padding: 30px 4%; } }
+  @media only screen and (min-width: 1024px) {
+    .bmt-releases .release-preview {
+      width: 32%;
+      padding: 20px 2%; } }
   .bmt-releases .bmt-releases-btn {
+    display: block;
     padding-bottom: 2px;
     font-size: 0.875rem;
     color: #353975;
@@ -402,6 +419,7 @@ Better Me Too Visual Guide
   .bmt-conversations .conversation-preview:last-of-type {
     margin-bottom: 0; }
   .bmt-conversations .bmt-conversations-btn {
+    display: block;
     padding-bottom: 2px;
     font-size: 0.875rem;
     color: #353975;
@@ -471,6 +489,7 @@ Better Me Too Visual Guide
         font-size: 0.875rem;
         color: #000000; }
   .bmt-resources .bmt-resources-btn {
+    display: block;
     padding-bottom: 2px;
     font-size: 0.875rem;
     color: #353975;
@@ -525,6 +544,7 @@ Better Me Too Visual Guide
       letter-spacing: 0.93px;
       background-image: linear-gradient(45deg, #6592E0 0%, #F3AFF1 100%); }
   .tl-container .thoughts-letter-example-btn {
+    display: block;
     padding-bottom: 2px;
     font-size: 0.875rem;
     color: #353975;
@@ -545,28 +565,23 @@ Better Me Too Visual Guide
   margin: 0 6%;
   padding: 50px 0;
   z-index: 1; }
-
-.bmt-footer .footer-nav {
-  margin-bottom: 20px; }
-
-.bmt-footer .nav-item {
-  margin-bottom: 10px; }
-
-.bmt-footer .nav-item:last-of-type {
-  margin-bottom: 0; }
-
-.bmt-footer .nav-item a {
-  font-size: 0.875rem;
-  color: #353975; }
-
-.bmt-footer .social-btn {
-  width: 25px;
-  height: 25px;
-  margin-right: 25px; }
-
-.bmt-footer .social-btn img {
-  width: 100%;
-  height: 100%; }
+  .bmt-footer .footer-nav {
+    margin-bottom: 20px; }
+  .bmt-footer .nav-item {
+    margin-bottom: 10px; }
+    .bmt-footer .nav-item .footer-nav-btn {
+      font-size: 0.875rem;
+      color: #353975; }
+  .bmt-footer .nav-item:last-of-type {
+    margin-bottom: 0; }
+  .bmt-footer .social-btn {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 25px; }
+    .bmt-footer .social-btn .social-btn-image {
+      width: 100%;
+      height: 100%; }
 /*************************************
 Better Me Too Visual Guide
 *************************************/
@@ -840,6 +855,7 @@ Better Me Too Visual Guide
     height: 18px; }
     .page-container .bmt-medium-conversation .bmt-medium-assets .bmt-medium-btn {
       display: inline-block;
+      display: block;
       padding-bottom: 2px;
       font-size: 0.875rem;
       color: #353975;

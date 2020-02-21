@@ -52,6 +52,27 @@ to = "/index.html"
 status = 200
 force = false
 
+# Social media redirect
+[[redirects]]
+from = "/twitter"
+to = "https://twitter.com/BrainMeToo"
+status = 301
+
+[[redirects]]
+from = "/instagram"
+to = "https://www.instagram.com/brainmetoo/"
+status = 301
+
+[[redirects]]
+from = "/github"
+to = "https://github.com/bettermetoo"
+status = 301
+
+[[redirects]]
+from = "/medium"
+to = "https://medium.com/better-me-too"
+status = 301
+
 # This is needed because we're using relative path LOL
 [[redirects]]
 from = "/conversations/dist/*"

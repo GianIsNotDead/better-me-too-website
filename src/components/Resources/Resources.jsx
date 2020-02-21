@@ -9,9 +9,9 @@ import WebCopy from '../../constant/web_copy.json';
 // assets
 import Incognito from '../../assets/resource_incognito.jpg'
 
-function ResourcesPreview() {
+function ResourcesPreview({ style }) {
   return (
-    <article className="resource-preview">
+    <article className="resource-preview" style={style}>
       <div className="resource-preview-image-container">
         <img className="resource-preview-image" src={`./dist/${Incognito}`} alt="resource"/>
       </div>
@@ -24,12 +24,21 @@ function ResourcesPreview() {
   );
 }
 
-function Resources({ btn }) {
+function Resources({ btn, windowWidth }) {
+  let ResourcesPreviewComponent = ['1', '2', '3'].map((resource, i) => (
+    <ResourcesPreview
+      style={
+        windowWidth >= 768 && (i+1) % 2 === 0
+        ? {'marginRight': 0} : null
+      }
+      key={'resource'.concat(i)}
+    />
+  ));
   return (
     <section className="bmt-resources">
       <h3 className="bmt-resources-title">{WebCopy['resources-title']}</h3>
       <p className="bmt-resources-description">{WebCopy['resources-description']}</p>
-      <ResourcesPreview />
+      { ResourcesPreviewComponent }
       { btn !== undefined &&
         <button className="bmt-resources-btn" onClick={btn.func}>{btn.name}</button>
       }

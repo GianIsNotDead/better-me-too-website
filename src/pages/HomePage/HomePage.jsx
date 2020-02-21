@@ -45,6 +45,7 @@ function HomePage({ showMobileMenu, toggleDisplay, setConversationContent, windo
             name: 'See All Resources',
             func: () => window.location.href = '/resources',
           }}
+          windowWidth={windowWidth}
         />
         <ThoughtsLetter />
         <div className="page-background">

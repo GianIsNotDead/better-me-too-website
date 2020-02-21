@@ -63,9 +63,7 @@ class App extends Component {
   // Life Cycle
   componentDidMount() {
     window.addEventListener('resize', () => {
-      this.setState({ windowWidth: window.innerWidth }, () => {
-        console.log('windowWith: ', this.state.windowWidth);
-      });
+      this.setState({ windowWidth: window.innerWidth });
     });
   }
 
@@ -119,6 +117,7 @@ class App extends Component {
         <ResourcesPage
           showMobileMenu={this.state.showMobileMenu}
           toggleDisplay={this.toggleDisplay}
+          windowWidth={this.state.windowWidth}
         />
       ),
       '/contact': () => (

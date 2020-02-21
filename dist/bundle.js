@@ -24895,6 +24895,8 @@ var App = function (_Component) {
     var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 
     _this.state = {
+      // Screen Component
+      windowWidth: window.innerWidth,
       // Header
       showMobileMenu: false,
       // SingleConversationPage
@@ -24942,65 +24944,90 @@ var App = function (_Component) {
       var display = this.state[item] === true ? false : true;
       return this.setState(_defineProperty({}, item, display));
     }
+
+    // Life Cycle
+
+  }, {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var _this3 = this;
+
+      window.addEventListener('resize', function () {
+        _this3.setState({ windowWidth: window.innerWidth }, function () {
+          console.log('windowWith: ', _this3.state.windowWidth);
+        });
+      });
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      var _this4 = this;
+
+      window.removeEventListener('resize', function () {
+        _this4.setState({ windowWidth: window.innerWidth });
+      });
+    }
   }, {
     key: 'render',
     value: function render() {
-      var _this3 = this;
+      var _this5 = this;
 
       return new _SonicHedgehog2.default().makeRoutes({
         '/': function _() {
           return _react2.default.createElement(_HomePage2.default, {
-            showMobileMenu: _this3.state.showMobileMenu,
-            toggleDisplay: _this3.toggleDisplay
+            showMobileMenu: _this5.state.showMobileMenu,
+            toggleDisplay: _this5.toggleDisplay,
+            setConversationContent: _this5.setConversationContent,
+            windowWidth: _this5.state.windowWidth
           });
         },
         '/about': function about() {
           return _react2.default.createElement(_AboutPage2.default, {
-            showMobileMenu: _this3.state.showMobileMenu,
-            toggleDisplay: _this3.toggleDisplay
+            showMobileMenu: _this5.state.showMobileMenu,
+            toggleDisplay: _this5.toggleDisplay
           });
         },
         '/releases': function releases() {
           return _react2.default.createElement(_ReleasesPage2.default, {
-            showMobileMenu: _this3.state.showMobileMenu,
-            toggleDisplay: _this3.toggleDisplay
+            showMobileMenu: _this5.state.showMobileMenu,
+            toggleDisplay: _this5.toggleDisplay
           });
         },
         '/releases/:project-name': function releasesProjectName() {
           return _react2.default.createElement(_SingleReleasePage2.default, {
-            showMobileMenu: _this3.state.showMobileMenu,
-            toggleDisplay: _this3.toggleDisplay
+            showMobileMenu: _this5.state.showMobileMenu,
+            toggleDisplay: _this5.toggleDisplay
           });
         },
         '/conversations': function conversations() {
           return _react2.default.createElement(_ConversationsPage2.default, {
-            showMobileMenu: _this3.state.showMobileMenu,
-            toggleDisplay: _this3.toggleDisplay
+            showMobileMenu: _this5.state.showMobileMenu,
+            toggleDisplay: _this5.toggleDisplay
           });
         },
         '/conversations/:title': function conversationsTitle() {
           return _react2.default.createElement(_SingleConversationPage2.default, {
-            showMobileMenu: _this3.state.showMobileMenu,
-            toggleDisplay: _this3.toggleDisplay
+            showMobileMenu: _this5.state.showMobileMenu,
+            toggleDisplay: _this5.toggleDisplay
           });
         },
         '/resources': function resources() {
           return _react2.default.createElement(_ResourcesPage2.default, {
-            showMobileMenu: _this3.state.showMobileMenu,
-            toggleDisplay: _this3.toggleDisplay
+            showMobileMenu: _this5.state.showMobileMenu,
+            toggleDisplay: _this5.toggleDisplay
           });
         },
         '/contact': function contact() {
           return _react2.default.createElement(_ContactPage2.default, {
-            showMobileMenu: _this3.state.showMobileMenu,
-            toggleDisplay: _this3.toggleDisplay
+            showMobileMenu: _this5.state.showMobileMenu,
+            toggleDisplay: _this5.toggleDisplay
           });
         },
         '/suggestions': function suggestions() {
           return _react2.default.createElement(_SuggestionsPage2.default, {
-            route: _this3.state.route,
-            showMobileMenu: _this3.state.showMobileMenu,
-            toggleDisplay: _this3.toggleDisplay
+            route: _this5.state.route,
+            showMobileMenu: _this5.state.showMobileMenu,
+            toggleDisplay: _this5.toggleDisplay
           });
         }
       });
@@ -25099,6 +25126,17 @@ module.exports = __webpack_require__.p + "./img/icon_instagram.svg";
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./img/icon_medium.png";
+
+/***/ }),
+
+/***/ "./src/assets/icon_medium.svg":
+/*!************************************!*\
+  !*** ./src/assets/icon_medium.svg ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./img/icon_medium.svg";
 
 /***/ }),
 
@@ -25501,9 +25539,13 @@ var _icon_youtube = __webpack_require__(/*! ../../assets/icon_youtube.svg */ "./
 
 var _icon_youtube2 = _interopRequireDefault(_icon_youtube);
 
+var _icon_medium = __webpack_require__(/*! ../../assets/icon_medium.svg */ "./src/assets/icon_medium.svg");
+
+var _icon_medium2 = _interopRequireDefault(_icon_medium);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// assets
+// style
 function Footer() {
   return _react2.default.createElement(
     'footer',
@@ -25519,7 +25561,7 @@ function Footer() {
           { className: 'nav-item' },
           _react2.default.createElement(
             'a',
-            { href: '/about' },
+            { className: 'footer-nav-btn', href: '/about' },
             'About'
           )
         ),
@@ -25528,7 +25570,7 @@ function Footer() {
           { className: 'nav-item' },
           _react2.default.createElement(
             'a',
-            { href: '/releases' },
+            { className: 'footer-nav-btn', href: '/releases' },
             'Releases & Milestones'
           )
         ),
@@ -25537,7 +25579,7 @@ function Footer() {
           { className: 'nav-item' },
           _react2.default.createElement(
             'a',
-            { href: '/conversations' },
+            { className: 'footer-nav-btn', href: '/conversations' },
             'Conversations'
           )
         ),
@@ -25546,7 +25588,7 @@ function Footer() {
           { className: 'nav-item' },
           _react2.default.createElement(
             'a',
-            { href: '/resources' },
+            { className: 'footer-nav-btn', href: '/resources' },
             'Resources'
           )
         )
@@ -25556,30 +25598,35 @@ function Footer() {
       'section',
       { className: 'social-links' },
       _react2.default.createElement(
-        'button',
-        { className: 'social-btn' },
+        'a',
+        { className: 'social-btn', href: '/twitter' },
         _react2.default.createElement('img', { className: 'social-btn-image', src: './dist/' + _icon_twitter2.default, alt: 'twitter icon' })
       ),
       _react2.default.createElement(
-        'button',
-        { className: 'social-btn' },
+        'a',
+        { className: 'social-btn', href: '/instagram' },
         _react2.default.createElement('img', { className: 'social-btn-image', src: './dist/' + _icon_instagram2.default, alt: 'instagram icon' })
       ),
       _react2.default.createElement(
-        'button',
-        { className: 'social-btn' },
+        'a',
+        { className: 'social-btn', href: '/github' },
         _react2.default.createElement('img', { className: 'social-btn-image', src: './dist/' + _icon_github2.default, alt: 'github icon' })
       ),
       _react2.default.createElement(
-        'button',
-        { className: 'social-btn' },
+        'a',
+        { className: 'social-btn', href: '/youtube' },
         _react2.default.createElement('img', { className: 'social-btn-image', src: './dist/' + _icon_youtube2.default, alt: 'youtube icon' })
+      ),
+      _react2.default.createElement(
+        'a',
+        { className: 'social-btn', href: '/medium' },
+        _react2.default.createElement('img', { className: 'social-btn-image', src: './dist/' + _icon_medium2.default, alt: 'medium icon' })
       )
     )
   );
 }
 
-// style
+// assets
 exports.default = Footer;
 
 /***/ }),
@@ -25795,11 +25842,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function ReleasesPreview(_ref) {
   var projectName = _ref.projectName,
       previewImage = _ref.previewImage,
-      content = _ref.content;
+      content = _ref.content,
+      style = _ref.style;
 
   return _react2.default.createElement(
     'article',
-    { className: 'release-preview' },
+    { className: 'release-preview', style: style },
     _react2.default.createElement('a', { className: 'release-full-btn', href: '/releases/' + projectName.toLowerCase().split(' ').join('-') }),
     _react2.default.createElement(
       'h4',
@@ -25827,7 +25875,8 @@ function ReleasesPreview(_ref) {
 
 
 function Releases(_ref2) {
-  var btn = _ref2.btn;
+  var btn = _ref2.btn,
+      windowWidth = _ref2.windowWidth;
 
   var ReleaseComponent = _releases2.default.map(function (release, i) {
     return _react2.default.createElement(ReleasesPreview, {
@@ -25835,6 +25884,8 @@ function Releases(_ref2) {
       previewImage: release['preview-image'],
       content: release['content'],
       key: 'release-preview'.concat(i)
+      // remove right margin on every third box
+      , style: windowWidth >= 1024 && (i + 1) % 3 === 0 ? { 'marginRight': 0 } : windowWidth >= 768 && windowWidth <= 1024 && (i + 1) % 2 === 0 ? { 'marginRight': 0 } : null
     });
   });
   return _react2.default.createElement(
@@ -26077,10 +26128,10 @@ module.exports = JSON.parse("[{\"title\":\"Memory Inheritance\",\"author\":\"Gia
 /*!************************************!*\
   !*** ./src/constant/releases.json ***!
   \************************************/
-/*! exports provided: 0, 1, default */
+/*! exports provided: 0, 1, 2, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"project-name\":\"Lucid Candy\",\"author\":\"Gian C\",\"metadata\":[],\"date\":\"08/10/2019\",\"preview-image\":\"![some image link](ReleasePlaceholder)\",\"content\":[\"##Material\",\"hello there asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"##Material\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\"],\"reference\":[\"[name of the link](this is the link)\",\"[name of the link](this is the link)\"]},{\"project-name\":\"Lucid Candy Lollipop\",\"author\":\"Gian C\",\"metadata\":[],\"date\":\"08/10/2019\",\"preview-image\":\"![some image link](ReleasePlaceholder)\",\"content\":[\"aisjdopahwubfaijpoij\",\"##Material\",\"hello there asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"##Material\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\"],\"reference\":[\"[name of the link](this is the link)\",\"[name of the link](this is the link)\"]}]");
+module.exports = JSON.parse("[{\"project-name\":\"Lucid Candy\",\"author\":\"Gian C\",\"metadata\":[],\"date\":\"08/10/2019\",\"preview-image\":\"![some image link](ReleasePlaceholder)\",\"content\":[\"hello there asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"##Material\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\"],\"reference\":[\"[name of the link](this is the link)\",\"[name of the link](this is the link)\"]},{\"project-name\":\"Lucid Candy Lollipop\",\"author\":\"Gian C\",\"metadata\":[],\"date\":\"08/10/2019\",\"preview-image\":\"![some image link](ReleasePlaceholder)\",\"content\":[\"aisjdopahwubfaijpoij asjdpofij apsodijf opaisdjf opiajsdpo fijapsoijdf poijasdf asdfaosdghasdj oasdjfp oiasjdf asd\",\"##Material\",\"hello there asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"##Material\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\"],\"reference\":[\"[name of the link](this is the link)\",\"[name of the link](this is the link)\"]},{\"project-name\":\"Lucid Candy Lollipop Lollipop\",\"author\":\"Gian C\",\"metadata\":[],\"date\":\"08/10/2019\",\"preview-image\":\"![some image link](ReleasePlaceholder)\",\"content\":[\"aisjdopahwubfaijpoij asjdpofij apsodijf opaisdjf opiajsdpo fijapsoijdf poijasdf asdfaosdghasdj oasdjfp oiasjdf asd\",\"##Material\",\"hello there asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"##Material\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\"],\"reference\":[\"[name of the link](this is the link)\",\"[name of the link](this is the link)\"]}]");
 
 /***/ }),
 
@@ -26631,7 +26682,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function HomePage(_ref) {
   var showMobileMenu = _ref.showMobileMenu,
       toggleDisplay = _ref.toggleDisplay,
-      setConversationContent = _ref.setConversationContent;
+      setConversationContent = _ref.setConversationContent,
+      windowWidth = _ref.windowWidth;
 
   return _react2.default.createElement(
     'div',
@@ -26654,7 +26706,8 @@ function HomePage(_ref) {
           func: function func() {
             return window.location.href = '/releases';
           }
-        }
+        },
+        windowWidth: windowWidth
       }),
       _react2.default.createElement(_Conversations2.default, {
         btn: {

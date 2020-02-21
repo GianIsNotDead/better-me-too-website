@@ -12,18 +12,22 @@ function ConversationsPreview({ title, metadata, date, content }) {
   return (
     <article className="conversation-preview">
       <div className="conversation-title-container">
+        {/* Release Date Box */}
         <div className="conversation-date-container">
           <div className="conversation-date-center">
             <p className="conversation-month">{date.substring(0, 5)}</p>
             <p className="conversation-year">{date.substring(6, date.length)}</p>
           </div>
         </div>
+        {/* End Release Date Box */}
+        {/* Title Box */}
         <div className="conversation-title">
           <div className="conversation-title-center">
             <h4 className="conversation-title-text">{title}</h4>
             <p className="conversation-metadata">{FormatedMetadata}</p>
           </div>
         </div>
+        {/* End Title Box */}
       </div>
       <div className="conversation-text-container">
         <p className="conversation-text">{content[0].substring(0, 130).concat('...')}</p>

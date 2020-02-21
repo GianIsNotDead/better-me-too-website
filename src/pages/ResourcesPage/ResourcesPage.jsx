@@ -9,7 +9,7 @@ import Resources from '../../components/Resources';
 import ThoughtsLetter from '../../components/ThoughtsLetter';
 import Footer from '../../components/Footer';
 
-function ResourcesPage({ showMobileMenu, toggleDisplay }) {
+function ResourcesPage({ showMobileMenu, toggleDisplay, windowWidth }) {
   return (
     <div className="page-container">
       <Header
@@ -18,7 +18,7 @@ function ResourcesPage({ showMobileMenu, toggleDisplay }) {
         toggleDisplay={toggleDisplay}
       />
       <main className="bmt-main">
-        <Resources />
+        <Resources windowWidth={windowWidth} />
         <ThoughtsLetter />
       </main>
       <Footer />

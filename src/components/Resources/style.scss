@@ -14,22 +14,57 @@
   // beginning of resource preview box
   .resource-preview {
     display: flex;
-    justify-content: space-between;
     padding: $vertical-gutter-small $horizontal-gutter;
+    margin-bottom: $vertical-gutter-small;
     background: #FFFFFF;
     box-shadow: 0 4px 6px 0 rgba(226,233,248,0.73);
     border-radius: 10px;
+    .resource-preview-image-container,
+    .resource-preview-text-container {
+      display: inline-block;
+      vertical-align: top;
+    }
     .resource-preview-image-container {
       position: relative;
-      height: 100px;
-      width: 25%;
+      width: 30%;
       .resource-preview-image {
-        height: 100%;
-        width: auto;
+        height: auto;
+        width: 100%;
+      }
+    }
+    @media only screen and (min-width: 480px) {
+      .resource-preview-image-container {
+        width: 25%;
+      }
+    }
+    @media only screen and (min-width: 520px) {
+      .resource-preview-image-container {
+        width: 18%;
+      }
+    }
+    @media only screen and (min-width: 600px) {
+      .resource-preview-image-container {
+        width: 15%;
+      }
+    }
+    @media only screen and (min-width: 768px) {
+      .resource-preview-image-container {
+        width: 30%;
+      }
+    }
+    @media only screen and (min-width: 1028px) {
+      .resource-preview-image-container {
+        width: 20%;
+      }
+    }
+    @media only screen and (min-width: 1200px) {
+      .resource-preview-image-container {
+        width: 15%;
       }
     }
     .resource-preview-text-container {
       width: 70%;
+      padding-left: $horizontal-gutter-medium;
       .resource-preview-title {
         @include content-title-text;
       }
@@ -40,6 +75,17 @@
         font-size: $primary-text-size;
         color: #000000;
       }
+    }
+  }
+  .resource-preview:last-of-type {
+    margin-bottom: 0;
+  }
+  @media only screen and (min-width: 768px) {
+    .resource-preview {
+      display: inline-block;
+      width: 49%;
+      padding: $vertical-gutter-medium;
+      margin-right: $horizontal-gutter-small;
     }
   }
   // end of resource preview box
