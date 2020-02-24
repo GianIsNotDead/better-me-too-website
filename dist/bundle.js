@@ -25722,22 +25722,18 @@ var Header = function (_Component) {
         'header',
         { className: 'bmt-header ' + (showMobileMenu === true ? 'nav-mobile-active' : '') },
         _react2.default.createElement(
-          'div',
-          { className: 'header-container' },
+          'h1',
+          { className: 'logo-text ' + (theme === 'dark' ? 'logo-text-dark' : 'logo-text-light') },
           _react2.default.createElement(
-            'h1',
-            { className: 'logo-text ' + (theme === 'dark' ? 'logo-text-dark' : 'logo-text-light') },
-            _react2.default.createElement(
-              'a',
-              { className: 'logo-link', href: '/' },
-              'Better Me Too'
-            )
-          ),
-          _react2.default.createElement(
-            'button',
-            { className: 'burger-menu-button', name: 'showMobileMenu', onClick: this._toggleMobileMenu },
-            _react2.default.createElement('img', { className: 'burger-menu', src: './dist/' + (showMobileMenu === true ? _icon_close2.default : HamburgerIcon), alt: 'hamburger menu' })
+            'a',
+            { className: 'logo-link', href: '/' },
+            'Better Me Too'
           )
+        ),
+        _react2.default.createElement(
+          'button',
+          { className: 'burger-menu-button ' + (showMobileMenu === true ? 'close-menu-button' : ''), name: 'showMobileMenu', onClick: this._toggleMobileMenu },
+          _react2.default.createElement('img', { className: 'burger-menu', src: './dist/' + (showMobileMenu === true ? _icon_close2.default : HamburgerIcon), alt: 'hamburger menu' })
         ),
         _react2.default.createElement(
           'nav',
@@ -25841,6 +25837,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function ReleasesPreview(_ref) {
   var projectName = _ref.projectName,
       previewImage = _ref.previewImage,
+      briefDescription = _ref.briefDescription,
       content = _ref.content,
       style = _ref.style;
 
@@ -25856,7 +25853,7 @@ function ReleasesPreview(_ref) {
     _react2.default.createElement(
       'p',
       { className: 'release-preview-brief' },
-      content[0].substring(0, 150).concat('...')
+      briefDescription.length > 150 ? briefDescription.substring(0, 150).concat('...') : briefDescription.concat(content[0].substring(0, 147 - briefDescription.length)).concat('...')
     ),
     _react2.default.createElement('img', { className: 'release-preview-image', src: './dist/' + _imageDB.releases[previewImage.substring(previewImage.indexOf('(') + 1, previewImage.indexOf(')'))], alt: previewImage.substring(previewImage.indexOf('[') + 1, previewImage.indexOf(']')) }),
     _react2.default.createElement(
@@ -25881,6 +25878,7 @@ function Releases(_ref2) {
     return _react2.default.createElement(ReleasesPreview, {
       projectName: release['project-name'],
       previewImage: release['preview-image'],
+      briefDescription: release['brief-description'],
       content: release['content'],
       key: 'release-preview'.concat(i)
       // remove right margin on every third box
@@ -26139,7 +26137,7 @@ module.exports = JSON.parse("[{\"title\":\"Memory Inheritance\",\"author\":\"Gia
 /*! exports provided: 0, 1, 2, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"project-name\":\"Lucid Candy\",\"author\":\"Gian C\",\"metadata\":[],\"date\":\"08/10/2019\",\"preview-image\":\"![some image link](ReleasePlaceholder)\",\"content\":[\"hello there asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"##Material\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\"],\"reference\":[\"[name of the link](this is the link)\",\"[name of the link](this is the link)\"]},{\"project-name\":\"Lucid Candy Lollipop\",\"author\":\"Gian C\",\"metadata\":[],\"date\":\"08/10/2019\",\"preview-image\":\"![some image link](ReleasePlaceholder)\",\"content\":[\"aisjdopahwubfaijpoij asjdpofij apsodijf opaisdjf opiajsdpo fijapsoijdf poijasdf asdfaosdghasdj oasdjfp oiasjdf asd\",\"##Material\",\"hello there asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"##Material\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\"],\"reference\":[\"[name of the link](this is the link)\",\"[name of the link](this is the link)\"]},{\"project-name\":\"Lucid Candy Lollipop Lollipop\",\"author\":\"Gian C\",\"metadata\":[],\"date\":\"08/10/2019\",\"preview-image\":\"![some image link](ReleasePlaceholder)\",\"content\":[\"aisjdopahwubfaijpoij asjdpofij apsodijf opaisdjf opiajsdpo fijapsoijdf poijasdf asdfaosdghasdj oasdjfp oiasjdf asd\",\"##Material\",\"hello there asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"##Material\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\"],\"reference\":[\"[name of the link](this is the link)\",\"[name of the link](this is the link)\"]}]");
+module.exports = JSON.parse("[{\"project-name\":\"Lucid Candy\",\"author\":\"Gian C\",\"metadata\":[],\"date\":\"08/10/2019\",\"preview-image\":\"![some image link](ReleasePlaceholder)\",\"brief-description\":\"hello there asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"content\":[\"hello there asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\"],\"reference\":[\"[name of the link](this is the link)\",\"[name of the link](this is the link)\"]},{\"project-name\":\"Lucid Candy Lollipop\",\"author\":\"Gian C\",\"metadata\":[],\"date\":\"08/10/2019\",\"preview-image\":\"![some image link](ReleasePlaceholder)\",\"brief-description\":\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf\",\"content\":[\"aisjdopahwubfaijpoij asjdpofij apsodijf opaisdjf opiajsdpo fijapsoijdf poijasdf asdfaosdghasdj oasdjfp oiasjdf asd\",\"hello there asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"##Material\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\"],\"reference\":[\"[name of the link](this is the link)\",\"[name of the link](this is the link)\"]},{\"project-name\":\"Lucid Candy Lollipop Lollipop\",\"author\":\"Gian C\",\"metadata\":[],\"date\":\"08/10/2019\",\"preview-image\":\"![some image link](ReleasePlaceholder)\",\"brief-description\":\"oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"content\":[\"aisjdopahwubfaijpoij asjdpofij apsodijf opaisdjf opiajsdpo fijapsoijdf poijasdf asdfaosdghasdj oasdjfp oiasjdf asd\",\"hello there asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"##Material\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\"],\"reference\":[\"[name of the link](this is the link)\",\"[name of the link](this is the link)\"]}]");
 
 /***/ }),
 
