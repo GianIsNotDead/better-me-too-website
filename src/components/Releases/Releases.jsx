@@ -10,12 +10,18 @@ import ReleasesList from '../../constant/releases.json';
 // assets
 import { releases as rDB } from '../../helpers/imageDB';
 
-function ReleasesPreview({projectName, previewImage, content, style}) {
+function ReleasesPreview({projectName, previewImage, briefDescription, content, style}) {
   return (
     <article className="release-preview" style={style}>
       <a className="release-full-btn" href={`/releases/${projectName.toLowerCase().split(' ').join('-')}`}></a>
       <h4 className="release-preview-title">{projectName}</h4>
-      <p className="release-preview-brief">{content[0].substring(0, 150).concat('...')}</p>
+      <p className="release-preview-brief">
+        {
+          briefDescription.length > 150
+          ? briefDescription.substring(0, 150).concat('...')
+          : briefDescription.concat(content[0].substring(0, 147 - briefDescription.length)).concat('...')
+        }
+      </p>
       <img className="release-preview-image" src={`./dist/${rDB[previewImage.substring(previewImage.indexOf('(') + 1, previewImage.indexOf(')'))]}`} alt={previewImage.substring(previewImage.indexOf('[') + 1, previewImage.indexOf(']'))} />
       <p className="release-expand">Tap/Click to See the Detail</p>
     </article>
@@ -27,6 +33,7 @@ function Releases({ btn, windowWidth }) {
     <ReleasesPreview
       projectName={release['project-name']}
       previewImage={release['preview-image']}
+      briefDescription={release['brief-description']}
       content={release['content']}
       key={'release-preview'.concat(i)}
       // remove right margin on every third box

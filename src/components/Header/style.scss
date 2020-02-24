@@ -7,61 +7,96 @@
 }
 
 .bmt-header {
-  padding: 0 $horizontal-gutter;
   z-index: 2;
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-    padding-top: $vertical-gutter-large;
-    padding-bottom: $vertical-gutter-extra-small;
-    @include vertical-divider();
-    .logo-text .logo-link {
-      font-size: $logo-text-size;
-      font-weight: 600;
-    }
-    .logo-text-dark .logo-link {
-      color: $primary-font-color;
-    }
-    .logo-text-light .logo-link {
-      color: #FFFFFF;
-    }
-    // hamgburger menu
-    .burger-menu-button, .burger-menu {
-      display: inline-block;
-      position: relative;
-    }
+  display: flex;
+  justify-content: space-between;
+  width: 88%;
+  margin: 0 auto;
+  padding-top: $vertical-gutter-large;
+  padding-bottom: $vertical-gutter-extra-small;
+  @include vertical-divider();
+  .logo-text .logo-link {
+    font-size: $logo-text-size;
+    font-weight: 600;
+  }
+  .logo-text-dark .logo-link {
+    color: $primary-font-color;
+  }
+  .logo-text-light .logo-link {
+    color: #FFFFFF;
+  }
+  // hamgburger menu
+  .burger-menu-button, .burger-menu {
+    display: inline-block;
+    position: relative;
+  }
+  .burger-menu-button {
+    z-index: 10;
+  }
+  .burger-menu {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  @media only screen and (min-width: 768px) {
     .burger-menu-button {
-      z-index: 10;
-    }
-    .burger-menu {
-      width: 100%;
-      height: 100%;
-      z-index: 1;
+      display: none;
     }
   }
+
+  // Nav Style Begin
   .header-nav {
     display: none;
     .nav-items-container {
       display: block;
       .nav-item {
         margin-bottom: 40px;
+        .nav-link {
+          font-family: $primary-font;
+          font-size: 1.25rem;
+          color: #353975;
+          letter-spacing: 1.6px;
+          line-height: 20px;
+        }
       }
-    }
-    a {
-      font-family: $primary-font;
-      font-size: 1.25rem;
-      color: #353975;
-      letter-spacing: 1.6px;
-      line-height: 20px;
     }
   }
   .nav-mobile {
     padding-top: 120px;
   }
+  // Nav Style on Desktop
+  @media only screen and (min-width: 768px) {
+    .header-nav {
+      display: block;
+      .nav-items-container {
+        .nav-item {
+          display: inline-block;
+          margin-bottom: 0;
+          padding-left: $vertical-gutter-small;
+          .nav-link {
+            font-size: 0.9rem;
+            color: #F6F6F6;
+          }
+          .nav-link:hover{
+            color: #FFFFFF;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  // Nav Style End
 }
 
 // expand mobile menu
 .nav-mobile-active {
+  .logo-text {
+    display: none;
+  }
+  .close-menu-button {
+    float: right;
+    clear: both;
+  }
   display: block !important;
   position: absolute;
   top: 0;
@@ -69,5 +104,6 @@
   width: 100%;
   height: 100%;
   padding: 0 $horizontal-gutter;
+  padding-top: $vertical-gutter-large;
   background: #EFF2F5;
 }

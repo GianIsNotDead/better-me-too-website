@@ -26,12 +26,11 @@ class Header extends Component {
     const HamburgerIcon = theme === 'dark' ? HamburgerDark : Hamburger;
     return (
       <header className={`bmt-header ${showMobileMenu === true ? 'nav-mobile-active' : ''}`}>
-        <div className="header-container">
-          <h1 className={`logo-text ${theme === 'dark' ? 'logo-text-dark' : 'logo-text-light'}`}><a className="logo-link" href="/">Better Me Too</a></h1>
-          <button className="burger-menu-button" name="showMobileMenu" onClick={this._toggleMobileMenu}>
-            <img className="burger-menu" src={`./dist/${showMobileMenu === true ? Close : HamburgerIcon}`} alt="hamburger menu" />
-          </button>
-        </div>
+        <h1 className={`logo-text ${theme === 'dark' ? 'logo-text-dark' : 'logo-text-light'}`}><a className="logo-link" href="/">Better Me Too</a></h1>
+        <button className={`burger-menu-button ${showMobileMenu === true ? 'close-menu-button' : ''}`} name="showMobileMenu" onClick={this._toggleMobileMenu}>
+          <img className="burger-menu" src={`./dist/${showMobileMenu === true ? Close : HamburgerIcon}`} alt="hamburger menu" />
+        </button>
+
         <nav className={`header-nav ${showMobileMenu === true ? 'nav-mobile nav-mobile-active' : ''}`}>
           <ul className="nav-items-container">
             <li className="nav-item"><a className="nav-link" href="/about">About</a></li>
