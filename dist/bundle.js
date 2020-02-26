@@ -24988,7 +24988,8 @@ var App = function (_Component) {
         '/releases': function releases() {
           return _react2.default.createElement(_ReleasesPage2.default, {
             showMobileMenu: _this5.state.showMobileMenu,
-            toggleDisplay: _this5.toggleDisplay
+            toggleDisplay: _this5.toggleDisplay,
+            windowWidth: _this5.state.windowWidth
           });
         },
         '/releases/:project-name': function releasesProjectName() {
@@ -25715,8 +25716,9 @@ var Header = function (_Component) {
       var _props = this.props,
           theme = _props.theme,
           showMobileMenu = _props.showMobileMenu;
-      // choose color theme for the header 
 
+      console.log('theme: ', theme);
+      // choose color theme for the header 
       var HamburgerIcon = theme === 'dark' ? _icon_hamburger_dark2.default : _icon_hamburger2.default;
       return _react2.default.createElement(
         'header',
@@ -25737,7 +25739,7 @@ var Header = function (_Component) {
         ),
         _react2.default.createElement(
           'nav',
-          { className: 'header-nav ' + (showMobileMenu === true ? 'nav-mobile nav-mobile-active' : '') },
+          { className: 'header-nav ' + (showMobileMenu === true ? 'nav-mobile nav-mobile-active' : '') + ' ' + (theme === 'dark' ? 'header-nav-dark' : '') },
           _react2.default.createElement(
             'ul',
             { className: 'nav-items-container' },
@@ -26804,7 +26806,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // components
 function ReleasesPage(_ref) {
   var showMobileMenu = _ref.showMobileMenu,
-      toggleDisplay = _ref.toggleDisplay;
+      toggleDisplay = _ref.toggleDisplay,
+      windowWidth = _ref.windowWidth;
 
   return _react2.default.createElement(
     'div',
@@ -26817,7 +26820,7 @@ function ReleasesPage(_ref) {
     _react2.default.createElement(
       'main',
       { className: 'bmt-main' },
-      _react2.default.createElement(_Releases2.default, null),
+      _react2.default.createElement(_Releases2.default, { windowWidth: windowWidth }),
       _react2.default.createElement(_ThoughtsLetter2.default, null)
     ),
     _react2.default.createElement(_Footer2.default, null)
