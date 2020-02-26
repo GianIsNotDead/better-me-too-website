@@ -93,6 +93,7 @@ class App extends Component {
         <ReleasesPage
           showMobileMenu={this.state.showMobileMenu}
           toggleDisplay={this.toggleDisplay}
+          windowWidth={this.state.windowWidth}
         />
       ),
       '/releases/:project-name': () => (

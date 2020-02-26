@@ -11,6 +11,16 @@
     @include content-text;
     margin-bottom: $vertical-gutter-small;  
   }
+  @media only screen and (min-width: 768px) {
+    .bmt-conversations-description {
+      width: 90%;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .bmt-conversations-description {
+      width: 75%;
+    }
+  }
   // beginning of conversation preview box style
   .conversation-preview, .conversation-title-container {
     width: 100%;

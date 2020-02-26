@@ -9,7 +9,7 @@ import Releases from '../../components/Releases';
 import ThoughtsLetter from '../../components/ThoughtsLetter';
 import Footer from '../../components/Footer';
 
-function ReleasesPage({ showMobileMenu, toggleDisplay }) {
+function ReleasesPage({ showMobileMenu, toggleDisplay, windowWidth }) {
   return (
     <div className="page-container">
       <Header
@@ -18,7 +18,7 @@ function ReleasesPage({ showMobileMenu, toggleDisplay }) {
         toggleDisplay={toggleDisplay}
       />
       <main className="bmt-main">
-        <Releases />
+        <Releases windowWidth={windowWidth}/>
         <ThoughtsLetter />
       </main>
       <Footer />

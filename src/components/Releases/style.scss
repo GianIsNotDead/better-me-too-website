@@ -13,6 +13,16 @@
     @include content-text;
     margin-bottom: $vertical-gutter-small;
   }
+  @media only screen and (min-width: 768px) {
+    .bmt-releases-description {
+      width: 90%;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .bmt-releases-description {
+      width: 75%;
+    }
+  }
   // beginning of preview box style
   .release-preview {
     position: relative;
