@@ -110,6 +110,7 @@ Better Me Too Visual Guide
     top: 0;
     left: 0;
     width: 100%;
+    height: auto;
     overflow: hidden;
     z-index: 0; }
   .page-container .page-background-image {
@@ -119,6 +120,16 @@ Better Me Too Visual Guide
     position: relative;
     top: 20px;
     left: -10%; }
+  @media only screen and (min-width: 500px) {
+    .page-container .page-background-image {
+      height: auto;
+      width: 120%;
+      left: -5%; } }
+  @media only screen and (min-width: 620px) {
+    .page-container .page-background-image {
+      height: 100%;
+      width: auto;
+      transform: translateX(110%); } }
 /*************************************
 Better Me Too Visual Guide
 *************************************/
