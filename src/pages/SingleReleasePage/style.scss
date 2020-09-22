@@ -22,22 +22,27 @@
       margin: $vertical-gutter-small 0;
     }
     .bmt-single-release-author,
+    .bmt-single-release-description,
     .bmt-single-release-text {
       @include content-text;
     }
     .bmt-single-release-author {
       font-size: 0.75rem;
     }
+    .bmt-single-release-preview-image,
     .bmt-single-release-image {
       display: block;
       width: 100%;
       height: auto;
     }
-    .bmt-single-release-name,
+    .bmt-single-release-name {
+      margin-bottom: $vertical-gutter-medium;
+    }
+    .bmt-single-release-preview-image,
     .bmt-single-release-author,
     .bmt-single-release-text,
     .bmt-single-release-image {
-      margin-bottom: $vertical-gutter-extra-small;
+      margin-bottom: $vertical-gutter-small;
     }
     .bmt-single-release-text:last-of-type {
       margin-bottom: 0;

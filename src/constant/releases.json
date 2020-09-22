@@ -3,15 +3,19 @@
     "project-name": "Lucid Candy",
     "author": "Gian C",
     "metadata": [],
-    "date": "08/10/2019",
-    "preview-image": "![some image link](ReleasePlaceholder)",
-    "brief-description": "hello there asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f",
+    "date": "09/12/2020",
+    "preview-image": "![lucid candy eeg size reference](LucidCandyBoard)",
+    "brief-description": "A bare minimum 8 channel EEG board with a TI ads1299 chip. It can be driven with any microcontroller that has 3.3V logic and SPI communication interface. Multiple boards can be chained together to record with higher channel counts.",
     "content": [
-      "hello there asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f",
-      "![some image link](ReleasePlaceholder)",
-      "asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f",
-      "![some image link](ReleasePlaceholder)",
-      "asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f"
+      "##Disclaimer: ",
+      "It still needs a lot of improvement, professional guidance and review. In no way it's fully tested to perform under clinical settings. Please use basic principles to test and evaluate before using it.",
+      "##Who should use it?",
+      "No one really should, but if you're a newbie in electronics, software, and neuroscience, and want to learn more by building, then this might be a thing for you. If you're just looking for an affordable EEG, there're better open source ones out there, such as OpenBCI.",
+      "##Getting started",
+      "Make sure to go over the .README on project github repo to examine and evaluate whether or not this build is a good fit for your project.",
+      "To build exact replica:",
+      "Upload the gerber directory to your choice of PCB manufacturer. I used JLC PCB. However, I felt the turnaround time, the price and their capabilities made it ideal for me to iterate and redesign quickly.",
+      "I ordered all my components from Mouser. There’s a link on the github page that leads to Google Sheets containing bills of material."
     ],
     "reference": [
       "[name of the link](this is the link)",
