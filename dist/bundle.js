@@ -25173,6 +25173,28 @@ module.exports = __webpack_require__.p + "./img/lucid_candy_board.jpg";
 
 /***/ }),
 
+/***/ "./src/assets/lucid_candy_eeg.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/lucid_candy_eeg.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./img/lucid_candy_eeg.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/lucid_candy_power.jpg":
+/*!******************************************!*\
+  !*** ./src/assets/lucid_candy_power.jpg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./img/lucid_candy_power.jpg";
+
+/***/ }),
+
 /***/ "./src/assets/release_placeholder.png":
 /*!********************************************!*\
   !*** ./src/assets/release_placeholder.png ***!
@@ -26150,7 +26172,7 @@ module.exports = JSON.parse("[{\"title\":\"Memory Inheritance\",\"author\":\"Gia
 /*! exports provided: 0, 1, 2, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"project-name\":\"Lucid Candy\",\"author\":\"Gian C\",\"metadata\":[],\"date\":\"09/12/2020\",\"preview-image\":\"![lucid candy eeg size reference](LucidCandyBoard)\",\"brief-description\":\"A bare minimum 8 channel EEG board with a TI ads1299 chip. It can be driven with any microcontroller that has 3.3V logic and SPI communication interface. Multiple boards can be chained together to record with higher channel counts.\",\"content\":[\"##Disclaimer: \",\"It still needs a lot of improvement, professional guidance and review. In no way it's fully tested to perform under clinical settings. Please use basic principles to test and evaluate before using it.\",\"##Who should use it?\",\"No one really should, but if you're a newbie in electronics, software, and neuroscience, and want to learn more by building, then this might be a thing for you. If you're just looking for an affordable EEG, there're better open source ones out there, such as OpenBCI.\",\"##Getting started\",\"Make sure to go over the .README on project github repo to examine and evaluate whether or not this build is a good fit for your project.\",\"To build exact replica:\",\"Upload the gerber directory to your choice of PCB manufacturer. I used JLC PCB. However, I felt the turnaround time, the price and their capabilities made it ideal for me to iterate and redesign quickly.\",\"I ordered all my components from Mouser. There’s a link on the github page that leads to Google Sheets containing bills of material.\"],\"reference\":[\"[name of the link](this is the link)\",\"[name of the link](this is the link)\"]},{\"project-name\":\"Lucid Candy Lollipop\",\"author\":\"Gian C\",\"metadata\":[],\"date\":\"08/10/2019\",\"preview-image\":\"![some image link](ReleasePlaceholder)\",\"brief-description\":\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf\",\"content\":[\"aisjdopahwubfaijpoij asjdpofij apsodijf opaisdjf opiajsdpo fijapsoijdf poijasdf asdfaosdghasdj oasdjfp oiasjdf asd\",\"hello there asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"##Material\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\"],\"reference\":[\"[name of the link](this is the link)\",\"[name of the link](this is the link)\"]},{\"project-name\":\"Lucid Candy Lollipop Lollipop\",\"author\":\"Gian C\",\"metadata\":[],\"date\":\"08/10/2019\",\"preview-image\":\"![some image link](ReleasePlaceholder)\",\"brief-description\":\"oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"content\":[\"aisjdopahwubfaijpoij asjdpofij apsodijf opaisdjf opiajsdpo fijapsoijdf poijasdf asdfaosdghasdj oasdjfp oiasjdf asd\",\"hello there asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"##Material\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\"],\"reference\":[\"[name of the link](this is the link)\",\"[name of the link](this is the link)\"]}]");
+module.exports = JSON.parse("[{\"project-name\":\"Lucid Candy\",\"author\":\"Gian C\",\"metadata\":[],\"date\":\"09/12/2020\",\"preview-image\":\"![lucid candy eeg size reference](LucidCandyBoard)\",\"brief-description\":\"A bare minimum 8 channel EEG board with a TI ads1299 chip. It can be driven with any microcontroller that has 3.3V logic and SPI communication interface. Multiple boards can be chained together to record with higher channel counts.\",\"content\":[\"Neurons communicate by spreading electrical impulses to neighboring neurons. In an ideal scenario, we should be able to record these signals without interruption. However, our world is filled with noise (undesirable disturbance to the electrical signal). With proper configuration, ADS1299 can pick up the voltage spikes in our brain and digitize it, so we can interpret the recordings in a meaningful way.\",\"##Who should use it?\",\"No one really should, but if you're relatively new to electronics, software, and neuroscience, and want to learn more by building, then this might be a thing for you. You’ll have a chance to explore SPI communication interface, noise filtering, and intricacies of Operational Amplifier (OpAmp) and Analog to Digital Converter (ADC). If you're just looking for an affordable EEG to run experiments, there are better ones out there, such as [OpenBCI]()\"],\"reference\":[\"[name of the link](this is the link)\",\"[name of the link](this is the link)\"]},{\"project-name\":\"Lucid Candy Lollipop\",\"author\":\"Gian C\",\"metadata\":[],\"date\":\"08/10/2019\",\"preview-image\":\"![some image link](ReleasePlaceholder)\",\"brief-description\":\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf\",\"content\":[\"aisjdopahwubfaijpoij asjdpofij apsodijf opaisdjf opiajsdpo fijapsoijdf poijasdf asdfaosdghasdj oasdjfp oiasjdf asd\",\"hello there asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"##Material\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\"],\"reference\":[\"[name of the link](this is the link)\",\"[name of the link](this is the link)\"]},{\"project-name\":\"Lucid Candy Lollipop Lollipop\",\"author\":\"Gian C\",\"metadata\":[],\"date\":\"08/10/2019\",\"preview-image\":\"![some image link](ReleasePlaceholder)\",\"brief-description\":\"oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"content\":[\"aisjdopahwubfaijpoij asjdpofij apsodijf opaisdjf opiajsdpo fijapsoijdf poijasdf asdfaosdghasdj oasdjfp oiasjdf asd\",\"hello there asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"##Material\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\"],\"reference\":[\"[name of the link](this is the link)\",\"[name of the link](this is the link)\"]}]");
 
 /***/ }),
 
@@ -26227,7 +26249,7 @@ exports.default = SonicHedgehog;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.conversations = exports.releases = exports.about = undefined;
+exports.db = exports.conversations = exports.releases = exports.about = undefined;
 
 var _background_home = __webpack_require__(/*! ../assets/background_home.svg */ "./src/assets/background_home.svg");
 
@@ -26245,6 +26267,14 @@ var _lucid_candy_board = __webpack_require__(/*! ../assets/lucid_candy_board.jpg
 
 var _lucid_candy_board2 = _interopRequireDefault(_lucid_candy_board);
 
+var _lucid_candy_eeg = __webpack_require__(/*! ../assets/lucid_candy_eeg.jpg */ "./src/assets/lucid_candy_eeg.jpg");
+
+var _lucid_candy_eeg2 = _interopRequireDefault(_lucid_candy_eeg);
+
+var _lucid_candy_power = __webpack_require__(/*! ../assets/lucid_candy_power.jpg */ "./src/assets/lucid_candy_power.jpg");
+
+var _lucid_candy_power2 = _interopRequireDefault(_lucid_candy_power);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var about = exports.about = {
@@ -26257,12 +26287,17 @@ var about = exports.about = {
 // about page images
 var releases = exports.releases = {
   ReleasePlaceholder: _release_placeholder2.default,
-  LucidCandyBoard: _lucid_candy_board2.default
+  LucidCandyBoard: _lucid_candy_board2.default,
+  LucidCandyEEG: _lucid_candy_eeg2.default,
+  LucidCandyPower: _lucid_candy_power2.default
+};
 
-  // conversations pages images
-};var conversations = exports.conversations = {
+// conversations pages images
+var conversations = exports.conversations = {
   ReleasePlaceholder: _release_placeholder2.default
 };
+
+var db = exports.db = Object.assign(about, releases, conversations);
 
 /***/ }),
 

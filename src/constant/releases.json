@@ -7,15 +7,9 @@
     "preview-image": "![lucid candy eeg size reference](LucidCandyBoard)",
     "brief-description": "A bare minimum 8 channel EEG board with a TI ads1299 chip. It can be driven with any microcontroller that has 3.3V logic and SPI communication interface. Multiple boards can be chained together to record with higher channel counts.",
     "content": [
-      "##Disclaimer: ",
-      "It still needs a lot of improvement, professional guidance and review. In no way it's fully tested to perform under clinical settings. Please use basic principles to test and evaluate before using it.",
+      "Neurons communicate by spreading electrical impulses to neighboring neurons. In an ideal scenario, we should be able to record these signals without interruption. However, our world is filled with noise (undesirable disturbance to the electrical signal). With proper configuration, ADS1299 can pick up the voltage spikes in our brain and digitize it, so we can interpret the recordings in a meaningful way.",
       "##Who should use it?",
-      "No one really should, but if you're a newbie in electronics, software, and neuroscience, and want to learn more by building, then this might be a thing for you. If you're just looking for an affordable EEG, there're better open source ones out there, such as OpenBCI.",
-      "##Getting started",
-      "Make sure to go over the .README on project github repo to examine and evaluate whether or not this build is a good fit for your project.",
-      "To build exact replica:",
-      "Upload the gerber directory to your choice of PCB manufacturer. I used JLC PCB. However, I felt the turnaround time, the price and their capabilities made it ideal for me to iterate and redesign quickly.",
-      "I ordered all my components from Mouser. There’s a link on the github page that leads to Google Sheets containing bills of material."
+      "No one really should, but if you're relatively new to electronics, software, and neuroscience, and want to learn more by building, then this might be a thing for you. You’ll have a chance to explore SPI communication interface, noise filtering, and intricacies of Operational Amplifier (OpAmp) and Analog to Digital Converter (ADC). If you're just looking for an affordable EEG to run experiments, there are better ones out there, such as [OpenBCI]()"
     ],
     "reference": [
       "[name of the link](this is the link)",
