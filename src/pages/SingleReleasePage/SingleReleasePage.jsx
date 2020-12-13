@@ -5,12 +5,14 @@ import './style.scss';
 
 // component
 import Header from '../../components/Header';
-import ThoughtsLetter from '../../components/ThoughtsLetter';
 import Footer from '../../components/Footer';
 
 // fake db
 import { releases as rDB } from '../../helpers/imageDB';
 import ReleasesList from '../../constant/releases.json';
+
+// helper
+import ReadMD from '../../helpers/ReadMD';
 
 function SingleReleasePage({ showMobileMenu, toggleDisplay }) {
   // get release title
@@ -28,6 +30,13 @@ function SingleReleasePage({ showMobileMenu, toggleDisplay }) {
     }
     return (<p className="bmt-single-release-text" key={'single-release'.concat(i)}>{r}</p>);
   });
+  let releaseComp = new ReadMD(release["content"].join(), rDB, {
+    h2: 'bmt-single-release-title',
+    img: 'bmt-single-release-image',
+    p: 'bmt-single-release-text',
+    a: 'bmt-single-release-link',
+  }).parse();
+  console.log('releasesComp: ', releaseComp);
   return (
     <div className="page-container">
       <Header
@@ -42,8 +51,8 @@ function SingleReleasePage({ showMobileMenu, toggleDisplay }) {
           <img className="bmt-single-release-preview-image" src={`./dist/${rDB[releasePreviewImage.substring(releasePreviewImage.indexOf('(') + 1, releasePreviewImage.indexOf(')'))]}`} alt={releasePreviewImage.substring(releasePreviewImage.indexOf('[') + 1, releasePreviewImage.indexOf(']'))} />
           <p className="bmt-single-release-description">{release['brief-description']}</p>
           {releaseContent}
+          {releaseComp}
         </section>
-        <ThoughtsLetter />
       </main>
       <Footer />
     </div>

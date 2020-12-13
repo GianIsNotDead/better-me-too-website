@@ -24910,6 +24910,7 @@ var App = function (_Component) {
     _this.toggleDisplay = _this.toggleDisplay.bind(_this);
     return _this;
   }
+
   /**
    * @param {string} title
    * @param {array} metadata ['#metadata', '#metadata']
@@ -25049,6 +25050,17 @@ exports.default = App;
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./img/background_home.svg";
+
+/***/ }),
+
+/***/ "./src/assets/banner_face.png":
+/*!************************************!*\
+  !*** ./src/assets/banner_face.png ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./img/banner_face.png";
 
 /***/ }),
 
@@ -25214,75 +25226,6 @@ module.exports = __webpack_require__.p + "./img/release_placeholder.png";
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "./img/resource_incognito.jpg";
-
-/***/ }),
-
-/***/ "./src/components/Banner/Banner.jsx":
-/*!******************************************!*\
-  !*** ./src/components/Banner/Banner.jsx ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-var _react2 = _interopRequireDefault(_react);
-
-__webpack_require__(/*! ./style.scss */ "./src/components/Banner/style.scss");
-
-var _web_copy = __webpack_require__(/*! ../../constant/web_copy.json */ "./src/constant/web_copy.json");
-
-var _web_copy2 = _interopRequireDefault(_web_copy);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// style
-function Banner() {
-  return _react2.default.createElement(
-    'section',
-    { className: 'bmt-banner' },
-    _react2.default.createElement(
-      'h2',
-      { className: 'bmt-banner-title' },
-      _web_copy2.default['banner-title']
-    ),
-    _react2.default.createElement(
-      'p',
-      { className: 'bmt-banner-text' },
-      _web_copy2.default['banner-text']
-    ),
-    _react2.default.createElement(
-      'a',
-      { className: 'bmt-cta-button', href: '/suggestions' },
-      _react2.default.createElement(
-        'div',
-        { className: 'bmt-cta-accent' },
-        _web_copy2.default['banner-button']
-      )
-    )
-  );
-}
-
-// static
-exports.default = Banner;
-
-/***/ }),
-
-/***/ "./src/components/Banner/style.scss":
-/*!******************************************!*\
-  !*** ./src/components/Banner/style.scss ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -25758,7 +25701,9 @@ var Header = function (_Component) {
         { className: 'bmt-header ' + (showMobileMenu === true ? 'nav-mobile-active' : '') },
         _react2.default.createElement(
           'h1',
-          { className: 'logo-text ' + (theme === 'dark' ? 'logo-text-dark' : 'logo-text-light') },
+          {
+            className: 'logo-text ' + (theme === 'dark' ? 'logo-text-dark' : 'logo-text-light')
+          },
           _react2.default.createElement(
             'a',
             { className: 'logo-link', href: '/' },
@@ -25767,12 +25712,22 @@ var Header = function (_Component) {
         ),
         _react2.default.createElement(
           'button',
-          { className: 'burger-menu-button ' + (showMobileMenu === true ? 'close-menu-button' : ''), name: 'showMobileMenu', onClick: this._toggleMobileMenu },
-          _react2.default.createElement('img', { className: 'burger-menu', src: './dist/' + (showMobileMenu === true ? _icon_close2.default : HamburgerIcon), alt: 'hamburger menu' })
+          {
+            className: 'burger-menu-button ' + (showMobileMenu === true ? 'close-menu-button' : ''),
+            name: 'showMobileMenu',
+            onClick: this._toggleMobileMenu
+          },
+          _react2.default.createElement('img', {
+            className: 'burger-menu',
+            src: './dist/' + (showMobileMenu === true ? _icon_close2.default : HamburgerIcon),
+            alt: 'hamburger menu'
+          })
         ),
         _react2.default.createElement(
           'nav',
-          { className: 'header-nav ' + (showMobileMenu === true ? 'nav-mobile nav-mobile-active' : '') + ' ' + (theme === 'dark' ? 'header-nav-dark' : '') },
+          {
+            className: 'header-nav ' + (showMobileMenu === true ? 'nav-mobile nav-mobile-active' : '') + ' ' + (theme === 'dark' ? 'header-nav-dark' : '')
+          },
           _react2.default.createElement(
             'ul',
             { className: 'nav-items-container' },
@@ -25791,7 +25746,7 @@ var Header = function (_Component) {
               _react2.default.createElement(
                 'a',
                 { className: 'nav-link', href: '/releases' },
-                'Releases & Milestones'
+                'Releases'
               )
             ),
             _react2.default.createElement(
@@ -26074,86 +26029,6 @@ exports.default = Resources;
 
 /***/ }),
 
-/***/ "./src/components/ThoughtsLetter/ThoughtsLetter.jsx":
-/*!**********************************************************!*\
-  !*** ./src/components/ThoughtsLetter/ThoughtsLetter.jsx ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-var _react2 = _interopRequireDefault(_react);
-
-__webpack_require__(/*! ./style.scss */ "./src/components/ThoughtsLetter/style.scss");
-
-var _web_copy = __webpack_require__(/*! ../../constant/web_copy.json */ "./src/constant/web_copy.json");
-
-var _web_copy2 = _interopRequireDefault(_web_copy);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// style
-function ThoughtsLetter() {
-  return _react2.default.createElement(
-    'section',
-    { className: 'tl-container' },
-    _react2.default.createElement(
-      'h3',
-      { className: 'thoughts-letter-title' },
-      _web_copy2.default['thoguhtsletter-title']
-    ),
-    _react2.default.createElement(
-      'p',
-      { className: 'thoughts-letter-text' },
-      _web_copy2.default['thoughtsletter-text']['description']
-    ),
-    _react2.default.createElement(
-      'form',
-      { className: 'thoughts-letter-form' },
-      _react2.default.createElement('input', { className: 'thoughts-letter-input', type: 'text' }),
-      _react2.default.createElement(
-        'button',
-        { className: 'thoughts-letter-submit' },
-        _web_copy2.default['thoughtsletter-button']["email"]
-      )
-    ),
-    _react2.default.createElement(
-      'p',
-      { className: 'thoughts-letter-text' },
-      _web_copy2.default['thoughtsletter-text']['affirmation']
-    ),
-    _react2.default.createElement(
-      'button',
-      { className: 'thoughts-letter-example-btn' },
-      _web_copy2.default['thoughtsletter-button']["sample-email"]
-    )
-  );
-}
-
-// constant
-exports.default = ThoughtsLetter;
-
-/***/ }),
-
-/***/ "./src/components/ThoughtsLetter/style.scss":
-/*!**************************************************!*\
-  !*** ./src/components/ThoughtsLetter/style.scss ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ "./src/constant/conversations.json":
 /*!*****************************************!*\
   !*** ./src/constant/conversations.json ***!
@@ -26172,7 +26047,7 @@ module.exports = JSON.parse("[{\"title\":\"Memory Inheritance\",\"author\":\"Gia
 /*! exports provided: 0, 1, 2, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"project-name\":\"Lucid Candy\",\"author\":\"Gian C\",\"metadata\":[],\"date\":\"09/12/2020\",\"preview-image\":\"![lucid candy eeg size reference](LucidCandyBoard)\",\"brief-description\":\"A bare minimum 8 channel EEG board with a TI ads1299 chip. It can be driven with any microcontroller that has 3.3V logic and SPI communication interface. Multiple boards can be chained together to record with higher channel counts.\",\"content\":[\"Neurons communicate by spreading electrical impulses to neighboring neurons. In an ideal scenario, we should be able to record these signals without interruption. However, our world is filled with noise (undesirable disturbance to the electrical signal). With proper configuration, ADS1299 can pick up the voltage spikes in our brain and digitize it, so we can interpret the recordings in a meaningful way.\",\"##Who should use it?\",\"No one really should, but if you're relatively new to electronics, software, and neuroscience, and want to learn more by building, then this might be a thing for you. You’ll have a chance to explore SPI communication interface, noise filtering, and intricacies of Operational Amplifier (OpAmp) and Analog to Digital Converter (ADC). If you're just looking for an affordable EEG to run experiments, there are better ones out there, such as [OpenBCI]()\"],\"reference\":[\"[name of the link](this is the link)\",\"[name of the link](this is the link)\"]},{\"project-name\":\"Lucid Candy Lollipop\",\"author\":\"Gian C\",\"metadata\":[],\"date\":\"08/10/2019\",\"preview-image\":\"![some image link](ReleasePlaceholder)\",\"brief-description\":\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf\",\"content\":[\"aisjdopahwubfaijpoij asjdpofij apsodijf opaisdjf opiajsdpo fijapsoijdf poijasdf asdfaosdghasdj oasdjfp oiasjdf asd\",\"hello there asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"##Material\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\"],\"reference\":[\"[name of the link](this is the link)\",\"[name of the link](this is the link)\"]},{\"project-name\":\"Lucid Candy Lollipop Lollipop\",\"author\":\"Gian C\",\"metadata\":[],\"date\":\"08/10/2019\",\"preview-image\":\"![some image link](ReleasePlaceholder)\",\"brief-description\":\"oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"content\":[\"aisjdopahwubfaijpoij asjdpofij apsodijf opaisdjf opiajsdpo fijapsoijdf poijasdf asdfaosdghasdj oasdjfp oiasjdf asd\",\"hello there asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"##Material\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\"],\"reference\":[\"[name of the link](this is the link)\",\"[name of the link](this is the link)\"]}]");
+module.exports = JSON.parse("[{\"project-name\":\"Lucid Candy\",\"author\":\"Gian C\",\"metadata\":[],\"date\":\"09/12/2020\",\"preview-image\":\"![lucid candy eeg size reference](LucidCandyBoard)\",\"brief-description\":\"A bare minimum 8 channel EEG board with a TI ads1299 chip. It can be driven with any microcontroller that has 3.3V logic and SPI communication interface. Multiple boards can be chained together to record with higher channel counts.\",\"content\":[\"Neurons communicate by spreading electrical impulses to neighboring neurons. In an ideal scenario, we should be able to record these signals without interruption. However, our world is filled with noise (undesirable disturbance to the electrical signal). With proper configuration, ADS1299 can pick up the voltage spikes in our brain and digitize it, so we can interpret the recordings in a meaningful way.\",\"No one really should, but if you're relatively new to electronics, software, and neuroscience, and want to learn more by building, then this might be a thing for you. You’ll have a chance to explore SPI communication interface, noise filtering, and intricacies of Operational Amplifier (OpAmp) and Analog to Digital Converter (ADC). If you're just looking for an affordable EEG to run experiments, there are better ones out there, such as [OpenBCI]()\"],\"reference\":[\"[name of the link](this is the link)\",\"[name of the link](this is the link)\"]},{\"project-name\":\"Lucid Candy Lollipop\",\"author\":\"Gian C\",\"metadata\":[],\"date\":\"08/10/2019\",\"preview-image\":\"![some image link](ReleasePlaceholder)\",\"brief-description\":\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf\",\"content\":[\"aisjdopahwubfaijpoij asjdpofij apsodijf opaisdjf opiajsdpo fijapsoijdf poijasdf asdfaosdghasdj oasdjfp oiasjdf asd\",\"hello there asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"##Material\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\"],\"reference\":[\"[name of the link](this is the link)\",\"[name of the link](this is the link)\"]},{\"project-name\":\"Lucid Candy Lollipop Lollipop\",\"author\":\"Gian C\",\"metadata\":[],\"date\":\"08/10/2019\",\"preview-image\":\"![some image link](ReleasePlaceholder)\",\"brief-description\":\"oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"content\":[\"aisjdopahwubfaijpoij asjdpofij apsodijf opaisdjf opiajsdpo fijapsoijdf poijasdf asdfaosdghasdj oasdjfp oiasjdf asd\",\"hello there asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"##Material\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\",\"![some image link](ReleasePlaceholder)\",\"asdnglksajdhfiaush dfoiauh soidufh oaisduhf oiasudhf oiaushdo ifhuasodiufh oaisudhf oiaushd foiuhasdoi fuhasoiduhf oaisuhdf oiuashdofi uhaosuhdf oaushdf ouhasdofu hasoduhf oasuhd ofiauhsdo iufhaosiu dhofiuha oiusdh f\"],\"reference\":[\"[name of the link](this is the link)\",\"[name of the link](this is the link)\"]}]");
 
 /***/ }),
 
@@ -26183,7 +26058,187 @@ module.exports = JSON.parse("[{\"project-name\":\"Lucid Candy\",\"author\":\"Gia
 /*! exports provided: banner-title, banner-text, banner-button, about-mission-title, about-mission-text, about-ethics-title, about-ethics-text, about-disclaimer-title, about-disclaimer-text-tltr, about-disclaimer-text, about-contributors, about-faq-title, about-faq-text, releases-title, releases-description, conversations-title, conversations-description, resources-title, resources-description, thoguhtsletter-title, thoughtsletter-text, thoughtsletter-button, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"banner-title\":\"Open Source Brain\",\"banner-text\":\"We hope to accelerate the understanding of the brain by delivering intriguing, undiluted builds (software &amp; hardware), contents (articles), and resources (books &amp; videos) to everyone, so they have the tools to ask questions, conduct experiments and make positive progress in healthcare.\",\"banner-button\":\"Suggest Builds & Articles\",\"about-mission-title\":\"Mission\",\"about-mission-text\":\"We hope to accelerate the understanding of the brain by delivering intriguing, undiluted builds, contents, and resources to everyone, so they have the tools to ask questions, conduct experiments and make positive progress in healthcare.\",\"about-ethics-title\":\"Ethics\",\"about-ethics-text\":[{\"title\":\"Emphasizing Human Potential\",\"text\":\"We believe that everyone is equipped with their own unique ability to thrive. The information exchanged through this platform is shared under the assumption that, given the right information and tools, everyone can access their highest potential.\"},{\"title\":\"Cultivating Supportive Communities\",\"text\":\"The goal of platform is to breakdown the power hierachy of conventional knowledge processing, so anyone can have the tools to create change. It's only possible to achieve this goal by the collective effort of people who are curious to learn, open to wild imagination, and honest in their approach to share the knowledge.\"},{\"title\":\"Operating with Transparency\",\"text\":\"All the materials are visible to the public via platforms like GitHub. Our business model is explained throughout the platform.\"},{\"title\":\"Communicating with Humility\",\"text\":\"We communicate with the awareness that we are all grasping for straws with blindfolds on, trying to piece this whole thing together. We welcome all questions, counter arguments and skepticism.\"}],\"about-disclaimer-title\":\"Disclaimer\",\"about-disclaimer-text-tltr\":\"Science and engineering are not always straight forward, so please enjoy the contents with a healthy dose of skepticism.\",\"about-disclaimer-text\":\"The materials published on this platform are not intended for medical advice, diagnosis nor treatment. Please always consult healthcare professionals for any medical conditions. We try our best to thoroughly validate the published materials. However, we make no warranties, expressed or implied, regarding errors or omissions and assumes no legal liability or responsibility for loss or damage resulting from the use of the information contained within.\",\"about-contributors\":[{\"name\":\"Gian\",\"image\":\"![computer graphic illustration of gian](ContributorGian)\",\"role\":\"Software, Hardware, Design\",\"socials\":[\"[instagram](https://www.instagram.com/gianisalive/)\",\"[twitter](https://twitter.com/gianisalive)\"]}],\"about-faq-title\":\"FAQ\",\"about-faq-text\":[{\"question\":\"What is this?\",\"answer\":\"We are professionals and hobbyists on a journey to learn more about the brain. We see no reason to keep it all to ourselves, so we talk about them on this platform, hoping that the contents have some value to others.\"},{\"question\":\"Should I seek medical advice on the platform?\",\"answer\":\"No. Please always consult healthcare professionals for any medical conditions.\"},{\"question\":\"Are there any financial backers who support the platform?\",\"answer\":\"No. We try to fund the entire platform by producing contents.\"},{\"question\":\"Who should use this platform?\",\"answer\":\"Well, no one really should. However, if you want to level up your understanding of science and engineering by learning about the brain, then you might like some of the things we do here.\"},{\"question\":\"Where are you guys based?\",\"answer\":\"We currently working out of coffee shops and maker spaces in San Francisco.\"}],\"releases-title\":\"Releases\",\"releases-description\":\"We build opensource software and hardware to help people understand the brain.\",\"conversations-title\":\"Conversations\",\"conversations-description\":\"We find interesting concepts, research, and experiments, deliver them in an undiluted yet digestible way.\",\"resources-title\":\"Resources\",\"resources-description\":\"Some say that the internet has enough resources for one to learn and become a rocket scientist. Here’re some of the goodies that helped us to level up on science and engineering.\",\"thoguhtsletter-title\":\"Thoughts Sharing Friday\",\"thoughtsletter-text\":{\"description\":\"We’d love to share our progress, and any interesting concepts we stumble upon. This is our one and only email service, so when you cancel, you cancel for REAL.\",\"affirmation\":\"Not sure whether you'll like these ot not?\"},\"thoughtsletter-button\":{\"email\":\"yay\",\"sample-email\":\"See the Sample Email\"}}");
+module.exports = JSON.parse("{\"banner-title\":\"Open Source Brain\",\"banner-text\":\"We’re a group of tinkerers on a journey to discover the power of the brain, and we build open source hardwares/softwares to support our exploration.\",\"banner-button\":\"Suggest Builds & Articles\",\"about-mission-title\":\"Mission\",\"about-mission-text\":\"We hope to accelerate the understanding of the brain by delivering intriguing, undiluted builds, contents, and resources to everyone, so they have the tools to ask questions, conduct experiments and make positive progress in healthcare.\",\"about-ethics-title\":\"Ethics\",\"about-ethics-text\":[{\"title\":\"Emphasizing Human Potential\",\"text\":\"We believe that everyone is equipped with their own unique ability to thrive. The information exchanged through this platform is shared under the assumption that, given the right information and tools, everyone can access their highest potential.\"},{\"title\":\"Cultivating Supportive Communities\",\"text\":\"The goal of platform is to breakdown the power hierachy of conventional knowledge processing, so anyone can have the tools to create change. It's only possible to achieve this goal by the collective effort of people who are curious to learn, open to wild imagination, and honest in their approach to share the knowledge.\"},{\"title\":\"Operating with Transparency\",\"text\":\"All the materials are visible to the public via platforms like GitHub. Our business model is explained throughout the platform.\"},{\"title\":\"Communicating with Humility\",\"text\":\"We communicate with the awareness that we are all grasping for straws with blindfolds on, trying to piece this whole thing together. We welcome all questions, counter arguments and skepticism.\"}],\"about-disclaimer-title\":\"Disclaimer\",\"about-disclaimer-text-tltr\":\"Science and engineering are not always straight forward, so please enjoy the contents with a healthy dose of skepticism.\",\"about-disclaimer-text\":\"The materials published on this platform are not intended for medical advice, diagnosis nor treatment. Please always consult healthcare professionals for any medical conditions. We try our best to thoroughly validate the published materials. However, we make no warranties, expressed or implied, regarding errors or omissions and assumes no legal liability or responsibility for loss or damage resulting from the use of the information contained within.\",\"about-contributors\":[{\"name\":\"Gian\",\"image\":\"![computer graphic illustration of gian](ContributorGian)\",\"role\":\"Software, Hardware, Design\",\"socials\":[\"[instagram](https://www.instagram.com/gianisalive/)\",\"[twitter](https://twitter.com/gianisalive)\"]}],\"about-faq-title\":\"FAQ\",\"about-faq-text\":[{\"question\":\"What is this?\",\"answer\":\"We are professionals and hobbyists on a journey to learn more about the brain. We see no reason to keep it all to ourselves, so we talk about them on this platform, hoping that the contents have some value to others.\"},{\"question\":\"Should I seek medical advice on the platform?\",\"answer\":\"No. Please always consult healthcare professionals for any medical conditions.\"},{\"question\":\"Are there any financial backers who support the platform?\",\"answer\":\"No. We try to fund the entire platform by producing contents.\"},{\"question\":\"Who should use this platform?\",\"answer\":\"Well, no one really should. However, if you want to level up your understanding of science and engineering by learning about the brain, then you might like some of the things we do here.\"},{\"question\":\"Where are you guys based?\",\"answer\":\"We currently working out of coffee shops and maker spaces in San Francisco.\"}],\"releases-title\":\"Releases\",\"releases-description\":\"We build opensource software and hardware to help people understand the brain.\",\"conversations-title\":\"Conversations\",\"conversations-description\":\"We find interesting concepts, research, and experiments, deliver them in an undiluted yet digestible way.\",\"resources-title\":\"Resources\",\"resources-description\":\"Some say that the internet has enough resources for one to learn and become a rocket scientist. Here’re some of the goodies that helped us to level up on science and engineering.\",\"thoguhtsletter-title\":\"Thoughts Sharing Friday\",\"thoughtsletter-text\":{\"description\":\"We’d love to share our progress, and any interesting concepts we stumble upon. This is our one and only email service, so when you cancel, you cancel for REAL.\",\"affirmation\":\"Not sure whether you'll like these ot not?\"},\"thoughtsletter-button\":{\"email\":\"yay\",\"sample-email\":\"See the Sample Email\"}}");
+
+/***/ }),
+
+/***/ "./src/helpers/ReadMD.jsx":
+/*!********************************!*\
+  !*** ./src/helpers/ReadMD.jsx ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+/**
+ * @description Process markdown text and generate corresponding component
+ * @param {String} mdStringRaw markdown string to process
+ * @param {Object} classes class name for each html tag {h, img, p, a}
+*/
+
+var ReadMD = function () {
+  function ReadMD(mdStringRaw, db, classes) {
+    _classCallCheck(this, ReadMD);
+
+    this.mdString = mdStringRaw;
+    this.db = db;
+    this.classes = classes;
+    this.components = [];
+  }
+
+  _createClass(ReadMD, [{
+    key: 'parse',
+    value: function parse() {
+      var pos = 0;
+      while (pos < this.mdString.length) {
+        var strLength = null;
+        // header
+        if (this.mdString[pos] === "#") {
+          strLength = this._makeHeader(this.mdString.substr(pos));
+        }
+        // image
+        else if (this.mdString[pos].concat(this.mdString[pos + 1]) === '![') {
+            strLength = this._makeImg(this.mdString.substr(pos));
+          }
+          // link
+          else if (this.mdString[pos] === '[' && this.mdString[pos - 1]) {
+              8;
+              strLength = this._makeLink(this.mdString.substr(pos));
+            } else {
+              strLength = this._makeParagraph(this.mdString.substr(pos));
+            }
+        pos = pos + strLength;
+      }
+      return this.components;
+    }
+  }, {
+    key: '_makeHeader',
+    value: function _makeHeader(mdString) {
+      var header = { type: 1, text: '' };
+      var strPos = 0;
+      var done = false;
+      while (done === false) {
+        if (strPos > 3 && mdString[strPos] === '#' || mdString[strPos].concat(mdString[strPos + 1]).match(/\n/g) !== null || mdString[strPos].concat(mdString[strPos + 1]) === '![' || mdString[strPos] === '[') {
+          done = true;
+        } else if (strPos > 0 && strPos < 4 && mdString[strPos] === '#') {
+          header.type = header.type + 1;
+          strPos = strPos + 1;
+        } else {
+          header.text = header.text + mdString[strPos];
+          strPos = strPos + 1;
+        }
+      }
+      if (header.type === 1) {
+        this.components.push(_react2.default.createElement(
+          'h1',
+          { className: this.classes.h1 },
+          header
+        ));
+      }
+      if (header.type === 2) {
+        this.components.push(_react2.default.createElement(
+          'h2',
+          { className: this.classes.h2 },
+          header
+        ));
+      }
+      if (header.type === 3) {
+        this.components.push(_react2.default.createElement(
+          'h3',
+          { className: this.classes.h3 },
+          header
+        ));
+      }
+      return strPos;
+    }
+  }, {
+    key: '_makeImg',
+    value: function _makeImg(mdString) {
+      var image = { alt: '', src: '' };
+      var currentAttr = 'alt';
+      var strPos = 0;
+      var done = false;
+      while (done === false) {
+        if (mdString[strPos] === ')') {
+          done = true;
+        } else if (mdString[strPos] === ']') {
+          currentAttr = 'src';
+        } else if (mdString[strPos].match(/\!|\[|\(/g) === null) {
+          image[currentAttr] = image[currentAttr] + mdString[strPos];
+        }
+        strPos = strPos + 1;
+      }
+      this.components.push(_react2.default.createElement('img', { alt: image.alt, src: this.db[image.src], className: this.classes.img }));
+      return strPos;
+    }
+  }, {
+    key: '_makeLink',
+    value: function _makeLink(mdString) {
+      var link = { text: '', href: '' };
+      var currentAttr = 'text';
+      var strPos = 0;
+      var done = false;
+      while (done === false) {
+        if (mdString[strPos] === ')') {
+          done = true;
+        } else if (mdString[strPos] === ']') {
+          currentAttr = 'href';
+        } else if (mdString[strPos].match(/\[|\(/g) === null) {
+          link[currentAttr] = link[currentAttr] + mdString[strPos];
+        }
+        strPos = strPos + 1;
+      }
+      this.components.push(_react2.default.createElement(
+        'a',
+        { href: link.href, className: this.classes.a },
+        link.text
+      ));
+      return strPos;
+    }
+  }, {
+    key: '_makeParagraph',
+    value: function _makeParagraph(mdString) {
+      var paragraph = '';
+      var strPos = 0;
+      var done = false;
+      while (done === false) {
+        if (mdString[strPos] === '#' || mdString[strPos].concat(mdString[strPos + 1]) === '![' || mdString[strPos] === '[') {
+          done = true;
+        } else {
+          paragraph = paragraph + mdString[strPos];
+          strPos = strPos + 1;
+        }
+      }
+      // this.components.push(<p className={this.classes.p}>{paragraph}</p>);
+      this.components.push(_react2.default.createElement(
+        'p',
+        { className: this.classes.p },
+        paragraph
+      ));
+      return strPos;
+    }
+  }]);
+
+  return ReadMD;
+}();
+
+exports.default = ReadMD;
 
 /***/ }),
 
@@ -26357,10 +26412,6 @@ var _Contributor = __webpack_require__(/*! ../../components/Contributor */ "./sr
 
 var _Contributor2 = _interopRequireDefault(_Contributor);
 
-var _ThoughtsLetter = __webpack_require__(/*! ../../components/ThoughtsLetter */ "./src/components/ThoughtsLetter/ThoughtsLetter.jsx");
-
-var _ThoughtsLetter2 = _interopRequireDefault(_ThoughtsLetter);
-
 var _Footer = __webpack_require__(/*! ../../components/Footer */ "./src/components/Footer/Footer.jsx");
 
 var _Footer2 = _interopRequireDefault(_Footer);
@@ -26371,7 +26422,7 @@ var _web_copy2 = _interopRequireDefault(_web_copy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// style
+// components
 function AboutPage(_ref) {
   var showMobileMenu = _ref.showMobileMenu,
       toggleDisplay = _ref.toggleDisplay;
@@ -26490,8 +26541,7 @@ function AboutPage(_ref) {
           'FAQ'
         ),
         FaqText
-      ),
-      _react2.default.createElement(_ThoughtsLetter2.default, null)
+      )
     ),
     _react2.default.createElement(_Footer2.default, null)
   );
@@ -26500,7 +26550,7 @@ function AboutPage(_ref) {
 // static
 
 
-// components
+// style
 exports.default = AboutPage;
 
 /***/ }),
@@ -26540,17 +26590,13 @@ var _Header = __webpack_require__(/*! ../../components/Header */ "./src/componen
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _ThoughtsLetter = __webpack_require__(/*! ../../components/ThoughtsLetter */ "./src/components/ThoughtsLetter/ThoughtsLetter.jsx");
-
-var _ThoughtsLetter2 = _interopRequireDefault(_ThoughtsLetter);
-
 var _Footer = __webpack_require__(/*! ../../components/Footer */ "./src/components/Footer/Footer.jsx");
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// style
+// components
 function ContactPage(_ref) {
   var showMobileMenu = _ref.showMobileMenu,
       toggleDisplay = _ref.toggleDisplay;
@@ -26584,14 +26630,13 @@ function ContactPage(_ref) {
           { className: 'contact-text' },
           'gian@bettermetoo.com'
         )
-      ),
-      _react2.default.createElement(_ThoughtsLetter2.default, null)
+      )
     ),
     _react2.default.createElement(_Footer2.default, null)
   );
 }
 
-// components
+// style
 exports.default = ContactPage;
 
 /***/ }),
@@ -26635,17 +26680,13 @@ var _Conversations = __webpack_require__(/*! ../../components/Conversations */ "
 
 var _Conversations2 = _interopRequireDefault(_Conversations);
 
-var _ThoughtsLetter = __webpack_require__(/*! ../../components/ThoughtsLetter */ "./src/components/ThoughtsLetter/ThoughtsLetter.jsx");
-
-var _ThoughtsLetter2 = _interopRequireDefault(_ThoughtsLetter);
-
 var _Footer = __webpack_require__(/*! ../../components/Footer */ "./src/components/Footer/Footer.jsx");
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// components
+// style
 function ConversationsPage(_ref) {
   var showMobileMenu = _ref.showMobileMenu,
       toggleDisplay = _ref.toggleDisplay;
@@ -26661,14 +26702,13 @@ function ConversationsPage(_ref) {
     _react2.default.createElement(
       'main',
       { className: 'bmt-main' },
-      _react2.default.createElement(_Conversations2.default, null),
-      _react2.default.createElement(_ThoughtsLetter2.default, null)
+      _react2.default.createElement(_Conversations2.default, null)
     ),
     _react2.default.createElement(_Footer2.default, null)
   );
 }
 
-// style
+// components
 exports.default = ConversationsPage;
 
 /***/ }),
@@ -26708,10 +26748,6 @@ var _Header = __webpack_require__(/*! ../../components/Header */ "./src/componen
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _Banner = __webpack_require__(/*! ../../components/Banner */ "./src/components/Banner/Banner.jsx");
-
-var _Banner2 = _interopRequireDefault(_Banner);
-
 var _Releases = __webpack_require__(/*! ../../components/Releases */ "./src/components/Releases/Releases.jsx");
 
 var _Releases2 = _interopRequireDefault(_Releases);
@@ -26724,10 +26760,6 @@ var _Resources = __webpack_require__(/*! ../../components/Resources */ "./src/co
 
 var _Resources2 = _interopRequireDefault(_Resources);
 
-var _ThoughtsLetter = __webpack_require__(/*! ../../components/ThoughtsLetter */ "./src/components/ThoughtsLetter/ThoughtsLetter.jsx");
-
-var _ThoughtsLetter2 = _interopRequireDefault(_ThoughtsLetter);
-
 var _Footer = __webpack_require__(/*! ../../components/Footer */ "./src/components/Footer/Footer.jsx");
 
 var _Footer2 = _interopRequireDefault(_Footer);
@@ -26736,9 +26768,16 @@ var _background_home = __webpack_require__(/*! ../../assets/background_home.svg 
 
 var _background_home2 = _interopRequireDefault(_background_home);
 
+var _banner_face = __webpack_require__(/*! ../../assets/banner_face.png */ "./src/assets/banner_face.png");
+
+var _banner_face2 = _interopRequireDefault(_banner_face);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// component
+// assets
+
+
+// style
 function HomePage(_ref) {
   var showMobileMenu = _ref.showMobileMenu,
       toggleDisplay = _ref.toggleDisplay,
@@ -26755,7 +26794,34 @@ function HomePage(_ref) {
         showMobileMenu: showMobileMenu,
         toggleDisplay: toggleDisplay
       }),
-      _react2.default.createElement(_Banner2.default, null)
+      _react2.default.createElement(
+        'section',
+        { className: 'bmt-banner' },
+        _react2.default.createElement(
+          'div',
+          { className: 'bmt-banner-left' },
+          _react2.default.createElement(
+            'h2',
+            { className: 'bmt-banner-title' },
+            'Open Source Hardware'
+          ),
+          _react2.default.createElement(
+            'p',
+            { className: 'bmt-banner-text' },
+            'We\u2019re a group of tinkerers on a journey to discover the power of the brain, and we build open source hardwares/softwares to support our exploration.'
+          ),
+          _react2.default.createElement(
+            'a',
+            { className: 'bmt-cta-button', href: '/suggestions' },
+            'Tell us what we should build next'
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'bmt-banner-right' },
+          _react2.default.createElement('img', { className: 'bmt-banner-img', src: './dist/' + _banner_face2.default, alt: '' })
+        )
+      )
     ),
     _react2.default.createElement(
       'main',
@@ -26787,7 +26853,6 @@ function HomePage(_ref) {
         },
         windowWidth: windowWidth
       }),
-      _react2.default.createElement(_ThoughtsLetter2.default, null),
       _react2.default.createElement(
         'div',
         { className: 'page-background' },
@@ -26798,10 +26863,7 @@ function HomePage(_ref) {
   );
 }
 
-// assets
-
-
-// style
+// component
 exports.default = HomePage;
 
 /***/ }),
@@ -26845,17 +26907,13 @@ var _Releases = __webpack_require__(/*! ../../components/Releases */ "./src/comp
 
 var _Releases2 = _interopRequireDefault(_Releases);
 
-var _ThoughtsLetter = __webpack_require__(/*! ../../components/ThoughtsLetter */ "./src/components/ThoughtsLetter/ThoughtsLetter.jsx");
-
-var _ThoughtsLetter2 = _interopRequireDefault(_ThoughtsLetter);
-
 var _Footer = __webpack_require__(/*! ../../components/Footer */ "./src/components/Footer/Footer.jsx");
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// components
+// style
 function ReleasesPage(_ref) {
   var showMobileMenu = _ref.showMobileMenu,
       toggleDisplay = _ref.toggleDisplay,
@@ -26872,14 +26930,13 @@ function ReleasesPage(_ref) {
     _react2.default.createElement(
       'main',
       { className: 'bmt-main' },
-      _react2.default.createElement(_Releases2.default, { windowWidth: windowWidth }),
-      _react2.default.createElement(_ThoughtsLetter2.default, null)
+      _react2.default.createElement(_Releases2.default, { windowWidth: windowWidth })
     ),
     _react2.default.createElement(_Footer2.default, null)
   );
 }
 
-// style
+// components
 exports.default = ReleasesPage;
 
 /***/ }),
@@ -26923,17 +26980,13 @@ var _Resources = __webpack_require__(/*! ../../components/Resources */ "./src/co
 
 var _Resources2 = _interopRequireDefault(_Resources);
 
-var _ThoughtsLetter = __webpack_require__(/*! ../../components/ThoughtsLetter */ "./src/components/ThoughtsLetter/ThoughtsLetter.jsx");
-
-var _ThoughtsLetter2 = _interopRequireDefault(_ThoughtsLetter);
-
 var _Footer = __webpack_require__(/*! ../../components/Footer */ "./src/components/Footer/Footer.jsx");
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// component
+// style
 function ResourcesPage(_ref) {
   var showMobileMenu = _ref.showMobileMenu,
       toggleDisplay = _ref.toggleDisplay,
@@ -26950,14 +27003,13 @@ function ResourcesPage(_ref) {
     _react2.default.createElement(
       'main',
       { className: 'bmt-main' },
-      _react2.default.createElement(_Resources2.default, { windowWidth: windowWidth }),
-      _react2.default.createElement(_ThoughtsLetter2.default, null)
+      _react2.default.createElement(_Resources2.default, { windowWidth: windowWidth })
     ),
     _react2.default.createElement(_Footer2.default, null)
   );
 }
 
-// style
+// component
 exports.default = ResourcesPage;
 
 /***/ }),
@@ -26997,10 +27049,6 @@ var _Header = __webpack_require__(/*! ../../components/Header */ "./src/componen
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _ThoughtsLetter = __webpack_require__(/*! ../../components/ThoughtsLetter */ "./src/components/ThoughtsLetter/ThoughtsLetter.jsx");
-
-var _ThoughtsLetter2 = _interopRequireDefault(_ThoughtsLetter);
-
 var _Footer = __webpack_require__(/*! ../../components/Footer */ "./src/components/Footer/Footer.jsx");
 
 var _Footer2 = _interopRequireDefault(_Footer);
@@ -27020,7 +27068,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // fake db
 
 
-// component
+// style
 function SingleConversationPage(_ref) {
   var showMobileMenu = _ref.showMobileMenu,
       toggleDisplay = _ref.toggleDisplay;
@@ -27084,8 +27132,7 @@ function SingleConversationPage(_ref) {
           '#' + conversation['metadata'].join('#')
         ),
         conversationContent
-      ),
-      _react2.default.createElement(_ThoughtsLetter2.default, null)
+      )
     ),
     _react2.default.createElement(_Footer2.default, null)
   );
@@ -27094,7 +27141,7 @@ function SingleConversationPage(_ref) {
 // assets
 
 
-// style
+// component
 exports.default = SingleConversationPage;
 
 /***/ }),
@@ -27134,10 +27181,6 @@ var _Header = __webpack_require__(/*! ../../components/Header */ "./src/componen
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _ThoughtsLetter = __webpack_require__(/*! ../../components/ThoughtsLetter */ "./src/components/ThoughtsLetter/ThoughtsLetter.jsx");
-
-var _ThoughtsLetter2 = _interopRequireDefault(_ThoughtsLetter);
-
 var _Footer = __webpack_require__(/*! ../../components/Footer */ "./src/components/Footer/Footer.jsx");
 
 var _Footer2 = _interopRequireDefault(_Footer);
@@ -27148,10 +27191,11 @@ var _releases = __webpack_require__(/*! ../../constant/releases.json */ "./src/c
 
 var _releases2 = _interopRequireDefault(_releases);
 
+var _ReadMD = __webpack_require__(/*! ../../helpers/ReadMD */ "./src/helpers/ReadMD.jsx");
+
+var _ReadMD2 = _interopRequireDefault(_ReadMD);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// fake db
-
 
 // style
 function SingleReleasePage(_ref) {
@@ -27181,6 +27225,13 @@ function SingleReleasePage(_ref) {
       r
     );
   });
+  var releaseComp = new _ReadMD2.default(release["content"].join(), _imageDB.releases, {
+    h2: 'bmt-single-release-title',
+    img: 'bmt-single-release-image',
+    p: 'bmt-single-release-text',
+    a: 'bmt-single-release-link'
+  }).parse();
+  console.log('releasesComp: ', releaseComp);
   return _react2.default.createElement(
     'div',
     { className: 'page-container' },
@@ -27212,13 +27263,19 @@ function SingleReleasePage(_ref) {
           { className: 'bmt-single-release-description' },
           release['brief-description']
         ),
-        releaseContent
-      ),
-      _react2.default.createElement(_ThoughtsLetter2.default, null)
+        releaseContent,
+        releaseComp
+      )
     ),
     _react2.default.createElement(_Footer2.default, null)
   );
 }
+
+// helper
+
+
+// fake db
+
 
 // component
 exports.default = SingleReleasePage;
@@ -27260,17 +27317,13 @@ var _Header = __webpack_require__(/*! ../../components/Header */ "./src/componen
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _ThoughtsLetter = __webpack_require__(/*! ../../components/ThoughtsLetter */ "./src/components/ThoughtsLetter/ThoughtsLetter.jsx");
-
-var _ThoughtsLetter2 = _interopRequireDefault(_ThoughtsLetter);
-
 var _Footer = __webpack_require__(/*! ../../components/Footer */ "./src/components/Footer/Footer.jsx");
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// style
+// components
 function SuggestionsPage(_ref) {
   var route = _ref.route,
       showMobileMenu = _ref.showMobileMenu,
@@ -27306,14 +27359,13 @@ function SuggestionsPage(_ref) {
           { className: 'suggestions-text' },
           'gian@bettermetoo.com'
         )
-      ),
-      _react2.default.createElement(_ThoughtsLetter2.default, null)
+      )
     ),
     _react2.default.createElement(_Footer2.default, null)
   );
 }
 
-// components
+// style
 exports.default = SuggestionsPage;
 
 /***/ }),

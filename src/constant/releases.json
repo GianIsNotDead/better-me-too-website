@@ -8,7 +8,6 @@
     "brief-description": "A bare minimum 8 channel EEG board with a TI ads1299 chip. It can be driven with any microcontroller that has 3.3V logic and SPI communication interface. Multiple boards can be chained together to record with higher channel counts.",
     "content": [
       "Neurons communicate by spreading electrical impulses to neighboring neurons. In an ideal scenario, we should be able to record these signals without interruption. However, our world is filled with noise (undesirable disturbance to the electrical signal). With proper configuration, ADS1299 can pick up the voltage spikes in our brain and digitize it, so we can interpret the recordings in a meaningful way.",
-      "##Who should use it?",
       "No one really should, but if you're relatively new to electronics, software, and neuroscience, and want to learn more by building, then this might be a thing for you. You’ll have a chance to explore SPI communication interface, noise filtering, and intricacies of Operational Amplifier (OpAmp) and Analog to Digital Converter (ADC). If you're just looking for an affordable EEG to run experiments, there are better ones out there, such as [OpenBCI]()"
     ],
     "reference": [

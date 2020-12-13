@@ -5,7 +5,6 @@ import './style.scss';
 
 // component
 import Header from '../../components/Header';
-import ThoughtsLetter from '../../components/ThoughtsLetter';
 import Footer from '../../components/Footer';
 
 // assets
@@ -45,7 +44,6 @@ function SingleConversationPage({ showMobileMenu, toggleDisplay }) {
           <p className="bmt-single-conversation-metadata">{`#${conversation['metadata'].join('#')}`}</p>
           {conversationContent}
         </section>
-        <ThoughtsLetter />
       </main>
       <Footer />
     </div>

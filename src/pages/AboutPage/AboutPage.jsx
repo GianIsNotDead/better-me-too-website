@@ -6,7 +6,6 @@ import './style.scss';
 // components
 import Header from '../../components/Header';
 import Contributor from '../../components/Contributor';
-import ThoughtsLetter from '../../components/ThoughtsLetter';
 import Footer from '../../components/Footer';
 
 // static
@@ -63,7 +62,6 @@ function AboutPage({ showMobileMenu, toggleDisplay }) {
           <h3 className="bmt-faq-title">FAQ</h3>
           {FaqText}
         </section>
-        <ThoughtsLetter />
       </main>
       <Footer />
     </div>

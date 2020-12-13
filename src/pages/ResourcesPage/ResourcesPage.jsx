@@ -6,7 +6,6 @@ import './style.scss';
 // component
 import Header from '../../components/Header';
 import Resources from '../../components/Resources';
-import ThoughtsLetter from '../../components/ThoughtsLetter';
 import Footer from '../../components/Footer';
 
 function ResourcesPage({ showMobileMenu, toggleDisplay, windowWidth }) {
@@ -19,7 +18,6 @@ function ResourcesPage({ showMobileMenu, toggleDisplay, windowWidth }) {
       />
       <main className="bmt-main">
         <Resources windowWidth={windowWidth} />
-        <ThoughtsLetter />
       </main>
       <Footer />
     </div>

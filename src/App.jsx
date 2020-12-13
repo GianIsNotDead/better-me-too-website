@@ -36,6 +36,7 @@ class App extends Component {
     this.setConversationContent = this.setConversationContent.bind(this);
     this.toggleDisplay = this.toggleDisplay.bind(this);
   }
+  
   /**
    * @param {string} title
    * @param {array} metadata ['#metadata', '#metadata']

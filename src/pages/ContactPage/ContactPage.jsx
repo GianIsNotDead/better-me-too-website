@@ -5,7 +5,6 @@ import './style.scss';
 
 // components
 import Header from '../../components/Header';
-import ThoughtsLetter from '../../components/ThoughtsLetter';
 import Footer from '../../components/Footer';
 
 function ContactPage({ showMobileMenu, toggleDisplay }) {
@@ -22,7 +21,6 @@ function ContactPage({ showMobileMenu, toggleDisplay }) {
           <p className="contact-text">We like yoga, coffee, nature, and the brain. </p>
           <p className="contact-text">gian@bettermetoo.com</p>
         </section>
-        <ThoughtsLetter />
       </main>
       <Footer />
     </div>

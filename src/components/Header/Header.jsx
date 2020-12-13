@@ -27,17 +27,41 @@ class Header extends Component {
     const HamburgerIcon = theme === 'dark' ? HamburgerDark : Hamburger;
     return (
       <header className={`bmt-header ${showMobileMenu === true ? 'nav-mobile-active' : ''}`}>
-        <h1 className={`logo-text ${theme === 'dark' ? 'logo-text-dark' : 'logo-text-light'}`}><a className="logo-link" href="/">Better Me Too</a></h1>
-        <button className={`burger-menu-button ${showMobileMenu === true ? 'close-menu-button' : ''}`} name="showMobileMenu" onClick={this._toggleMobileMenu}>
-          <img className="burger-menu" src={`./dist/${showMobileMenu === true ? Close : HamburgerIcon}`} alt="hamburger menu" />
+        {/* Logo */}
+        <h1
+          className={`logo-text ${theme === 'dark' ? 'logo-text-dark' : 'logo-text-light'}`}
+        >
+          <a className="logo-link" href="/">Better Me Too</a>
+        </h1>
+        {/* Hamburger Nav */}
+        <button
+          className={`burger-menu-button ${showMobileMenu === true ? 'close-menu-button': ''}`}
+          name="showMobileMenu"
+          onClick={this._toggleMobileMenu}
+        >
+          <img
+            className="burger-menu"
+            src={`./dist/${showMobileMenu === true ? Close : HamburgerIcon}`}
+            alt="hamburger menu"
+          />
         </button>
-
-        <nav className={`header-nav ${showMobileMenu === true ? 'nav-mobile nav-mobile-active' : ''} ${theme === 'dark' ? 'header-nav-dark' : ''}`}>
+        {/* Nav Items */}
+        <nav
+          className={`header-nav ${showMobileMenu === true ? 'nav-mobile nav-mobile-active' : ''} ${theme === 'dark' ? 'header-nav-dark' : ''}`}
+        >
           <ul className="nav-items-container">
-            <li className="nav-item"><a className="nav-link" href="/about">About</a></li>
-            <li className="nav-item"><a className="nav-link" href="/releases">Releases &amp; Milestones</a></li>
-            <li className="nav-item"><a className="nav-link" href="/conversations">Conversations</a></li>
-            <li className="nav-item"><a className="nav-link" href="/resources">Resources</a></li>
+            <li className="nav-item">
+              <a className="nav-link" href="/about">About</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/releases">Releases</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/conversations">Conversations</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/resources">Resources</a>
+            </li>
           </ul>
         </nav>
       </header>

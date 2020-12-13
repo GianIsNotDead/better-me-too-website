@@ -1,5 +1,4 @@
-// import DB from './imageDB';
-
+import React from 'react';
 /**
  * @description Process markdown text and generate corresponding component
  * @param {String} mdStringRaw markdown string to process
@@ -7,8 +6,9 @@
 */
 
 class ReadMD {
-  constructor(mdStringRaw, classes) {
+  constructor(mdStringRaw, db, classes) {
     this.mdString = mdStringRaw;
+    this.db = db;
     this.classes = classes;
     this.components = [];
   }
@@ -33,7 +33,6 @@ class ReadMD {
       }
       pos = pos + strLength;
     }
-    console.log('this.components: ', this.components);
     return this.components;
   }
   _makeHeader(mdString) {
@@ -47,7 +46,6 @@ class ReadMD {
         || mdString[strPos].concat(mdString[strPos + 1]) === '!['
         || mdString[strPos] === '['
       ) {
-        console.log('mdString: ', mdString[strPos].concat(mdString[strPos + 1]));
         done = true;
       }
       else if ((strPos > 0 && strPos < 4) && mdString[strPos] === '#') {
@@ -59,7 +57,15 @@ class ReadMD {
         strPos = strPos + 1;
       }
     }
-    this.components.push(header);
+    if (header.type === 1) {
+      this.components.push(<h1 className={this.classes.h1}>{header}</h1>);
+    }
+    if (header.type === 2) {
+      this.components.push(<h2 className={this.classes.h2}>{header}</h2>);
+    }
+    if (header.type === 3) {
+      this.components.push(<h3 className={this.classes.h3}>{header}</h3>);
+    }
     return strPos;
   }
   _makeImg(mdString) {
@@ -79,7 +85,7 @@ class ReadMD {
       }
       strPos = strPos + 1;
     }
-    this.components.push(image);
+    this.components.push(<img alt={image.alt} src={this.db[image.src]} className={this.classes.img} />);
     return strPos;
   }
   _makeLink(mdString) {
@@ -99,7 +105,7 @@ class ReadMD {
       }
       strPos = strPos + 1;
     }
-    this.components.push(link);
+    this.components.push(<a href={link.href} className={this.classes.a}>{link.text}</a>);
     return strPos;
   }
   _makeParagraph(mdString) {
@@ -120,13 +126,9 @@ class ReadMD {
       }
     }
     // this.components.push(<p className={this.classes.p}>{paragraph}</p>);
-    this.components.push(paragraph);
+    this.components.push(<p className={this.classes.p}>{paragraph}</p>);
     return strPos;
   }
 }
 
-let sampleText = "##This is Header \nNo one really should, but if you're relatively new to electronics, software, and neuroscience, and want to learn more by building, then this might be a thing for you. You’ll have a chance to explore SPI communication interface, noise filtering, and intricacies of Operational Amplifier (OpAmp) and Analog to Digital Converter (ADC). ![some image](../someImage.com) If you're just looking for an affordable EEG to run experiments, there are better ones out there, such as [OpenBCI](https://openbci.com)";
-
-new ReadMD(sampleText).parse();
-
-// export default ReadMD;
+export default ReadMD;

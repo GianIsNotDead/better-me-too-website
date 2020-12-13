@@ -5,7 +5,6 @@ import './style.scss';
 
 // components
 import Header from '../../components/Header';
-import ThoughtsLetter from '../../components/ThoughtsLetter';
 import Footer from '../../components/Footer';
 
 function SuggestionsPage({ route, showMobileMenu, toggleDisplay }) {
@@ -23,7 +22,6 @@ function SuggestionsPage({ route, showMobileMenu, toggleDisplay }) {
           <p className="suggestions-text">Nothing is too small or too big for us to investigate. Don’t be shy, reach out to us, be part of our research and build process. </p>
           <p className="suggestions-text">gian@bettermetoo.com</p>
         </section>
-        <ThoughtsLetter />
       </main>
       <Footer />
     </div>
